@@ -1,27 +1,30 @@
 import { NavLink, useNavigate } from 'react-router-dom'
-import { Menu, X, Moon, Sun, Home, BookOpen, User2, MessageSquare } from 'lucide-react'
+import { Menu, X, Moon, Sun, Home, BookOpen, User2, MessageSquare, Globe } from 'lucide-react'
 import { useEffect, useState } from 'react'
+import { translations } from '../i18n/translations'
 
 export default function Header({ lang='es' }) {
+  const t = translations[lang]
   const base = `/${lang}`
   const nav = [
-    { to: `${base}/`, label: 'Inicio', icon: Home },
-    { to: `${base}/blog`, label: 'Blog', icon: BookOpen },
-    { to: `${base}/sobre-mi`, label: 'Sobre mí', icon: User2 },
-    { to: `${base}/contacto`, label: 'Contacto', icon: MessageSquare },
+    { to: `${base}/`, label: t.nav.home, icon: Home },
+    { to: `${base}/blog`, label: t.nav.blog, icon: BookOpen },
+    { to: `${base}/sobre-mi`, label: t.nav.about, icon: User2 },
+    { to: `${base}/contacto`, label: t.nav.contact, icon: MessageSquare },
   ]
   const [mobile, setMobile] = useState(false)
   const [dark, setDark] = useState(() => window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)
-  useEffect(() => {
-    document.documentElement.classList.toggle('dark', dark)
-  }, [dark])
+  useEffect(() => { document.documentElement.classList.toggle('dark', dark) }, [dark])
+
+  const navigate = useNavigate()
+  const toggleLang = () => { navigate(lang==='es' ? '/en/' : '/es/') }
 
   return (
     <header className="bg-white dark:bg-gray-800 shadow-sm sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <NavLink to={`${base}/`} className="text-2xl font-bold text-blue-800 dark:text-blue-400">
-            Tu Dinero Simple
+            {t.brand}
           </NavLink>
 
           <nav className="hidden md:flex items-center space-x-6">
@@ -36,12 +39,16 @@ export default function Header({ lang='es' }) {
                 <i.icon className="w-4 h-4" /><span>{i.label}</span>
               </NavLink>
             ))}
+            <button onClick={toggleLang} className="p-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center">
+              <Globe className="w-4 h-4 mr-1" /> {lang==='es'?'EN':'ES'}
+            </button>
             <button onClick={()=>setDark(v=>!v)} className="p-2 rounded-full text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
               {dark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
             </button>
           </nav>
 
           <div className="md:hidden flex items-center space-x-2">
+            <button onClick={toggleLang} className="p-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"><Globe className="w-5 h-5" /></button>
             <button onClick={()=>setDark(v=>!v)} className="p-2 rounded-full text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
               {dark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
             </button>
