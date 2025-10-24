@@ -1,19 +1,30 @@
-import SEO from "../seo/SEO";
-import { getPostBySlug } from "../data/posts";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link } from 'react-router-dom'
+import SEO from '../seo/SEO'
+import { getPostBySlug } from '../data/posts'
+import AdPlaceholder from '../components/AdPlaceholder'
 
 export default function BlogPost({ lang }) {
-  const { slug } = useParams();
-  const post = getPostBySlug(lang, slug);
-  if (!post) return <div style={{padding:24}}>No encontrado</div>;
-  const path = `/${lang}/blog/${slug}`;
+  const { slug } = useParams()
+  const post = getPostBySlug(lang, slug)
+  if (!post) return <div className="max-w-4xl mx-auto p-8">No encontrado</div>
+  const path = `/${lang}/blog/${slug}`
   return (
-    <div style={{padding:24, maxWidth:800, margin:'0 auto'}}>
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <SEO lang={lang} path={path} title={post.title} description={post.excerpt} />
-      <p style={{color:'#6b7280'}}>{post.category} · {post.date}</p>
-      <h1>{post.title}</h1>
-      <div className="prose" dangerouslySetInnerHTML={{__html: post.content}} />
-      <p style={{marginTop:24}}><Link to={`/${lang}/blog`}>← {lang==='es'?'Volver':'Back'}</Link></p>
+      <AdPlaceholder position="Cabecera artículo" />
+      <Link to={`/${lang}/blog`} className="flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 mb-6">
+        <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7"/></svg>
+        {lang==='es'?'Volver al blog':'Back to blog'}
+      </Link>
+      <article className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-sm border border-gray-200 dark:border-gray-700">
+        <div className="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-4">
+          <span className="bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-400 px-2 py-1 rounded mr-3">{post.category}</span>
+          <span>{post.date}</span>
+        </div>
+        <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">{post.title}</h1>
+        <div className="prose prose-blue dark:prose-invert max-w-none" dangerouslySetInnerHTML={{ __html: post.content }} />
+      </article>
+      <AdPlaceholder position="Mitad artículo" />
     </div>
-  );
+  )
 }
