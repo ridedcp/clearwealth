@@ -1,6 +1,6 @@
 import { Routes, Route, Navigate, useParams } from 'react-router-dom';
 import { isSupportedLang } from './i18n';
-import Header from './components/Header';
+import Layout from './components/Layout';
 import Home from './pages/Home';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
@@ -12,8 +12,7 @@ function LangLayout() {
   const { lang } = useParams();
   const safeLang = isSupportedLang(lang) ? lang : 'es';
   return (
-    <>
-      <Header lang={safeLang} />
+    <Layout lang={safeLang}>
       <Routes>
         <Route index element={<Home lang={safeLang} />} />
         <Route path="blog" element={<Blog lang={safeLang} />} />
@@ -23,7 +22,7 @@ function LangLayout() {
         <Route path="privacidad" element={<Privacy lang={safeLang} />} />
         <Route path="*" element={<Navigate to={`/${safeLang}/`} replace />} />
       </Routes>
-    </>
+    </Layout>
   );
 }
 
