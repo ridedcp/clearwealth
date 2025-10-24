@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 
 export default function SEO({ lang, path, title, description }) {
-  const base = 'https://clearwealth.com';
+  const base = 'https://clearfinanciallife.com';
   const current = `${base}${path}`;
   const altPath = lang === 'es' ? path.replace(/^\/es/, '/en') : path.replace(/^\/en/, '/es');
   const alt = `${base}${altPath}`;
