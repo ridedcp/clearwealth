@@ -10,7 +10,7 @@ import Privacy from './pages/Privacy';
 
 function LangLayout() {
   const { lang } = useParams();
-  const safeLang = isSupportedLang(lang) ? lang : 'es';
+  const safeLang = ['es','en'].includes(lang) ? lang : 'es';
   return (
     <Layout lang={safeLang}>
       <Routes>
