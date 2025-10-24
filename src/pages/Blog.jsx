@@ -2,19 +2,25 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import SEO from '../seo/SEO'
 import { getPosts } from '../data/posts'
+import { translations } from '../i18n/translations'
 
 export default function Blog({ lang }) {
+  const t = translations[lang]
   const path = `/${lang}/blog`
-  const categories = lang==='es' ? ['Todos','Ahorro','Presupuesto','Inversiones','Hábitos'] : ['All','Saving','Budgeting','Investing','Habits']
+  const categories = t.blog.categories
   const [selected, setSelected] = useState(categories[0])
-  const posts = getPosts(lang).filter(p => selected===categories[0] ? true : p.category.toLowerCase().includes(selected.split('/')[0].toLowerCase()))
+
+  const posts = getPosts(lang).filter(p => {
+    if (selected === categories[0]) return true
+    return p.category.toLowerCase().includes(selected.split('/')[0].toLowerCase())
+  })
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <SEO lang={lang} path={path} title="Blog" description="Artículos prácticos para mejorar tu situación financiera" />
+      <SEO lang={lang} path={path} title={t.blog.title} description={t.blog.subtitle} />
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">{lang==='es'?'Blog de Finanzas Personales':'Personal Finance Blog'}</h1>
-        <p className="text-gray-600 dark:text-gray-300">{lang==='es'?'Artículos prácticos para mejorar tu situación financiera':'Practical articles to improve your finances'}</p>
+        <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">{t.blog.title}</h1>
+        <p className="text-gray-600 dark:text-gray-300">{t.blog.subtitle}</p>
       </div>
 
       <div className="flex flex-wrap gap-2 mb-8">
@@ -36,7 +42,7 @@ export default function Blog({ lang }) {
             <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-3">{post.title}</h2>
             <p className="text-gray-600 dark:text-gray-300 mb-4">{post.excerpt}</p>
             <Link to={`/${lang}/blog/${post.slug}`} className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium flex items-center">
-              {lang==='es'?'Leer más':'Read more'}
+              {t.blog.readMore}
               <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"/></svg>
             </Link>
           </article>
