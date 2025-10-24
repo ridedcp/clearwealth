@@ -2,5 +2,5 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Tipografía de artículos */
+/* Ajustes de tipografía para artículos */
 .prose :where(img):not(:where([class~="not-prose"] *)) { margin: 0; }
