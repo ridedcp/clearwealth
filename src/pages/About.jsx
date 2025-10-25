@@ -1,9 +1,9 @@
 import SEO from "../seo/SEO";
-import { translations } from "../i18n/translations";
+import { translations } from "../i18n";
 import { User2 } from "lucide-react";
 
 export default function About({ lang }) {
-  const t = translations[lang];
+  const t = translations[lang] || translations.es;
   const path = `/${lang}/sobre-mi`;
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
