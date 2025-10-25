@@ -1,6 +1,6 @@
 import { useState } from "react";
 import SEO from "../components/SEO";
-import translations from "../i18n"; // ajusta si tu import real es distinto
+import translations from "../i18n";
 import { Mail, Phone, MapPin } from "lucide-react";
 
 export default function Contact({ lang }) {
@@ -8,10 +8,10 @@ export default function Contact({ lang }) {
   const path = `/${lang}/contacto`;
   const [form, setForm] = useState({ name: "", email: "", message: "" });
 
-  // Endpoint sin backend: envía a tu Gmail
-  const endpoint = "https://formsubmit.co/clearfinanciallife@gmail.com";
+  // FormSubmit con token (no expone tu Gmail)
+  const endpoint = "https://formsubmit.co/43ac32c8eb2e2fc207154edbba51fccd";
 
-  // Redirección post-envío a la página de gracias (2 idiomas)
+  // Redirección post-envío según idioma
   const thankYouPath = lang === "es" ? "/es/gracias" : "/en/thank-you";
   const thankYouUrl =
     typeof window !== "undefined"
@@ -63,7 +63,7 @@ export default function Contact({ lang }) {
             {lang === "es" ? "Envía un mensaje" : "Send a message"}
           </h2>
 
-          {/* POST nativo: tras enviar, redirige a /es/gracias o /en/thank-you */}
+          {/* POST nativo directo a FormSubmit */}
           <form action={endpoint} method="POST" className="space-y-4">
             <div>
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
@@ -108,25 +108,13 @@ export default function Contact({ lang }) {
               />
             </div>
 
-            {/* Hidden fields */}
-            {/* Reply-To será el email del usuario para que contestes fácil desde tu Gmail */}
+            {/* Hidden fields de FormSubmit */}
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_subject" value={`Nuevo mensaje de ${form.name}`} />
             <input type="hidden" name="_replyto" value={form.email} />
-            {/* Asunto del email que recibirás */}
-            <input
-              type="hidden"
-              name="_subject"
-              value={`Nuevo mensaje de ${form.name}`}
-            />
-            {/* Redirección tras enviar */}
+            <input type="hidden" name="_template" value="table" />
             <input type="hidden" name="_next" value={thankYouUrl} />
-            {/* Evita que robots envíen (honeypot) */}
-            <input
-              type="text"
-              name="_honey"
-              style={{ display: "none" }}
-              tabIndex={-1}
-              autoComplete="off"
-            />
+            <input type="text" name="_honey" style={{ display: "none" }} tabIndex={-1} autoComplete="off" />
 
             <button
               type="submit"
