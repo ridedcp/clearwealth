@@ -1,10 +1,10 @@
 import AdPlaceholder from '../components/AdPlaceholder'
 import { BookOpen, User, Shield } from 'lucide-react'
 import SEO from '../seo/SEO'
-import { translations } from '../i18n/translations'
+import { translations } from "../i18n";
 
 export default function Home({ lang }) {
-  const t = translations[lang]
+  const t = translations[lang] || translations.es;
   const path = `/${lang}/`
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
