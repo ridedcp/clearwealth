@@ -25,8 +25,8 @@ export const translations = {
     },
     contact: {
       title:"Contacto", subtitle:"¿Tienes preguntas o quieres colaborar? Escríbeme y estaré encantado de ayudarte.",
-      info:{ email:"contacto@tudinerosimple.com", phone:"+34 900 123 456", city:"Madrid, España" },
-      form:{ name:"Nombre", email:"Email", message:"Mensaje", submit:"Enviar mensaje", success:"¡Gracias por tu mensaje! Te responderé lo antes posible." }
+      info:{ email:"contact@clearfinanciallife.com", city:"Barcelona, España" },
+      form:{ name:"Nombre", email:"Email", message:"Mensaje", submit:"Enviar mensaje", success:"¡Gracias por tu mensaje! Te responderemos lo antes posible." }
     },
     privacy:{ title:"Política de privacidad", stub:"Texto legal en español..." },
     legal: { nav:"Navegación", legal:"Legal", cookies:"Cookies", rights:"Todos los derechos reservados." }
@@ -58,8 +58,8 @@ export const translations = {
     },
     contact: {
       title:"Contact", subtitle:"Questions or collaborations? Send me a message — happy to help.",
-      info:{ email:"contact@clearfinanciallife.com", phone:"+1 555 123 4567", city:"Remote" },
-      form:{ name:"Name", email:"Email", message:"Message", submit:"Send message", success:"Thanks! I’ll reply as soon as possible." }
+      info:{ email:"contact@clearfinanciallife.com", city:"Barcelona, Spain" },
+      form:{ name:"Name", email:"Email", message:"Message", submit:"Send message", success:"Thanks! We’ll reply as soon as possible." }
     },
     privacy:{ title:"Privacy Policy", stub:"Legal text in English..." },
     legal: { nav:"Navigation", legal:"Legal", cookies:"Cookies", rights:"All rights reserved." }
