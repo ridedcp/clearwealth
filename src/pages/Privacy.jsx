@@ -1,8 +1,8 @@
 import SEO from "../seo/SEO";
-import { translations } from "../i18n/translations";
+import { translations } from "../i18n";
 
 export default function Privacy({ lang }) {
-  const t = translations[lang];
+  const t = translations[lang] || translations.es;
   const path = `/${lang}/privacidad`;
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
