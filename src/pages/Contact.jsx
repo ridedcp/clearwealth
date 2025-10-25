@@ -1,12 +1,14 @@
 import { useState } from "react";
-// 👇 Ojo a la ruta y a las mayúsculas/minúsculas
-import Seo from "../seo/SEO";
-import translations from "../i18n";
-import { Mail, Phone, MapPin } from "lucide-react";
+import SEO from "../seo/SEO";
+import { translations } from "../i18n"; // named export
+import { Mail, MapPin } from "lucide-react";
 
 export default function Contact({ lang }) {
   const t = translations[lang];
-  const path = `/${lang}/contacto`;
+
+  // Path correcto por idioma para las etiquetas SEO/canonical
+  const path = lang === "es" ? "/es/contacto" : "/en/contact";
+
   const [form, setForm] = useState({ name: "", email: "", message: "" });
 
   // FormSubmit con token (no expone tu Gmail)
@@ -21,7 +23,12 @@ export default function Contact({ lang }) {
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <Seo path={path} title={t.contact.title} description={t.contact.seo?.description} />
+      <SEO
+        lang={lang}
+        path={path}
+        title={t.contact.title}
+        description={t.contact.seo?.description}
+      />
 
       <div className="text-center mb-12">
         <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
@@ -40,13 +47,7 @@ export default function Contact({ lang }) {
             <div className="flex items-center">
               <Mail className="w-5 h-5 text-blue-600 dark:text-blue-400 mr-3" />
               <span className="text-gray-700 dark:text-gray-300">
-                contact@clearfinanciallife.com
-              </span>
-            </div>
-            <div className="flex items-center">
-              <Phone className="w-5 h-5 text-blue-600 dark:text-blue-400 mr-3" />
-              <span className="text-gray-700 dark:text-gray-300">
-                {t.contact.info.phone}
+                {t.contact.info.email}
               </span>
             </div>
             <div className="flex items-center">
