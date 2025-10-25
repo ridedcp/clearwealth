@@ -1,6 +1,6 @@
 import { useState } from "react";
 // 👇 Ojo a la ruta y a las mayúsculas/minúsculas
-import Seo from "../components/Seo";
+import Seo from "../seo/SEO";
 import translations from "../i18n";
 import { Mail, Phone, MapPin } from "lucide-react";
 
