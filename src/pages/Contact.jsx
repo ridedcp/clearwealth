@@ -1,21 +1,20 @@
 import { useState } from "react";
 import SEO from "../seo/SEO";
-// ✅ Importación robusta: funciona tanto si i18n exporta default como named
-import i18n from "../i18n";
+import { translations } from "../i18n";   // ← named export
 import { Mail, MapPin } from "lucide-react";
 
 export default function Contact({ lang }) {
-  // Soporta i18n.default o i18n.translations
-  const dict = (i18n && (i18n.translations || i18n)) || {};
-  const t = dict[lang] || dict.es;
+  const t = translations[lang] || translations.es;
 
+  // Path correcto por idioma (SEO canonical)
   const path = lang === "es" ? "/es/contacto" : "/en/contact";
 
   const [form, setForm] = useState({ name: "", email: "", message: "" });
 
-  // FormSubmit con token
+  // FormSubmit con token (no expone tu Gmail)
   const endpoint = "https://formsubmit.co/43ac32c8eb2e2fc207154edbba51fccd";
 
+  // Redirección post-envío según idioma
   const thankYouPath = lang === "es" ? "/es/gracias" : "/en/thank-you";
   const thankYouUrl =
     typeof window !== "undefined"
