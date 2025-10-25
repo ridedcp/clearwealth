@@ -1,5 +1,4 @@
-// i18n centralizado: exporta named y default (translations)
-
+// ---- i18n dictionary (tu versión) ----
 export const translations = {
   es: {
     brand: "Tu Dinero Simple",
@@ -68,7 +67,8 @@ export const translations = {
   }
 };
 
+// helpers que ya usa tu App
 export const isSupportedLang = (l) => ['es','en'].includes(l);
 
-// Export default también, para compatibilidad con imports por defecto
+// compatibilidad: export default también
 export default translations;
