@@ -1,5 +1,6 @@
 import { useState } from "react";
-import SEO from "../components/SEO";
+// 👇 Ojo a la ruta y a las mayúsculas/minúsculas
+import Seo from "../components/Seo";
 import translations from "../i18n";
 import { Mail, Phone, MapPin } from "lucide-react";
 
@@ -20,7 +21,7 @@ export default function Contact({ lang }) {
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <SEO path={path} title={t.contact.title} description={t.contact.seo?.description} />
+      <Seo path={path} title={t.contact.title} description={t.contact.seo?.description} />
 
       <div className="text-center mb-12">
         <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
