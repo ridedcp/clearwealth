@@ -1,20 +1,21 @@
 import { useState } from "react";
 import SEO from "../seo/SEO";
-import { translations } from "../i18n"; // named export
+// ✅ Importación robusta: funciona tanto si i18n exporta default como named
+import i18n from "../i18n";
 import { Mail, MapPin } from "lucide-react";
 
 export default function Contact({ lang }) {
-  const t = translations[lang];
+  // Soporta i18n.default o i18n.translations
+  const dict = (i18n && (i18n.translations || i18n)) || {};
+  const t = dict[lang] || dict.es;
 
-  // Path correcto por idioma para las etiquetas SEO/canonical
   const path = lang === "es" ? "/es/contacto" : "/en/contact";
 
   const [form, setForm] = useState({ name: "", email: "", message: "" });
 
-  // FormSubmit con token (no expone tu Gmail)
+  // FormSubmit con token
   const endpoint = "https://formsubmit.co/43ac32c8eb2e2fc207154edbba51fccd";
 
-  // Redirección post-envío según idioma
   const thankYouPath = lang === "es" ? "/es/gracias" : "/en/thank-you";
   const thankYouUrl =
     typeof window !== "undefined"
@@ -45,13 +46,13 @@ export default function Contact({ lang }) {
           </h2>
           <div className="space-y-4">
             <div className="flex items-center">
-              <Mail className="w-5 h-5 text-blue-600 dark:text-blue-400 mr-3" />
+              <Mail className="w-5 h-5 mr-3" />
               <span className="text-gray-700 dark:text-gray-300">
                 {t.contact.info.email}
               </span>
             </div>
             <div className="flex items-center">
-              <MapPin className="w-5 h-5 text-blue-600 dark:text-blue-400 mr-3" />
+              <MapPin className="w-5 h-5 mr-3" />
               <span className="text-gray-700 dark:text-gray-300">
                 {t.contact.info.city}
               </span>
@@ -65,10 +66,9 @@ export default function Contact({ lang }) {
             {lang === "es" ? "Envía un mensaje" : "Send a message"}
           </h2>
 
-          {/* POST nativo directo a FormSubmit */}
           <form action={endpoint} method="POST" className="space-y-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+              <label className="block text-sm font-medium mb-1">
                 {t.contact.form.name}
               </label>
               <input
@@ -77,12 +77,12 @@ export default function Contact({ lang }) {
                 onChange={(e) => setForm({ ...form, name: e.target.value })}
                 required
                 autoComplete="name"
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
+                className="w-full px-3 py-2 border rounded-md"
               />
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+              <label className="block text-sm font-medium mb-1">
                 {t.contact.form.email}
               </label>
               <input
@@ -92,12 +92,12 @@ export default function Contact({ lang }) {
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
                 required
                 autoComplete="email"
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
+                className="w-full px-3 py-2 border rounded-md"
               />
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+              <label className="block text-sm font-medium mb-1">
                 {t.contact.form.message}
               </label>
               <textarea
@@ -106,11 +106,11 @@ export default function Contact({ lang }) {
                 value={form.message}
                 onChange={(e) => setForm({ ...form, message: e.target.value })}
                 required
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
+                className="w-full px-3 py-2 border rounded-md"
               />
             </div>
 
-            {/* Hidden fields de FormSubmit */}
+            {/* Hidden fields FormSubmit */}
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_subject" value={`Nuevo mensaje de ${form.name}`} />
             <input type="hidden" name="_replyto" value={form.email} />
@@ -118,10 +118,7 @@ export default function Contact({ lang }) {
             <input type="hidden" name="_next" value={thankYouUrl} />
             <input type="text" name="_honey" style={{ display: "none" }} tabIndex={-1} autoComplete="off" />
 
-            <button
-              type="submit"
-              className="w-full bg-blue-600 text-white rounded-md py-2 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
+            <button type="submit" className="w-full rounded-md py-2 text-white bg-blue-600">
               {t.contact.form.submit}
             </button>
           </form>
