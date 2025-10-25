@@ -1,8 +1,8 @@
 import { NavLink } from "react-router-dom";
-import { translations } from "../i18n/translations";
+import { translations } from "../i18n";
 
 export default function Footer({ lang='es' }) {
-  const t = translations[lang];
+  const t = translations[lang] || translations.es;
   const base = `/${lang}`;
   return (
     <footer className="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 mt-16">
