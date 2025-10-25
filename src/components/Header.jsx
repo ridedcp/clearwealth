@@ -1,10 +1,10 @@
 import { NavLink, useNavigate } from 'react-router-dom'
 import { Menu, X, Moon, Sun, Home, BookOpen, User2, MessageSquare, Globe } from 'lucide-react'
 import { useEffect, useState } from 'react'
-import { translations } from '../i18n/translations'
+import { translations } from '../i18n'
 
 export default function Header({ lang='es' }) {
-  const t = translations[lang]
+  const t = translations[lang] || translations.es;
   const base = `/${lang}`
   const nav = [
     { to: `${base}/`, label: t.nav.home, icon: Home },
