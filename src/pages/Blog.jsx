@@ -2,10 +2,10 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import SEO from '../seo/SEO'
 import { getPosts } from '../data/posts'
-import { translations } from '../i18n/translations'
+import { translations } from "../i18n";
 
 export default function Blog({ lang }) {
-  const t = translations[lang]
+  const t = translations[lang] || translations.es;
   const path = `/${lang}/blog`
   const categories = t.blog.categories
   const [selected, setSelected] = useState(categories[0])
