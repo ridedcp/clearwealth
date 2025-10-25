@@ -2,12 +2,12 @@ import { useParams, Link } from 'react-router-dom'
 import SEO from '../seo/SEO'
 import { getPostBySlug } from '../data/posts'
 import AdPlaceholder from '../components/AdPlaceholder'
-import { translations } from '../i18n/translations'
+import { translations } from '../i18n'
 
 export default function BlogPost({ lang }) {
   const { slug } = useParams()
   const post = getPostBySlug(lang, slug)
-  const t = translations[lang]
+  const t = translations[lang] || translations.es;
   if (!post) return <div className="max-w-4xl mx-auto p-8">Not found</div>
   const path = `/${lang}/blog/${slug}`
   return (
