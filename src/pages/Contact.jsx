@@ -11,8 +11,14 @@ export default function Contact({ lang }) {
   // FormSubmit con token
   const endpoint = "https://formsubmit.co/43ac32c8eb2e2fc207154edbba51fccd";
 
-  // Redirección post-envío (usa ruta relativa para evitar problemas)
-  const thankYouPath = lang === "es" ? "/es/gracias" : "/en/thank-you";
+  // URL absoluta de “gracias” (evita 404 en formsubmit.co)
+  const siteBase =
+    typeof window !== "undefined"
+      ? window.location.origin
+      : "https://clearfinanciallife.com";
+  const thankYouUrl = `${siteBase}${
+    lang === "es" ? "/es/gracias" : "/en/thank-you"
+  }`;
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -88,8 +94,7 @@ export default function Contact({ lang }) {
             <input type="hidden" name="_subject" value={`Nuevo mensaje de ${form.name}`} />
             <input type="hidden" name="_replyto" value={form.email} />
             <input type="hidden" name="_template" value="table" />
-            {/* Usa ruta relativa para _next */}
-            <input type="hidden" name="_next" value={thankYouPath} />
+            <input type="hidden" name="_next" value={thankYouUrl} />
             <input type="text" name="_honey" style={{ display: "none" }} tabIndex={-1} autoComplete="off" />
 
             <button type="submit" className="w-full rounded-md py-2 text-white bg-blue-600">
