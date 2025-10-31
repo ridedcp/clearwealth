@@ -8,8 +8,9 @@ export default function Contact({ lang }) {
   const path = lang === "es" ? "/es/contacto" : "/en/contact";
   const [form, setForm] = useState({ name: "", email: "", message: "" });
 
-  // FormSubmit con token
-  const endpoint = "https://formsubmit.co/43ac32c8eb2e2fc207154edbba51fccd";
+  // --- Config ---
+  const token = "43ac32c8eb2e2fc207154edbba51fccd"; // FormSubmit token
+  const ajaxEndpoint = `https://formsubmit.co/ajax/${token}`;
 
   // URL absoluta de “gracias”
   const siteBase =
@@ -20,8 +21,31 @@ export default function Contact({ lang }) {
     lang === "es" ? "/es/gracias" : "/en/thank-you"
   }`;
 
-  // ⚠️ Forzamos redirección vía query ?next= (FormSubmit lo respeta siempre)
-  const actionUrl = `${endpoint}?next=${encodeURIComponent(thankYouUrl)}`;
+  // --- Submit AJAX (evita la pantalla de FormSubmit y fuerza nuestra redirección) ---
+  async function handleSubmit(e) {
+    e.preventDefault();
+    const formEl = e.currentTarget;
+    const fd = new FormData(formEl);
+
+    // Campos “especiales” de FormSubmit
+    fd.set("_captcha", "false");
+    fd.set("_template", "table");
+    fd.set("_replyto", form.email);
+    fd.set("_subject", `Nuevo mensaje de ${form.name}`);
+    fd.set("_next", thankYouUrl); // por si un día vuelves a POST normal
+
+    try {
+      await fetch(ajaxEndpoint, {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: fd,
+      });
+    } catch (_) {
+      // ignoramos error: redirigimos igual para UX consistente
+    } finally {
+      window.location.assign(thankYouUrl);
+    }
+  }
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -67,7 +91,8 @@ export default function Contact({ lang }) {
             {lang === "es" ? "Envía un mensaje" : "Send a message"}
           </h2>
 
-          <form action={actionUrl} method="POST" className="space-y-4" target="_self">
+          {/* Envío AJAX */}
+          <form onSubmit={handleSubmit} className="space-y-4" noValidate>
             <div>
               <label className="block text-sm font-medium mb-1">
                 {t.contact.form.name}
@@ -111,16 +136,7 @@ export default function Contact({ lang }) {
               />
             </div>
 
-            {/* Hidden fields FormSubmit */}
-            <input type="hidden" name="_captcha" value="false" />
-            <input
-              type="hidden"
-              name="_subject"
-              value={`Nuevo mensaje de ${form.name}`}
-            />
-            <input type="hidden" name="_replyto" value={form.email} />
-            <input type="hidden" name="_template" value="table" />
-            {/* _next ya no es necesario porque lo inyectamos en el action */}
+            {/* Honeypot anti-spam */}
             <input
               type="text"
               name="_honey"
