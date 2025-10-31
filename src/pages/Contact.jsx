@@ -21,18 +21,18 @@ export default function Contact({ lang }) {
     lang === "es" ? "/es/gracias" : "/en/thank-you"
   }`;
 
-  // --- Submit AJAX (evita la pantalla de FormSubmit y fuerza nuestra redirección) ---
+  // --- Submit AJAX ---
   async function handleSubmit(e) {
     e.preventDefault();
     const formEl = e.currentTarget;
     const fd = new FormData(formEl);
 
-    // Campos “especiales” de FormSubmit
+    // Campos FormSubmit
     fd.set("_captcha", "false");
     fd.set("_template", "table");
     fd.set("_replyto", form.email);
     fd.set("_subject", `Nuevo mensaje de ${form.name}`);
-    fd.set("_next", thankYouUrl); // por si un día vuelves a POST normal
+    fd.set("_next", thankYouUrl);
 
     try {
       await fetch(ajaxEndpoint, {
@@ -41,8 +41,13 @@ export default function Contact({ lang }) {
         body: fd,
       });
     } catch (_) {
-      // ignoramos error: redirigimos igual para UX consistente
+      // ignoramos error para UX consistente
     } finally {
+      // 👉 Persistimos el tema actual para que la Thank You no cambie
+      try {
+        const isDark = document.documentElement.classList.contains("dark");
+        localStorage.setItem("theme", isDark ? "dark" : "light");
+      } catch {}
       window.location.assign(thankYouUrl);
     }
   }
@@ -56,7 +61,9 @@ export default function Contact({ lang }) {
           <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
             {t.contact.title}
           </h1>
-          <p className="text-gray-600 dark:text-gray-300">{t.contact.subtitle}</p>
+          <p className="text-gray-600 dark:text-gray-300">
+            {t.contact.subtitle}
+          </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
@@ -87,10 +94,9 @@ export default function Contact({ lang }) {
               {lang === "es" ? "Envía un mensaje" : "Send a message"}
             </h2>
 
-            {/* Envío AJAX */}
             <form onSubmit={handleSubmit} className="space-y-4" noValidate>
               <div>
-                <label className="block text-sm font-medium mb-1">
+                <label className="block text-sm font-medium mb-1 text-gray-900 dark:text-gray-200">
                   {t.contact.form.name}
                 </label>
                 <input
@@ -99,12 +105,16 @@ export default function Contact({ lang }) {
                   onChange={(e) => setForm({ ...form, name: e.target.value })}
                   required
                   autoComplete="name"
-                  className="w-full px-3 py-2 border rounded-md bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:bg-transparent dark:border-white/20 dark:text-white dark:placeholder-white/60"
+                  className="w-full px-3 py-2 border rounded-md
+                             bg-white text-gray-900 placeholder-gray-400
+                             focus:outline-none focus:ring-2 focus:ring-indigo-500
+                             dark:bg-gray-900 dark:border-white/20 dark:text-white dark:placeholder-white/60
+                             dark:focus:ring-indigo-400"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium mb-1">
+                <label className="block text-sm font-medium mb-1 text-gray-900 dark:text-gray-200">
                   {t.contact.form.email}
                 </label>
                 <input
@@ -114,21 +124,31 @@ export default function Contact({ lang }) {
                   onChange={(e) => setForm({ ...form, email: e.target.value })}
                   required
                   autoComplete="email"
-                  className="w-full px-3 py-2 border rounded-md bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:bg-transparent dark:border-white/20 dark:text-white dark:placeholder-white/60"
+                  className="w-full px-3 py-2 border rounded-md
+                             bg-white text-gray-900 placeholder-gray-400
+                             focus:outline-none focus:ring-2 focus:ring-indigo-500
+                             dark:bg-gray-900 dark:border-white/20 dark:text-white dark:placeholder-white/60
+                             dark:focus:ring-indigo-400"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium mb-1">
+                <label className="block text-sm font-medium mb-1 text-gray-900 dark:text-gray-200">
                   {t.contact.form.message}
                 </label>
                 <textarea
                   name="message"
                   rows={4}
                   value={form.message}
-                  onChange={(e) => setForm({ ...form, message: e.target.value })}
+                  onChange={(e) =>
+                    setForm({ ...form, message: e.target.value })
+                  }
                   required
-                  className="w-full px-3 py-2 border rounded-md bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:bg-transparent dark:border-white/20 dark:text-white dark:placeholder-white/60"
+                  className="w-full px-3 py-2 border rounded-md
+                             bg-white text-gray-900 placeholder-gray-400
+                             focus:outline-none focus:ring-2 focus:ring-indigo-500
+                             dark:bg-gray-900 dark:border-white/20 dark:text-white dark:placeholder-white/60
+                             dark:focus:ring-indigo-400"
                 />
               </div>
 
