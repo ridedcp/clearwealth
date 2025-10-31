@@ -8,11 +8,9 @@ export default function Contact({ lang }) {
   const path = lang === "es" ? "/es/contacto" : "/en/contact";
   const [form, setForm] = useState({ name: "", email: "", message: "" });
 
-  // --- Config ---
-  const token = "43ac32c8eb2e2fc207154edbba51fccd"; // FormSubmit token
+  const token = "43ac32c8eb2e2fc207154edbba51fccd";
   const ajaxEndpoint = `https://formsubmit.co/ajax/${token}`;
 
-  // URL absoluta de “gracias”
   const siteBase =
     typeof window !== "undefined"
       ? window.location.origin
@@ -21,13 +19,9 @@ export default function Contact({ lang }) {
     lang === "es" ? "/es/gracias" : "/en/thank-you"
   }`;
 
-  // --- Submit AJAX ---
   async function handleSubmit(e) {
     e.preventDefault();
-    const formEl = e.currentTarget;
-    const fd = new FormData(formEl);
-
-    // Campos FormSubmit
+    const fd = new FormData(e.currentTarget);
     fd.set("_captcha", "false");
     fd.set("_template", "table");
     fd.set("_replyto", form.email);
@@ -35,19 +29,10 @@ export default function Contact({ lang }) {
     fd.set("_next", thankYouUrl);
 
     try {
-      await fetch(ajaxEndpoint, {
-        method: "POST",
-        headers: { Accept: "application/json" },
-        body: fd,
-      });
+      await fetch(ajaxEndpoint, { method: "POST", headers: { Accept: "application/json" }, body: fd });
     } catch (_) {
-      // ignoramos error para UX consistente
     } finally {
-      // 👉 Persistimos el tema actual para que la Thank You no cambie
-      try {
-        const isDark = document.documentElement.classList.contains("dark");
-        localStorage.setItem("theme", isDark ? "dark" : "light");
-      } catch {}
+      try { localStorage.setItem("theme", "dark"); } catch {}
       window.location.assign(thankYouUrl);
     }
   }
@@ -61,13 +46,10 @@ export default function Contact({ lang }) {
           <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
             {t.contact.title}
           </h1>
-          <p className="text-gray-600 dark:text-gray-300">
-            {t.contact.subtitle}
-          </p>
+          <p className="text-gray-600 dark:text-gray-300">{t.contact.subtitle}</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
-          {/* Columna info */}
           <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-700">
             <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
               {t.nav.contact}
@@ -88,7 +70,6 @@ export default function Contact({ lang }) {
             </div>
           </div>
 
-          {/* Columna formulario */}
           <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-700">
             <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
               {lang === "es" ? "Envía un mensaje" : "Send a message"}
@@ -140,9 +121,7 @@ export default function Contact({ lang }) {
                   name="message"
                   rows={4}
                   value={form.message}
-                  onChange={(e) =>
-                    setForm({ ...form, message: e.target.value })
-                  }
+                  onChange={(e) => setForm({ ...form, message: e.target.value })}
                   required
                   className="w-full px-3 py-2 border rounded-md
                              bg-white text-gray-900 placeholder-gray-400
@@ -153,18 +132,9 @@ export default function Contact({ lang }) {
               </div>
 
               {/* Honeypot anti-spam */}
-              <input
-                type="text"
-                name="_honey"
-                style={{ display: "none" }}
-                tabIndex={-1}
-                autoComplete="off"
-              />
+              <input type="text" name="_honey" style={{ display: "none" }} tabIndex={-1} autoComplete="off" />
 
-              <button
-                type="submit"
-                className="w-full rounded-md py-2 text-white bg-blue-600"
-              >
+              <button type="submit" className="w-full rounded-md py-2 text-white bg-blue-600">
                 {t.contact.form.submit}
               </button>
             </form>
