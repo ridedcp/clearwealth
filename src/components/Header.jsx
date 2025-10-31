@@ -6,57 +6,63 @@ import { translations } from '../i18n'
 export default function Header({ lang='es' }) {
   const t = translations[lang] || translations.es;
   const base = `/${lang}`
+
   const nav = [
-    { to: `${base}/`, label: t.nav.home, icon: Home },
-    { to: `${base}/blog`, label: t.nav.blog, icon: BookOpen },
-    { to: `${base}/sobre-mi`, label: t.nav.about, icon: User2 },
-    { to: `${base}/contacto`, label: t.nav.contact, icon: MessageSquare },
+    { to: `${base}/`,        label: t.nav.home,   icon: Home,        end: true }, // <- end para no quedar activo en subrutas
+    { to: `${base}/blog`,    label: t.nav.blog,   icon: BookOpen },
+    { to: `${base}/sobre-mi`,label: t.nav.about,  icon: User2 },
+    { to: `${base}/contacto`,label: t.nav.contact,icon: MessageSquare },
   ]
+
   const [mobile, setMobile] = useState(false)
   const navigate = useNavigate()
   const toggleLang = () => { navigate(lang==='es' ? '/en/' : '/es/') }
 
+  const linkCls = (isActive) =>
+    `flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors
+     ${isActive
+        ? 'text-blue-400 bg-blue-900/20'
+        : 'text-gray-300 hover:text-blue-400 hover:bg-blue-900/10'}`
+
+  const langBtnCls =
+    'flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium ' +
+    'text-gray-300 hover:text-blue-400 hover:bg-blue-900/10'
+
   return (
-    <header className="bg-white dark:bg-gray-800 shadow-sm sticky top-0 z-50">
+    <header className="bg-gray-800 shadow-sm sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <NavLink to={`${base}/`} className="text-2xl font-bold text-blue-800 dark:text-blue-400">
+          <NavLink to={`${base}/`} end className="text-2xl font-bold text-blue-400">
             {t.brand}
           </NavLink>
 
-          <nav className="hidden md:flex items-center space-x-6">
+          <nav className="hidden md:flex items-center space-x-3">
             {nav.map(i => (
               <NavLink
                 key={i.to}
                 to={i.to}
-                className={({isActive}) =>
-                  `flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                    isActive
-                      ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20'
-                      : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'}`
-                }>
-                <i.icon className="w-4 h-4" /><span>{i.label}</span>
+                end={i.end}
+                className={({isActive}) => linkCls(isActive)}
+              >
+                <i.icon className="w-4 h-4" />
+                <span>{i.label}</span>
               </NavLink>
             ))}
-            {/* Botón idioma blanco */}
-            <button
-              onClick={toggleLang}
-              className="px-3 py-2 rounded-md flex items-center bg-white text-gray-900 hover:bg-white/90"
-            >
-              <Globe className="w-4 h-4 mr-1" /> {lang==='es'?'EN':'ES'}
+
+            {/* Botón de idioma con el mismo estilo que los links */}
+            <button onClick={toggleLang} className={langBtnCls} type="button">
+              <Globe className="w-4 h-4" />
+              <span>{lang==='es' ? 'EN' : 'ES'}</span>
             </button>
           </nav>
 
+          {/* Mobile */}
           <div className="md:hidden flex items-center space-x-2">
-            {/* Botón idioma blanco en móvil */}
-            <button
-              onClick={toggleLang}
-              className="px-3 py-2 rounded-md bg-white text-gray-900 hover:bg-white/90"
-            >
-              <span className="sr-only">Switch language</span>
+            <button onClick={toggleLang} className={langBtnCls} type="button" aria-label="Switch language">
               <Globe className="w-5 h-5" />
+              <span className="text-sm">{lang==='es' ? 'EN' : 'ES'}</span>
             </button>
-            <button onClick={()=>setMobile(m=>!m)} className="p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700">
+            <button onClick={()=>setMobile(m=>!m)} className="p-2 rounded-md text-gray-300 hover:bg-gray-700" aria-label="Menu">
               {mobile ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
@@ -64,17 +70,22 @@ export default function Header({ lang='es' }) {
       </div>
 
       {mobile && (
-        <div className="md:hidden bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
+        <div className="md:hidden bg-gray-800 border-t border-gray-700">
           <div className="px-2 pt-2 pb-3 space-y-1">
             {nav.map(i=>(
-              <NavLink key={i.to} to={i.to} onClick={()=>setMobile(false)}
+              <NavLink
+                key={i.to}
+                to={i.to}
+                end={i.end}
+                onClick={()=>setMobile(false)}
                 className={({isActive}) =>
                   `flex items-center space-x-3 w-full px-3 py-2 rounded-md text-base font-medium ${
                     isActive
-                      ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20'
-                      : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700'}`
+                      ? 'text-blue-400 bg-blue-900/20'
+                      : 'text-gray-300 hover:bg-gray-700 hover:text-blue-400'}`
                 }>
-                <i.icon className="w-5 h-5" /><span>{i.label}</span>
+                <i.icon className="w-5 h-5" />
+                <span>{i.label}</span>
               </NavLink>
             ))}
           </div>
