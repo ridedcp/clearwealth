@@ -4,6 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ClearWealth</title>
+  
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem('theme'); // 'dark'|'light'|null
+          var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var useDark = saved ? (saved === 'dark') : prefersDark;
+          document.documentElement.classList.toggle('dark', useDark);
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
