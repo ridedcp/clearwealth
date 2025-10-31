@@ -38,13 +38,22 @@ export default function Header({ lang='es' }) {
                 <i.icon className="w-4 h-4" /><span>{i.label}</span>
               </NavLink>
             ))}
-            <button onClick={toggleLang} className="p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center">
+            {/* Botón idioma blanco */}
+            <button
+              onClick={toggleLang}
+              className="px-3 py-2 rounded-md flex items-center bg-white text-gray-900 hover:bg-white/90"
+            >
               <Globe className="w-4 h-4 mr-1" /> {lang==='es'?'EN':'ES'}
             </button>
           </nav>
 
           <div className="md:hidden flex items-center space-x-2">
-            <button onClick={toggleLang} className="p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700">
+            {/* Botón idioma blanco en móvil */}
+            <button
+              onClick={toggleLang}
+              className="px-3 py-2 rounded-md bg-white text-gray-900 hover:bg-white/90"
+            >
+              <span className="sr-only">Switch language</span>
               <Globe className="w-5 h-5" />
             </button>
             <button onClick={()=>setMobile(m=>!m)} className="p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700">
