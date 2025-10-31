@@ -1,6 +1,6 @@
 import { NavLink, useNavigate } from 'react-router-dom'
-import { Menu, X, Moon, Sun, Home, BookOpen, User2, MessageSquare, Globe } from 'lucide-react'
-import { useEffect, useState } from 'react'
+import { Menu, X, Home, BookOpen, User2, MessageSquare, Globe } from 'lucide-react'
+import { useState } from 'react'
 import { translations } from '../i18n'
 
 export default function Header({ lang='es' }) {
@@ -13,9 +13,6 @@ export default function Header({ lang='es' }) {
     { to: `${base}/contacto`, label: t.nav.contact, icon: MessageSquare },
   ]
   const [mobile, setMobile] = useState(false)
-  const [dark, setDark] = useState(() => window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)
-  useEffect(() => { document.documentElement.classList.toggle('dark', dark) }, [dark])
-
   const navigate = useNavigate()
   const toggleLang = () => { navigate(lang==='es' ? '/en/' : '/es/') }
 
@@ -29,7 +26,9 @@ export default function Header({ lang='es' }) {
 
           <nav className="hidden md:flex items-center space-x-6">
             {nav.map(i => (
-              <NavLink key={i.to} to={i.to}
+              <NavLink
+                key={i.to}
+                to={i.to}
                 className={({isActive}) =>
                   `flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                     isActive
@@ -39,20 +38,16 @@ export default function Header({ lang='es' }) {
                 <i.icon className="w-4 h-4" /><span>{i.label}</span>
               </NavLink>
             ))}
-            <button onClick={toggleLang} className="p-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center">
+            <button onClick={toggleLang} className="p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center">
               <Globe className="w-4 h-4 mr-1" /> {lang==='es'?'EN':'ES'}
-            </button>
-            <button onClick={()=>setDark(v=>!v)} className="p-2 rounded-full text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
-              {dark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
             </button>
           </nav>
 
           <div className="md:hidden flex items-center space-x-2">
-            <button onClick={toggleLang} className="p-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"><Globe className="w-5 h-5" /></button>
-            <button onClick={()=>setDark(v=>!v)} className="p-2 rounded-full text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
-              {dark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+            <button onClick={toggleLang} className="p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700">
+              <Globe className="w-5 h-5" />
             </button>
-            <button onClick={()=>setMobile(m=>!m)} className="p-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
+            <button onClick={()=>setMobile(m=>!m)} className="p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700">
               {mobile ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
