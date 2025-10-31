@@ -1,6 +1,5 @@
 import SEO from "../seo/SEO";
 import { translations } from "../i18n";
-import { User2 } from "lucide-react";
 
 export default function About({ lang }) {
   const t = translations[lang] || translations.es;
@@ -9,12 +8,11 @@ export default function About({ lang }) {
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <SEO lang={lang} path={path} title={t.about.title} />
 
-      {/* Cabecera + avatar centrados */}
-      <div className="text-center mb-12 flex flex-col items-center">
-        <div className="w-32 h-32 bg-gradient-to-br from-blue-50...700 rounded-full flex items-center justify-center mx-auto mb-6">
-          <User2 className="w-16 h-16 text-white" />
-        </div>
-        <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">{t.about.title}</h1>
+      {/* Título centrado */}
+      <div className="text-center mb-12">
+        <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+          {t.about.title}
+        </h1>
       </div>
 
       {/* Card centrada y ancho consistente */}
