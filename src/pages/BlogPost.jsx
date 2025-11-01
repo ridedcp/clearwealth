@@ -71,7 +71,7 @@ export default function BlogPost({ lang }) {
       name: lang === "es" ? "Tu Dinero Simple" : "Clear Financial Life",
       logo: {
         "@type": "ImageObject",
-        url: `${siteBase}/logo-512.png`,
+        url: `${siteBase}/logo-512.svg`,
       },
     },
   };
