@@ -9,7 +9,7 @@ export default function Contact({ lang }) {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
 
   const token = import.meta.env.VITE_FORMSUBMIT_TOKEN ?? "43ac32c8eb2e2fc207154edbba51fccd";
-  const ajaxEndpoint = `https://formsubmit.co/ajax/${token}`;
+  const ajaxEndpoint = "https://formsubmit.co/clearfinanciallife@gmail.com";
 
   const siteBase =
     typeof window !== "undefined"
