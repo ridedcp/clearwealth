@@ -24,22 +24,22 @@ export default function BlogPost({ lang }) {
 
   const path = `/${lang}/blog/${post.slug}`;
   const title = post.title;
-  const description = post.description || post.excerpt;
+  const description = post.description || post.excerpt || "";
   const cover = post.cover;
 
   // TOC simple: extrae anclas id="..."
   const toc = Array.from(
     post.content.matchAll(/<h2 id="([^"]+)">([^<]+)<\/h2>/g)
-  ).map((m) => ({
-    id: m[1],
-    text: m[2],
-  }));
+  ).map((m) => ({ id: m[1], text: m[2] }));
 
   // ---- JSON-LD Article ----
   const siteBase = "https://clearfinanciallife.com";
-  const ogImage =
+  const pageUrl = `${siteBase}${path}`;
+
+  const absoluteImage =
     cover && (cover.startsWith("http") ? cover : `${siteBase}${cover}`);
 
+  // Normaliza fecha a ISO (si no es parseable usa ahora)
   const isoDate = (() => {
     try {
       const d = new Date(post.date);
@@ -49,31 +49,38 @@ export default function BlogPost({ lang }) {
     }
   })();
 
+  const publisherName =
+    lang === "es" ? "Tu Dinero Simple" : "Clear Financial Life";
+
+  // Preferimos SVG; si en algún momento cambias a PNG, solo actualiza la URL
+  const publisherLogo = `${siteBase}/logo-512.svg`;
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
-    mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": `${siteBase}${path}`,
-    },
+    mainEntityOfPage: { "@type": "WebPage", "@id": pageUrl },
     headline: title,
-    description: description,
-    ...(ogImage ? { image: [ogImage] } : {}),
+    description,
+    ...(absoluteImage ? { image: [absoluteImage] } : {}),
     datePublished: isoDate,
     dateModified: isoDate,
+    inLanguage: lang === "es" ? "es-ES" : "en-US",
+    articleSection: post.category || (lang === "es" ? "Blog" : "Blog"),
     author: {
       "@type": "Organization",
-      name: lang === "es" ? "Tu Dinero Simple" : "Clear Financial Life",
-      url: siteBase,
+      name: publisherName,
+      url: siteBase
     },
     publisher: {
       "@type": "Organization",
-      name: lang === "es" ? "Tu Dinero Simple" : "Clear Financial Life",
+      name: publisherName,
       logo: {
         "@type": "ImageObject",
-        url: `${siteBase}/logo-512.svg`,
-      },
-    },
+        url: publisherLogo
+        // Si en el futuro quieres validar dimensiones:
+        // , width: 512, height: 512
+      }
+    }
   };
 
   return (
@@ -126,7 +133,7 @@ export default function BlogPost({ lang }) {
               alt={post.title}
               className="w-full h-auto rounded-xl border border-gray-800"
               loading="eager"
-              fetchpriority="high"
+              fetchPriority="high"
             />
           </div>
         )}
