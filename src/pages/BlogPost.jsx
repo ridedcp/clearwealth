@@ -1,32 +1,85 @@
-import { useParams, Link } from 'react-router-dom'
-import SEO from '../seo/SEO'
-import { getPostBySlug } from '../data/posts'
-import AdPlaceholder from '../components/AdPlaceholder'
-import { translations } from '../i18n'
+import SEO from "../seo/SEO";
+import { getPostBySlug } from "../data/posts";
+import { useParams } from "react-router-dom";
 
 export default function BlogPost({ lang }) {
-  const { slug } = useParams()
-  const post = getPostBySlug(lang, slug)
-  const t = translations[lang] || translations.es;
-  if (!post) return <div className="max-w-4xl mx-auto p-8">Not found</div>
-  const path = `/${lang}/blog/${slug}`
+  const { slug } = useParams();
+  const post = getPostBySlug(lang, slug);
+
+  if (!post) {
+    return (
+      <div className="max-w-3xl mx-auto px-4 py-16">
+        <SEO lang={lang} path={`/${lang}/blog/${slug}`} title={lang === 'es' ? 'Artículo no encontrado' : 'Post not found'} noindex />
+        <h1 className="text-2xl font-bold">{lang === 'es' ? 'Artículo no encontrado' : 'Post not found'}</h1>
+      </div>
+    );
+  }
+
+  const path = `/${lang}/blog/${post.slug}`;
+  const title = post.title;
+  const description = post.description || post.excerpt;
+  const cover = post.cover;
+
+  // TOC simple: extrae anclas id="..."
+  const toc = Array.from(post.content.matchAll(/<h2 id="([^"]+)">([^<]+)<\/h2>/g)).map((m) => ({
+    id: m[1],
+    text: m[2]
+  }));
+
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <SEO lang={lang} path={path} title={post.title} description={post.excerpt} />
-      <AdPlaceholder position="Cabecera artículo" />
-      <Link to={`/${lang}/blog`} className="flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 mb-6">
-        <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7"/></svg>
-        {t.blog.back}
-      </Link>
-      <article className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-sm border border-gray-200 dark:border-gray-700">
-        <div className="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-4">
-          <span className="bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-400 px-2 py-1 rounded mr-3">{post.category}</span>
-          <span>{post.date}</span>
+    <div className="max-w-4xl mx-auto px-4 py-8">
+      <SEO lang={lang} path={path} title={title} description={description} image={cover} />
+
+      <article className="bg-gray-900/40 dark:bg-gray-800/60 rounded-2xl border border-gray-800 p-6">
+        {/* Meta */}
+        <div className="flex items-center gap-3 mb-4 text-sm text-gray-400">
+          <span className="inline-block px-2 py-1 rounded-full bg-blue-900/30 text-blue-300">{post.category}</span>
+          <span>•</span>
+          <time>{post.date}</time>
+          {post.readMins && (
+            <>
+              <span>•</span>
+              <span>{post.readMins} min</span>
+            </>
+          )}
         </div>
-        <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">{post.title}</h1>
-        <div className="prose prose-blue dark:prose-invert max-w-none" dangerouslySetInnerHTML={{ __html: post.content }} />
+
+        {/* Título */}
+        <h1 className="text-3xl md:text-4xl font-extrabold text-white mb-4">{post.title}</h1>
+
+        {/* Portada */}
+        {cover && (
+          <div className="mb-6">
+            <img
+              src={cover}
+              alt={post.title}
+              className="w-full h-auto rounded-xl border border-gray-800"
+              loading="eager"
+              fetchpriority="high"
+            />
+          </div>
+        )}
+
+        {/* TOC */}
+        {toc.length > 1 && (
+          <nav className="mb-8 text-sm">
+            <div className="font-semibold text-gray-300 mb-2">{lang === 'es' ? 'En este artículo' : 'In this article'}</div>
+            <ul className="space-y-1 text-blue-300">
+              {toc.map((i) => (
+                <li key={i.id}>
+                  <a href={`#${i.id}`} className="hover:underline">{i.text}</a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        )}
+
+        {/* Contenido */}
+        <div
+          className="prose prose-invert max-w-none prose-img:rounded-xl prose-img:border prose-img:border-gray-800"
+          dangerouslySetInnerHTML={{ __html: post.content }}
+        />
       </article>
-      <AdPlaceholder position="Mitad artículo" />
     </div>
-  )
+  );
 }
