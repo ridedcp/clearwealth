@@ -1,0 +1,88 @@
+// scripts/generate-sitemap.mjs
+import { writeFileSync } from "node:fs";
+import { join } from "node:path";
+import { pathToFileURL } from "node:url";
+
+// Rutas estáticas ES/EN
+const STATIC_ES = ["/es/", "/es/blog", "/es/sobre-mi", "/es/contacto", "/es/privacidad"];
+const STATIC_EN = ["/en/", "/en/blog", "/en/about", "/en/contact", "/en/privacy"];
+
+// Carga dinámica de posts
+const postsModuleUrl = pathToFileURL(join(process.cwd(), "src/data/posts.js")).href;
+const { postsEs, postsEn } = await import(postsModuleUrl);
+
+const BASE = "https://clearfinanciallife.com";
+const TODAY = new Date().toISOString().slice(0, 10);
+
+function urlEntry(loc, alternates = []) {
+  const altLinks = alternates
+    .map(
+      (a) =>
+        `<xhtml:link rel="alternate" hreflang="${a.lang}" href="${BASE}${a.href}"/>`
+    )
+    .join("");
+  return `
+  <url>
+    <loc>${BASE}${loc}</loc>
+    <lastmod>${TODAY}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    ${altLinks}
+  </url>`;
+}
+
+// Estáticas con alternates cruzados
+const staticEntries = [
+  ...STATIC_ES.map((p) =>
+    urlEntry(p, [
+      { lang: "en", href: p.replace(/^\/es/, "/en") },
+      { lang: "es", href: p },
+      { lang: "x-default", href: "/es/" },
+    ])
+  ),
+  ...STATIC_EN.map((p) =>
+    urlEntry(p, [
+      { lang: "es", href: p.replace(/^\/en/, "/es") },
+      { lang: "en", href: p },
+      { lang: "x-default", href: "/es/" },
+    ])
+  ),
+];
+
+// Posts pareados por id (tienes mismo id en ES/EN)
+function esPath(slug) { return `/es/blog/${slug}`; }
+function enPath(slug) { return `/en/blog/${slug}`; }
+
+const postEntries = [];
+for (const pEs of postsEs) {
+  const pEn = postsEn.find((q) => q.id === pEs.id);
+  postEntries.push(
+    urlEntry(esPath(pEs.slug), [
+      { lang: "en", href: enPath(pEn?.slug ?? pEs.slug) },
+      { lang: "es", href: esPath(pEs.slug) },
+      { lang: "x-default", href: "/es/" },
+    ])
+  );
+}
+for (const pEn of postsEn) {
+  const pEs = postsEs.find((q) => q.id === pEn.id);
+  postEntries.push(
+    urlEntry(enPath(pEn.slug), [
+      { lang: "es", href: esPath(pEs?.slug ?? pEn.slug) },
+      { lang: "en", href: enPath(pEn.slug) },
+      { lang: "x-default", href: "/es/" },
+    ])
+  );
+}
+
+// Construcción final (no incluimos /gracias /thank-you)
+const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+${staticEntries.join("\n")}
+${postEntries.join("\n")}
+</urlset>`.trim();
+
+const outFile = join(process.cwd(), "public", "sitemap.xml");
+writeFileSync(outFile, xml, "utf8");
+console.log("✔ sitemap.xml generado en", outFile);
