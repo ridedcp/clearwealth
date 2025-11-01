@@ -52,7 +52,7 @@ export default function BlogPost({ lang }) {
   const publisherName =
     lang === "es" ? "Tu Dinero Simple" : "Clear Financial Life";
 
-  // Preferimos SVG; si en algún momento cambias a PNG, solo actualiza la URL
+  // Preferimos SVG; si cambias a PNG, actualiza la URL
   const publisherLogo = `${siteBase}/logo-512.svg`;
 
   const jsonLd = {
@@ -77,8 +77,7 @@ export default function BlogPost({ lang }) {
       logo: {
         "@type": "ImageObject",
         url: publisherLogo
-        // Si en el futuro quieres validar dimensiones:
-        // , width: 512, height: 512
+        // width: 512, height: 512 // opcional
       }
     }
   };
