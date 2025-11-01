@@ -1,86 +1,151 @@
-import { writeFileSync } from "node:fs";
-import { fileURLToPath, pathToFileURL } from "node:url";
-import { dirname, join } from "node:path";
-
-// Rutas “estáticas” de tu web
-const STATIC_ES = ["/es/", "/es/blog", "/es/sobre-mi", "/es/contacto", "/es/privacidad"];
-const STATIC_EN = ["/en/", "/en/blog", "/en/about", "/en/contact", "/en/privacy"];
-
-// Cargamos dinámicamente los posts del proyecto (ESM)
-const postsModuleUrl = pathToFileURL(join(process.cwd(), "src/data/posts.js")).href;
-const { postsEs, postsEn } = await import(postsModuleUrl);
-
-const BASE = "https://clearfinanciallife.com";
-const TODAY = new Date().toISOString().slice(0, 10);
-
-// Construye <url> con sus hreflang alternates
-function urlEntry(loc, alternates = []) {
-  const altLinks = alternates.map(
-    (a) =>
-      `<xhtml:link rel="alternate" hreflang="${a.lang}" href="${BASE}${a.href}"/>`
-  ).join("");
-
-  return `
-  <url>
-    <loc>${BASE}${loc}</loc>
-    <lastmod>${TODAY}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    ${altLinks}
-  </url>`;
-}
-
-// Páginas estáticas con alternates cruzados
-const staticEntries = [
-  ...STATIC_ES.map((p) => urlEntry(p, [
-    { lang: "en", href: p.replace(/^\/es/, "/en") },
-    { lang: "es", href: p },
-    { lang: "x-default", href: "/es/" },
-  ])),
-  ...STATIC_EN.map((p) => urlEntry(p, [
-    { lang: "es", href: p.replace(/^\/en/, "/es") },
-    { lang: "en", href: p },
-    { lang: "x-default", href: "/es/" },
-  ])),
-];
-
-// Posts con alternates (solo si existe el equivalente)
-const mapEs = new Map(postsEs.map((p) => [p.slug, p]));
-const mapEn = new Map(postsEn.map((p) => [p.slug, p]));
-function esPath(slug) { return `/es/blog/${slug}`; }
-function enPath(slug) { return `/en/blog/${slug}`; }
-
-// Empareja por id (los tuyos coinciden)
-const postEntries = [];
-for (const pEs of postsEs) {
-  const pEn = postsEn.find((q) => q.id === pEs.id);
-  postEntries.push(
-    urlEntry(esPath(pEs.slug), [
-      { lang: "en", href: enPath(pEn?.slug ?? pEs.slug) },
-      { lang: "es", href: esPath(pEs.slug) },
-      { lang: "x-default", href: "/es/" },
-    ])
-  );
-}
-for (const pEn of postsEn) {
-  const pEs = postsEs.find((q) => q.id === pEn.id);
-  postEntries.push(
-    urlEntry(enPath(pEn.slug), [
-      { lang: "es", href: esPath(pEs?.slug ?? pEn.slug) },
-      { lang: "en", href: enPath(pEn.slug) },
-      { lang: "x-default", href: "/es/" },
-    ])
-  );
-}
-
-// Excluimos /gracias y /thank-you (no los añadimos)
-const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
-${staticEntries.join("\n")}
-${postEntries.join("\n")}
-</urlset>`.trim();
+  <!-- ESTÁTICAS ES -->
+  <url>
+    <loc>https://clearfinanciallife.com/es/</loc>
+    <lastmod>2025-11-01</lastmod><changefreq>weekly</changefreq><priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://clearfinanciallife.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://clearfinanciallife.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clearfinanciallife.com/es/"/>
+  </url>
+  <url>
+    <loc>https://clearfinanciallife.com/es/blog</loc>
+    <lastmod>2025-11-01</lastmod><changefreq>weekly</changefreq><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://clearfinanciallife.com/en/blog"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://clearfinanciallife.com/es/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clearfinanciallife.com/es/"/>
+  </url>
+  <url>
+    <loc>https://clearfinanciallife.com/es/sobre-mi</loc>
+    <lastmod>2025-11-01</lastmod><changefreq>monthly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://clearfinanciallife.com/en/about"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://clearfinanciallife.com/es/sobre-mi"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clearfinanciallife.com/es/"/>
+  </url>
+  <url>
+    <loc>https://clearfinanciallife.com/es/contacto</loc>
+    <lastmod>2025-11-01</lastmod><changefreq>monthly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://clearfinanciallife.com/en/contact"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://clearfinanciallife.com/es/contacto"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clearfinanciallife.com/es/"/>
+  </url>
+  <url>
+    <loc>https://clearfinanciallife.com/es/privacidad</loc>
+    <lastmod>2025-11-01</lastmod><changefreq>yearly</changefreq><priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://clearfinanciallife.com/en/privacy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://clearfinanciallife.com/es/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clearfinanciallife.com/es/"/>
+  </url>
 
-const outFile = join(process.cwd(), "public", "sitemap.xml");
-writeFileSync(outFile, xml, "utf8");
-console.log(`✔ sitemap.xml generado: ${outFile}`);
+  <!-- ESTÁTICAS EN -->
+  <url>
+    <loc>https://clearfinanciallife.com/en/</loc>
+    <lastmod>2025-11-01</lastmod><changefreq>weekly</changefreq><priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://clearfinanciallife.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://clearfinanciallife.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clearfinanciallife.com/es/"/>
+  </url>
+  <url>
+    <loc>https://clearfinanciallife.com/en/blog</loc>
+    <lastmod>2025-11-01</lastmod><changefreq>weekly</changefreq><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://clearfinanciallife.com/es/blog"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://clearfinanciallife.com/en/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clearfinanciallife.com/es/"/>
+  </url>
+  <url>
+    <loc>https://clearfinanciallife.com/en/about</loc>
+    <lastmod>2025-11-01</lastmod><changefreq>monthly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://clearfinanciallife.com/es/sobre-mi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://clearfinanciallife.com/en/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clearfinanciallife.com/es/"/>
+  </url>
+  <url>
+    <loc>https://clearfinanciallife.com/en/contact</loc>
+    <lastmod>2025-11-01</lastmod><changefreq>monthly</changefreq><priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://clearfinanciallife.com/es/contacto"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://clearfinanciallife.com/en/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clearfinanciallife.com/es/"/>
+  </url>
+  <url>
+    <loc>https://clearfinanciallife.com/en/privacy</loc>
+    <lastmod>2025-11-01</lastmod><changefreq>yearly</changefreq><priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://clearfinanciallife.com/es/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://clearfinanciallife.com/en/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clearfinanciallife.com/es/"/>
+  </url>
+
+  <!-- POSTS ES (5) -->
+  <url>
+    <loc>https://clearfinanciallife.com/es/blog/como-ahorrar-100-euros-al-mes-sin-esfuerzo</loc>
+    <lastmod>2025-11-01</lastmod><changefreq>weekly</changefreq><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://clearfinanciallife.com/en/blog/how-to-save-100-euros-a-month"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://clearfinanciallife.com/es/blog/como-ahorrar-100-euros-al-mes-sin-esfuerzo"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clearfinanciallife.com/es/"/>
+  </url>
+  <url>
+    <loc>https://clearfinanciallife.com/es/blog/mejores-apps-controlar-gastos-2025</loc>
+    <lastmod>2025-11-01</lastmod><changefreq>weekly</changefreq><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://clearfinanciallife.com/en/blog/best-expense-tracker-apps-2025"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://clearfinanciallife.com/es/blog/mejores-apps-controlar-gastos-2025"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clearfinanciallife.com/es/"/>
+  </url>
+  <url>
+    <loc>https://clearfinanciallife.com/es/blog/interes-compuesto-explicado-facil</loc>
+    <lastmod>2025-11-01</lastmod><changefreq>weekly</changefreq><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://clearfinanciallife.com/en/blog/compound-interest-explained-easy"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://clearfinanciallife.com/es/blog/interes-compuesto-explicado-facil"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clearfinanciallife.com/es/"/>
+  </url>
+  <url>
+    <loc>https://clearfinanciallife.com/es/blog/habitos-financieros-para-mejorar-tus-finanzas</loc>
+    <lastmod>2025-11-01</lastmod><changefreq>weekly</changefreq><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://clearfinanciallife.com/en/blog/five-financial-habits-to-improve"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://clearfinanciallife.com/es/blog/habitos-financieros-para-mejorar-tus-finanzas"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clearfinanciallife.com/es/"/>
+  </url>
+  <url>
+    <loc>https://clearfinanciallife.com/es/blog/metodo-50-30-20-presupuesto</loc>
+    <lastmod>2025-11-01</lastmod><changefreq>weekly</changefreq><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://clearfinanciallife.com/en/blog/50-30-20-budget-method"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://clearfinanciallife.com/es/blog/metodo-50-30-20-presupuesto"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clearfinanciallife.com/es/"/>
+  </url>
+
+  <!-- POSTS EN (5) -->
+  <url>
+    <loc>https://clearfinanciallife.com/en/blog/how-to-save-100-euros-a-month</loc>
+    <lastmod>2025-11-01</lastmod><changefreq>weekly</changefreq><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://clearfinanciallife.com/es/blog/como-ahorrar-100-euros-al-mes-sin-esfuerzo"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://clearfinanciallife.com/en/blog/how-to-save-100-euros-a-month"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clearfinanciallife.com/es/"/>
+  </url>
+  <url>
+    <loc>https://clearfinanciallife.com/en/blog/best-expense-tracker-apps-2025</loc>
+    <lastmod>2025-11-01</lastmod><changefreq>weekly</changefreq><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://clearfinanciallife.com/es/blog/mejores-apps-controlar-gastos-2025"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://clearfinanciallife.com/en/blog/best-expense-tracker-apps-2025"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clearfinanciallife.com/es/"/>
+  </url>
+  <url>
+    <loc>https://clearfinanciallife.com/en/blog/compound-interest-explained-easy</loc>
+    <lastmod>2025-11-01</lastmod><changefreq>weekly</changefreq><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://clearfinanciallife.com/es/blog/interes-compuesto-explicado-facil"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://clearfinanciallife.com/en/blog/compound-interest-explained-easy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clearfinanciallife.com/es/"/>
+  </url>
+  <url>
+    <loc>https://clearfinanciallife.com/en/blog/five-financial-habits-to-improve</loc>
+    <lastmod>2025-11-01</lastmod><changefreq>weekly</changefreq><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://clearfinanciallife.com/es/blog/habitos-financieros-para-mejorar-tus-finanzas"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://clearfinanciallife.com/en/blog/five-financial-habits-to-improve"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clearfinanciallife.com/es/"/>
+  </url>
+  <url>
+    <loc>https://clearfinanciallife.com/en/blog/50-30-20-budget-method</loc>
+    <lastmod>2025-11-01</lastmod><changefreq>weekly</changefreq><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://clearfinanciallife.com/es/blog/metodo-50-30-20-presupuesto"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://clearfinanciallife.com/en/blog/50-30-20-budget-method"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clearfinanciallife.com/es/"/>
+  </url>
+</urlset>
