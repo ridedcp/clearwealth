@@ -171,23 +171,118 @@ export const postsEs = [
 
 export const postsEn = [
   {
-    id: 1,
-    slug: "how-to-save-100-euros-a-month",
-    title: "How to Save 100 Euros per Month Effortlessly",
-    date: "March 15, 2025",
-    category: "Saving",
-    readMins: 4,
-    cover: "/images/posts/como-ahorrar-100-euros-al-mes-sin-esfuerzo/cover.jpg",
-    excerpt: "Practical strategies to consistently save €100/month without drastic lifestyle changes.",
-    description: "Simple habits to save €100/month: subscriptions audit, home cooking, smart shopping and automation.",
-    content: `
-      <h2 id="intro">Yes, you can save €100/month</h2><p>Small daily tweaks compound.</p>
-      <h2 id="subs">1. Audit subscriptions</h2><p>Cancel unused ones.</p>
-      <h2 id="cook">2. Cook at home</h2><p>Cut eating out to save €30–50.</p>
-      <h2 id="shop">3. Smart grocery shopping</h2><p>Compare unit prices and pre-plan.</p>
-      <h2 id="auto">4. Automate savings</h2><p>Auto-transfer on payday.</p>
-    `
-  },
+  id: 1,
+  slug: "how-to-save-100-euros-a-month",
+  title: "How to Save €100 (or $110) a Month Effortlessly",
+  date: "March 15, 2025",
+  category: "Saving",
+  readMins: 8,
+  cover: "/images/posts/como-ahorrar-100-euros-al-mes-sin-esfuerzo/cover.jpg",
+  excerpt: "Practical strategies to consistently save €100/month (≈$110) without drastic lifestyle changes—works in the US, UK, EU, and Australia.",
+  description: "Simple, proven habits to save €100/month: audit subscriptions, cook at home, shop smarter, and automate savings—adapted for global readers.",
+  content: `
+    <h2 id="intro">Yes, you can save €100 (or $110) a month—even on a tight budget</h2>
+    <p>Whether you’re in London, Berlin, Sydney, or Chicago, saving €100 (≈$110) per month is absolutely achievable—not by cutting essentials, but by making smarter, automated choices. Small daily tweaks compound into real financial freedom over time.</p>
+
+    <h2 id="subs">1. Audit Your Subscriptions</h2>
+    <p>Subscription fatigue is real. The average person in the US spends <strong>$219/month</strong> on subscriptions—but believes they only spend $86! In the UK and EU, it’s common to pay for 4–6 streaming, fitness, or app services without using half of them.</p>
+    <h3>What to do:</h3>
+    <ul>
+      <li><strong>List all recurring charges:</strong> Check bank/credit card statements for the last 90 days.</li>
+      <li><strong>Ask yourself:</strong> “Have I used this in the past month?” If not, cancel it.</li>
+      <li><strong>Share or rotate:</strong> Split Netflix, Spotify, or gym memberships with family (where allowed). Rotate streaming services seasonally.</li>
+    </ul>
+    <h3>Tools by region:</h3>
+    <ul>
+      <li><strong>US/Global:</strong> Rocket Money, Truebill, or Trim (auto-cancel unused subs).</li>
+      <li><strong>UK/EU:</strong> Moneyhub, Emma, or Revolut’s subscription tracker.</li>
+      <li><strong>Australia:</strong> TrackMySubs or Pocketbook.</li>
+    </ul>
+    <p><strong>Potential savings:</strong> Canceling 2–3 unused services can free up <strong>€20–30 (≈$22–33) per month</strong>.</p>
+
+    <h2 id="cook">2. Cook at Home More Often</h2>
+    <p>Eating out adds up fast:
+      <ul>
+        <li><strong>US:</strong> Average meal = $15–25</li>
+        <li><strong>UK:</strong> Pub meal = £12–18 (≈€14–21)</li>
+        <li><strong>EU:</strong> Restaurant meal = €12–20</li>
+        <li><strong>AU:</strong> Café lunch = AU$20–30 (≈€12–18)</li>
+      </ul>
+      Meanwhile, a home-cooked meal costs just <strong>€3–5 (≈$3–6)</strong> per person.
+    </p>
+    <h3>Smart strategies:</h3>
+    <ul>
+      <li><strong>Batch cook:</strong> Prepare 2–3 versatile dishes (e.g., chili, curry, pasta sauce) on weekends.</li>
+      <li><strong>Plan weekly menus:</strong> Reduces impulse takeout and food waste.</li>
+      <li><strong>Use leftovers creatively:</strong> Turn roasted chicken into tacos, soup, or salad.</li>
+    </ul>
+    <h3>Helpful apps:</h3>
+    <ul>
+      <li><strong>Mealime</strong> (US/Global): Personalized meal plans + auto-shopping list.</li>
+      <li><strong>SuperCook</strong> (UK/EU): Finds recipes based on ingredients you already have.</li>
+      <li><strong>Easy Meals</strong> (AU): Budget-friendly recipes with Woolworths/Coles integration.</li>
+    </ul>
+    <p><strong>Potential savings:</strong> Cutting dining out from 5x to 2x/week saves <strong>€30–50 (≈$33–55) monthly</strong>.</p>
+
+    <h2 id="shop">3. Shop Smarter at the Grocery Store</h2>
+    <p>Grocery bills are a major budget leak—but easy to optimize with a few habits.</p>
+    <h3>Universal tips:</h3>
+    <ul>
+      <li><strong>Always shop with a list</strong> (based on your meal plan).</li>
+      <li><strong>Compare unit prices:</strong> Look at €/kg or $/lb—not just package price.</li>
+      <li><strong>Choose store brands:</strong> Often 20–30% cheaper with similar quality.</li>
+      <li><strong>Buy in-season produce:</strong> Fresher, tastier, and cheaper.</li>
+    </ul>
+    <h3>Price-comparison apps by region:</h3>
+    <ul>
+      <li><strong>EU:</strong> <em>Soysuper</em> (Spain), <em>MySupermarket</em> (France/Germany)</li>
+      <li><strong>UK:</strong> <em>Trolley</em> or <em>MySupermarket.co.uk</em></li>
+      <li><strong>US:</strong> <em>Flipp</em> (compares local flyers), <em>Buy Me Once</em> (for durable goods)</li>
+      <li><strong>AU:</strong> <em>Half Price</em> or <em>Shopfully</em></li>
+    </ul>
+    <p><strong>Potential savings:</strong> Smart shopping can reduce your grocery bill by <strong>15–25%</strong>—that’s <strong>€20–30 (≈$22–33) per month</strong> for an average household.</p>
+
+    <h2 id="auto">4. Automate Your Savings</h2>
+    <p>The secret to consistent saving? <strong>Make it invisible.</strong> Behavioral economics shows we’re far more likely to save when it happens automatically—before we even see the money.</p>
+    <h3>How to set it up:</h3>
+    <ul>
+      <li><strong>Payday transfer:</strong> Schedule an automatic transfer of €100 (or $110) to a separate savings account the same day you get paid.</li>
+      <li><strong>Round-up apps:</strong> Link your card to apps that round up purchases and save the change.</li>
+      <li><strong>Split direct deposit:</strong> In the US/UK/AU, many employers let you split your paycheck into multiple accounts.</li>
+    </ul>
+    <h3>Top automation tools:</h3>
+    <ul>
+      <li><strong>US:</strong> Chime (automatic savings), Qapital (goal-based rules)</li>
+      <li><strong>UK:</strong> Monzo pots, Chip (AI-powered savings)</li>
+      <li><strong>EU:</strong> N26 Spaces, bunq (auto-save features)</li>
+      <li><strong>AU:</strong> Up Bank (Round Ups), Raiz (micro-investing)</li>
+    </ul>
+    <p><strong>Pro tip:</strong> Keep your savings account at a different bank—it reduces temptation to dip in.</p>
+
+    <h2>Putting It All Together</h2>
+    <p>Here’s how the numbers add up across regions:</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Strategy</th>
+          <th>Eurozone (€)</th>
+          <th>US ($)</th>
+          <th>UK (£)</th>
+          <th>Australia (AU$)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Cancel unused subscriptions</td><td>€25</td><td>$28</td><td>£22</td><td>AU$40</td></tr>
+        <tr><td>Cook at home more</td><td>€40</td><td>$44</td><td>£35</td><td>AU$65</td></tr>
+        <tr><td>Smart grocery shopping</td><td>€25</td><td>$28</td><td>£20</td><td>AU$40</td></tr>
+        <tr><td>Automate the rest</td><td>€10</td><td>$10</td><td>£8</td><td>AU$15</td></tr>
+        <tr><td><strong>Total monthly savings</strong></td><td><strong>€100</strong></td><td><strong>$110</strong></td><td><strong>£85</strong></td><td><strong>AU$160</strong></td></tr>
+      </tbody>
+    </table>
+    <p>No extreme cuts. No guilt. Just smarter systems.</p>
+    <p><strong>Start small, stay consistent—and let automation do the heavy lifting.</strong> In one year, you’ll have saved €1,200 (≈$1,320), enough for an emergency fund, a vacation, or your next financial goal.</p>
+  `
+},
   {
     id: 2,
     slug: "best-expense-tracker-apps-2025",
