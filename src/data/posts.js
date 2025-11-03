@@ -95,78 +95,276 @@ export const postsEs = [
   `
   },
   {
-    id: 2,
-    slug: "mejores-apps-controlar-gastos-2025",
-    title: "Las mejores apps para controlar tus gastos en 2025",
-    date: "10 de marzo de 2025",
-    category: "Presupuesto",
-    readMins: 4,
-    cover: "/images/posts/mejores-apps-controlar-gastos-2025/cover.jpg",
-    excerpt: "Herramientas digitales que te ayudarán a llevar un control exhaustivo de tus finanzas personales.",
-    description: "Comparativa de apps para controlar gastos: Fintonic, Money Manager, Wallet, Sheets y Revolut.",
-    content: `
-      <h2 id="intro">¿Te cuesta llevar un control de tus gastos diarios?</h2>
-      <p>Estas apps pueden transformar tu relación con el dinero.</p>
-      <h2 id="fintonic">1. Fintonic</h2><p>Conexión bancaria y análisis de gastos.</p>
-      <h2 id="moneymanager">2. Money Manager</h2><p>Entrada manual con gráficos claros.</p>
-      <h2 id="wallet">3. Wallet</h2><p>Metas y seguimiento de inversiones.</p>
-      <h2 id="sheets">4. Google Sheets</h2><p>Control total con plantillas.</p>
-      <h2 id="revolut">5. Revolut</h2><p>Categorización automática y límites.</p>
-    `
-  },
+  id: 2,
+  slug: "mejores-apps-controlar-gastos-2025",
+  title: "Las mejores apps para controlar tus gastos en 2025",
+  date: "10 de marzo de 2025",
+  category: "Presupuesto",
+  readMins: 6,
+  cover: "/images/posts/mejores-apps-controlar-gastos-2025/cover.jpg",
+  excerpt: "Herramientas digitales que te ayudarán a llevar un control exhaustivo de tus finanzas personales.",
+  description: "Comparativa de apps para controlar gastos: Fintonic, Money Manager, Wallet, Sheets y Revolut.",
+  content: `
+    <h2 id="intro">¿Te cuesta llevar un control de tus gastos diarios?</h2>
+    <p>No estás solo. Según la CNMV, el 62% de los españoles no lleva un presupuesto mensual. La buena noticia: hoy existen apps intuitivas que hacen el trabajo por ti. Aquí, analizamos las 5 mejores opciones de 2025, según tus necesidades.</p>
+
+    <h2 id="fintonic">1. Fintonic</h2>
+    <figure>
+      <img src="/images/posts/mejores-apps-controlar-gastos-2025/fintonic.jpg" alt="App Fintonic en smartphone" loading="lazy" />
+      <figcaption>Conexión segura con tu banco y análisis en tiempo real.</figcaption>
+    </figure>
+    <p><strong>Ideal para:</strong> Quienes quieren ver todos sus gastos automáticamente categorizados sin introducir nada manualmente.</p>
+    <p>Fintonic se conecta a más de 150 entidades financieras en España y Europa mediante API segura (PSD2). Ofrece alertas de gastos inusuales, comparativas mensuales y consejos personalizados. Es gratuita, aunque tiene una versión Premium (4,99€/mes) con informes avanzados.</p>
+    <p><strong>Pros:</strong> Automático, en español, integración con cuentas y tarjetas.<br><strong>Contras:</strong> Algunas funciones clave están en la versión de pago.</p>
+
+    <h2 id="moneymanager">2. Money Manager Expense & Budget</h2>
+    <figure>
+      <img src="/images/posts/mejores-apps-controlar-gastos-2025/money-manager.jpg" alt="Interfaz de Money Manager" loading="lazy" />
+      <figcaption>Entrada manual con gráficos claros y sin publicidad (en versión Pro).</figcaption>
+    </figure>
+    <p><strong>Ideal para:</strong> Usuarios que prefieren el control total y no quieren vincular su banco.</p>
+    <p>Esta app, con más de 50 millones de descargas, permite registrar ingresos y gastos manualmente. Sus gráficos por categorías (alimentación, transporte, ocio) son intuitivos. La versión gratuita incluye anuncios; la Pro (2,99€/mes) los elimina y añade copias de seguridad en la nube.</p>
+    <p><strong>Pros:</strong> Ligera, offline, sin conexión bancaria.<br><strong>Contras:</strong> Requiere disciplina para registrar cada gasto.</p>
+
+    <h2 id="wallet">3. Wallet by BudgetBakers</h2>
+    <figure>
+      <img src="/images/posts/mejores-apps-controlar-gastos-2025/wallet.jpg" alt="App Wallet con metas financieras" loading="lazy" />
+      <figcaption>Metas de ahorro, deudas e inversiones en un solo lugar.</figcaption>
+    </figure>
+    <p><strong>Ideal para:</strong> Quienes buscan una visión 360° de sus finanzas, incluyendo inversiones y deudas.</p>
+    <p>Wallet permite sincronizar cuentas bancarias, pero también introducir manualmente activos como fondos de inversión, criptomonedas o préstamos. Su función estrella son las "metas": puedes crear un objetivo (ej. “Vacaciones 2025”) y la app te dice cuánto ahorrar mensualmente.</p>
+    <p><strong>Pros:</strong> Gestión integral, multiplataforma, informes detallados.<br><strong>Contras:</strong> Versión gratuita limitada; Premium a 4,99€/mes.</p>
+
+    <h2 id="sheets">4. Google Sheets (con plantillas)</h2>
+    <figure>
+      <img src="/images/posts/mejores-apps-controlar-gastos-2025/google-sheets.jpg" alt="Plantilla de presupuesto en Google Sheets" loading="lazy" />
+      <figcaption>Control total, gratis y personalizable al 100%.</figcaption>
+    </figure>
+    <p><strong>Ideal para:</strong> Perfeccionistas, contables caseros o quienes aman el Excel.</p>
+    <p>Plantillas como “Presupuesto Mensual” de Vertex42 o “Finanzas Personales” de The Budget Mom ofrecen tablas automáticas con gráficos, seguimiento de metas y comparativas anuales. Todo se actualiza en tiempo real desde tu móvil o PC.</p>
+    <p><strong>Pros:</strong> Gratis, ilimitado, sin publicidad, totalmente personalizable.<br><strong>Contras:</strong> Requiere introducir datos manualmente y conocimientos básicos de hojas de cálculo.</p>
+
+    <h2 id="revolut">5. Revolut</h2>
+    <figure>
+      <img src="/images/posts/mejores-apps-controlar-gastos-2025/revolut.jpg" alt="Categorización automática en Revolut" loading="lazy" />
+      <figcaption>Categorización automática y límites de gasto por categoría.</figcaption>
+    </figure>
+    <p><strong>Ideal para:</strong> Usuarios de Revolut que quieren control sin instalar otra app.</p>
+    <p>Revolut no es solo un banco, sino un potente gestor financiero. Categoriza automáticamente tus gastos (supermercado, transporte, restaurantes) y te permite establecer límites mensuales. Si superas el límite en “ocio”, te avisa en tiempo real.</p>
+    <p><strong>Pros:</strong> Integrado en tu cuenta, sin apps adicionales, útil para viajes (cambio de divisas sin comisiones).<br><strong>Contras:</strong> Solo funciona si usas Revolut como cuenta principal.</p>
+
+    <h2>Conclusión: ¿Cuál elegir?</h2>
+    <ul>
+      <li><strong>Automático y en español:</strong> Fintonic</li>
+      <li><strong>Manual y sin conexión bancaria:</strong> Money Manager</li>
+      <li><strong>Visión completa (ahorro + inversión):</strong> Wallet</li>
+      <li><strong>Control total y gratis:</strong> Google Sheets</li>
+      <li><strong>Si ya usas Revolut:</strong> Aprovecha sus herramientas nativas</li>
+    </ul>
+    <p>Lo importante no es la app, sino <strong>usarla de forma constante</strong>. Elige la que mejor se adapte a tu estilo de vida y empieza hoy.</p>
+  `
+},
   {
-    id: 3,
-    slug: "interes-compuesto-explicado-facil",
-    title: "Qué es el interés compuesto explicado fácil",
-    date: "5 de marzo de 2025",
-    category: "Inversiones",
-    readMins: 3,
-    cover: "/images/posts/interes-compuesto-explicado-facil/cover.jpg",
-    excerpt: "Entiende esta poderosa herramienta financiera que puede multiplicar tu dinero con el tiempo.",
-    description: "Conceptos básicos y ejemplo del interés compuesto para empezar cuanto antes.",
-    content: `
-      <h2 id="intro">La octava maravilla</h2><p>Ganas intereses sobre intereses.</p>
-      <h2 id="ejemplo">Ejemplo</h2><ul><li>Año 1: 1.050€</li><li>Año 2: 1.102,50€</li></ul>
-      <h2 id="tiempo">El poder del tiempo</h2><p>Cuanto antes empieces, mejor.</p>
-      <h2 id="como">Cómo aprovecharlo</h2><p>Reinvierte dividendos y sé constante.</p>
-    `
-  },
+  id: 3,
+  slug: "interes-compuesto-explicado-facil",
+  title: "Qué es el interés compuesto explicado fácil",
+  date: "5 de marzo de 2025",
+  category: "Inversiones",
+  readMins: 4,
+  cover: "/images/posts/interes-compuesto-explicado-facil/cover.jpg",
+  excerpt: "Entiende esta poderosa herramienta financiera que puede multiplicar tu dinero con el tiempo.",
+  description: "Conceptos básicos y ejemplo del interés compuesto para empezar cuanto antes.",
+  content: `
+    <h2 id="intro">La octava maravilla del mundo (según Einstein)</h2>
+    <p>El interés compuesto es la capacidad de ganar intereses no solo sobre tu capital inicial, sino también sobre los intereses acumulados en periodos anteriores. En otras palabras: <strong>“intereses sobre intereses”</strong>.</p>
+    <p>Es la fuerza que permite que pequeñas cantidades crezcan exponencialmente con el tiempo… pero solo si empiezas pronto.</p>
+
+    <h2 id="ejemplo">Ejemplo práctico: 1.000€ al 5% anual</h2>
+    <figure>
+      <img src="/images/posts/interes-compuesto-explicado-facil/ejemplo.jpg" alt="Gráfico de crecimiento exponencial" loading="lazy" />
+      <figcaption>Crecimiento con interés simple vs. compuesto.</figcaption>
+    </figure>
+    <ul>
+      <li><strong>Año 0:</strong> 1.000€</li>
+      <li><strong>Año 1:</strong> 1.000€ + (5% de 1.000€) = <strong>1.050€</strong></li>
+      <li><strong>Año 2:</strong> 1.050€ + (5% de 1.050€) = <strong>1.102,50€</strong></li>
+      <li><strong>Año 10:</strong> <strong>1.628,89€</strong></li>
+      <li><strong>Año 30:</strong> <strong>4.321,94€</strong></li>
+    </ul>
+    <p>Con interés simple (solo sobre el capital inicial), en 30 años tendrías 2.500€. Con compuesto: **más del doble**.</p>
+
+    <h2 id="tiempo">El poder del tiempo: empieza hoy</h2>
+    <p>Imagina dos personas:
+      <ul>
+        <li><strong>María</strong> invierte 200€/mes desde los 25 hasta los 35 (10 años) y luego para.</li>
+        <li><strong>Laura</strong> empieza a los 35 y aporta 200€/mes hasta los 65 (30 años).</li>
+      </ul>
+      Asumiendo un 7% anual de rentabilidad:
+      <ul>
+        <li>María aporta: 24.000€ → Tiene a los 65: <strong>≈250.000€</strong></li>
+        <li>Laura aporta: 72.000€ → Tiene a los 65: <strong>≈244.000€</strong></li>
+      </ul>
+    </p>
+    <p>María invirtió **48.000€ menos**… ¡y terminó con más dinero! Porque el interés compuesto trabajó **40 años** para ella.</p>
+
+    <h2 id="como">Cómo aprovecharlo</h2>
+    <figure>
+      <img src="/images/posts/interes-compuesto-explicado-facil/reinvertir.jpg" alt="Reinversión de dividendos" loading="lazy" />
+      <figcaption>Reinvierte siempre tus ganancias.</figcaption>
+    </figure>
+    <ol>
+      <li><strong>Empieza ya:</strong> No esperes a “tener más dinero”. Empieza con lo que tengas.</li>
+      <li><strong>Reinvierte:</strong> En fondos indexados, ETFs o planes de pensiones, activa la opción de “reinversión de dividendos”.</li>
+      <li><strong>Sé constante:</strong> Aporta incluso pequeñas cantidades de forma regular.</li>
+      <li><strong>Paciencia:</strong> El crecimiento es lento al principio, explosivo al final.</li>
+    </ol>
+    <p>El interés compuesto no es magia: es matemática + tiempo + disciplina.</p>
+  `
+},
   {
-    id: 4,
-    slug: "habitos-financieros-para-mejorar-tus-finanzas",
-    title: "5 hábitos financieros para mejorar tus finanzas personales",
-    date: "1 de marzo de 2025",
-    category: "Hábitos",
-    readMins: 3,
-    cover: "/images/posts/habitos-financieros-para-mejorar-tus-finanzas/cover.jpg",
-    excerpt: "Pequeños cambios diarios que pueden transformar tu situación económica a largo plazo.",
-    description: "Cinco hábitos financieros sencillos para ganar control y estabilidad.",
-    content: `
-      <h2 id="intro">Hábitos clave</h2>
-      <ol>
-        <li id="rev-semanal">Revisión semanal</li>
-        <li id="pagate-primero">Págate primero</li>
-        <li id="vive-bajo">Vive por debajo de tus posibilidades</li>
-        <li id="educate">Edúcate</li>
-        <li id="metas">Metas claras</li>
-      </ol>
-    `
-  },
+  id: 4,
+  slug: "habitos-financieros-para-mejorar-tus-finanzas",
+  title: "5 hábitos financieros para mejorar tus finanzas personales",
+  date: "1 de marzo de 2025",
+  category: "Hábitos",
+  readMins: 4,
+  cover: "/images/posts/habitos-financieros-para-mejorar-tus-finanzas/cover.jpg",
+  excerpt: "Pequeños cambios diarios que pueden transformar tu situación económica a largo plazo.",
+  description: "Cinco hábitos financieros sencillos para ganar control y estabilidad.",
+  content: `
+    <h2 id="intro">Hábitos clave que construyen riqueza silenciosamente</h2>
+    <p>La estabilidad financiera no nace de golpes de suerte, sino de rutinas consistentes. Estos 5 hábitos, respaldados por estudios de comportamiento financiero, te darán control, claridad y tranquilidad.</p>
+
+    <h2 id="rev-semanal">1. Revisión semanal de finanzas (10 minutos)</h2>
+    <figure>
+      <img src="/images/posts/habitos-financieros-para-mejorar-tus-finanzas/revision.jpg" alt="Revisión semanal de gastos en tableta" loading="lazy" />
+      <figcaption>Dedica 10 minutos cada domingo a revisar tus finanzas.</figcaption>
+    </figure>
+    <p>No necesitas una auditoría. Solo abre tu app de gastos o tu hoja de cálculo y responde:
+      <ul>
+        <li>¿He superado algún límite esta semana?</li>
+        <li>¿Hay algún gasto recurrente que pueda eliminar?</li>
+        <li>¿He ahorrado lo planeado?</li>
+      </ul>
+    </p>
+    <p>Este hábito previene sorpresas y refuerza la conciencia financiera.</p>
+
+    <h2 id="pagate-primero">2. Págate primero a ti mismo</h2>
+    <figure>
+      <img src="/images/posts/habitos-financieros-para-mejorar-tus-finanzas/pagate-primero.jpg" alt="Transferencia automática a cuenta de ahorro" loading="lazy" />
+      <figcaption>Antes de pagar facturas, ahorra una parte fija.</figcaption>
+    </figure>
+    <p>En lugar de ahorrar “lo que sobre”, destina un porcentaje fijo (ej. 10–20%) de tu ingreso a ahorro **el mismo día que cobras**. Automatízalo. Este dinero es tan obligatorio como el alquiler.</p>
+    <p>Este principio, popularizado por George S. Clason en *El hombre más rico de Babilonia*, es la base de toda riqueza duradera.</p>
+
+    <h2 id="vive-bajo">3. Vive por debajo de tus posibilidades</h2>
+    <figure>
+      <img src="/images/posts/habitos-financieros-para-mejorar-tus-finanzas/vive-bajo.jpg" alt="Persona feliz con estilo de vida sencillo" loading="lazy" />
+      <figcaption>El lujo no es tener más, sino necesitar menos.</figcaption>
+    </figure>
+    <p>No se trata de vivir con austeridad, sino de evitar el “consumo por estatus”. Pregunta antes de comprar: “¿Esto mejora mi vida o solo mi imagen?”.</p>
+    <p>Estudios de la Universidad de Harvard muestran que las personas que viven por debajo de sus ingresos tienen niveles de estrés financiero un 60% más bajos.</p>
+
+    <h2 id="educate">4. Edúcate financieramente 15 minutos al día</h2>
+    <figure>
+      <img src="/images/posts/habitos-financieros-para-mejorar-tus-finanzas/educate.jpg" alt="Lectura de libro de finanzas" loading="lazy" />
+      <figcaption>Lee, escucha podcasts o sigue canales de educación financiera.</figcaption>
+    </figure>
+    <p>Invierte en tu conocimiento. Sigue blogs, escucha podcasts como *Finanzas Claras* o *El Podcast del Emprendedor*, o lee libros como *Padre Rico, Padre Pobre*.</p>
+    <p>El 85% de los millonarios son autodidactas en finanzas (según el libro *The Millionaire Next Door*).</p>
+
+    <h2 id="metas">5. Define metas financieras claras y visibles</h2>
+    <figure>
+      <img src="/images/posts/habitos-financieros-para-mejorar-tus-finanzas/metas.jpg" alt="Tablero con metas financieras" loading="lazy" />
+      <figcaption>Escribe tus metas y ponlas donde las veas todos los días.</figcaption>
+    </figure>
+    <p>Una meta vaga (“ahorrar más”) fracasa. Una meta SMART (“ahorrar 3.000€ para emergencias en 12 meses”) tiene un 42% más de probabilidades de cumplirse (Universidad de Dominican).</p>
+    <p>Usa la regla: Específica, Medible, Alcanzable, Relevante, con Tiempo.</p>
+
+    <h2>Conclusión</h2>
+    <p>Estos hábitos no requieren más dinero, solo más intención. Empieza con uno esta semana. En 6 meses, tu relación con el dinero habrá cambiado para siempre.</p>
+  `
+},
   {
-    id: 5,
-    slug: "metodo-50-30-20-presupuesto",
-    title: "Cómo organizar tu presupuesto con el método 50/30/20",
-    date: "25 de febrero de 2025",
-    category: "Presupuesto",
-    readMins: 3,
-    cover: "/images/posts/metodo-50-30-20-presupuesto/cover.jpg",
-    excerpt: "Una fórmula sencilla y efectiva para distribuir tus ingresos de forma equilibrada.",
-    description: "Aplica el método 50/30/20 paso a paso y equilibra tus gastos.",
-    content: `
-      <h2 id="intro">El método</h2><p>50% necesidades, 30% deseos, 20% ahorro/inversión.</p>
-      <h2 id="aplicacion">Aplicación</h2><p>Ajusta tus gastos a esas tres categorías.</p>
-    `
-  }
+  id: 5,
+  slug: "metodo-50-30-20-presupuesto",
+  title: "Cómo organizar tu presupuesto con el método 50/30/20",
+  date: "25 de febrero de 2025",
+  category: "Presupuesto",
+  readMins: 4,
+  cover: "/images/posts/metodo-50-30-20-presupuesto/cover.jpg",
+  excerpt: "Una fórmula sencilla y efectiva para distribuir tus ingresos de forma equilibrada.",
+  description: "Aplica el método 50/30/20 paso a paso y equilibra tus gastos.",
+  content: `
+    <h2 id="intro">El método 50/30/20: equilibrio financiero en tres partes</h2>
+    <p>Creado por la senadora y profesora de derecho Elizabeth Warren, este método divide tus ingresos netos (después de impuestos) en tres categorías simples:</p>
+    <ul>
+      <li><strong>50% Necesidades:</strong> Gastos esenciales para vivir.</li>
+      <li><strong>30% Deseos:</strong> Cosas que mejoran tu calidad de vida.</li>
+      <li><strong>20% Ahorro/Deuda:</strong> Futuro financiero y libertad.</li>
+    </ul>
+    <p>Es flexible, realista y perfecto para principiantes.</p>
+
+    <h2 id="necesidades">50%: Necesidades (lo indispensable)</h2>
+    <figure>
+      <img src="/images/posts/metodo-50-30-20-presupuesto/necesidades.jpg" alt="Facturas de servicios básicos" loading="lazy" />
+      <figcaption>Alquiler, luz, comida básica, transporte al trabajo.</figcaption>
+    </figure>
+    <p>Incluye:
+      <ul>
+        <li>Vivienda (alquiler o hipoteca)</li>
+        <li>Alimentos básicos (no restaurantes)</li>
+        <li>Transporte (coche, gasolina, transporte público para trabajar)</li>
+        <li>Seguros médicos y esenciales</li>
+        <li>Servicios básicos (luz, agua, internet si es necesario para teletrabajo)</li>
+      </ul>
+    </p>
+    <p>⚠️ Si superas el 50%, prioriza reducir gastos aquí (ej. mudarte a un alquiler más barato).</p>
+
+    <h2 id="deseos">30%: Deseos (lo que te hace feliz)</h2>
+    <figure>
+      <img src="/images/posts/metodo-50-30-20-presupuesto/deseos.jpg" alt="Cena con amigos y hobbies" loading="lazy" />
+      <figcaption>Restaurantes, viajes, suscripciones, hobbies.</figcaption>
+    </figure>
+    <p>Incluye:
+      <ul>
+        <li>Comer fuera</li>
+        <li>Suscripciones (Netflix, Spotify)</li>
+        <li>Viajes y ocio</li>
+        <li>Ropa no esencial</li>
+        <li>Hobbies y entretenimiento</li>
+      </ul>
+    </p>
+    <p>Este es tu “presupuesto de felicidad”. Si ahorras bien en necesidades, puedes disfrutar sin culpa.</p>
+
+    <h2 id="ahorro">20%: Ahorro y deuda (tu futuro)</h2>
+    <figure>
+      <img src="/images/posts/metodo-50-30-20-presupuesto/ahorro.jpg" alt="Cuenta de ahorro e inversiones" loading="lazy" />
+      <figcaption>Ahorro de emergencia, jubilación, pago de deudas.</figcaption>
+    </figure>
+    <p>Incluye:
+      <ul>
+        <li>Fondo de emergencia</li>
+        <li>Planes de pensiones o inversión</li>
+        <li>Pago extra de deudas (tarjetas, préstamos)</li>
+        <li>Ahorro para metas (coche, casa, estudios)</li>
+      </ul>
+    </p>
+    <p>Si tienes deudas de alto interés (ej. tarjetas >20%), prioriza pagarlas antes de invertir.</p>
+
+    <h2 id="aplicacion">Cómo aplicarlo paso a paso</h2>
+    <ol>
+      <li><strong>Calcula tus ingresos netos mensuales.</strong> (Ej. 2.000€)</li>
+      <li><strong>Multiplica:</strong> 50% = 1.000€ (necesidades), 30% = 600€ (deseos), 20% = 400€ (ahorro).</li>
+      <li><strong>Clasifica tus gastos actuales</strong> en estas tres categorías.</li>
+      <li><strong>Ajusta:</strong> Si necesidades son 1.300€, busca recortar 300€ o aumentar ingresos.</li>
+    </ol>
+    <p>Usa apps como Fintonic o Google Sheets para automatizar esta clasificación.</p>
+
+    <h2>Conclusión</h2>
+    <p>El 50/30/20 no es rígido: si vives en una ciudad cara, quizás necesidades sean 60%. Lo importante es ser consciente y equilibrar presente y futuro. Empieza hoy, y en 3 meses verás la diferencia.</p>
+  `
+}
 ];
 
 export const postsEn = [
