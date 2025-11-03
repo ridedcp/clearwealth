@@ -364,6 +364,375 @@ export const postsEs = [
     <h2>Conclusión</h2>
     <p>El 50/30/20 no es rígido: si vives en una ciudad cara, quizás necesidades sean 60%. Lo importante es ser consciente y equilibrar presente y futuro. Empieza hoy, y en 3 meses verás la diferencia.</p>
   `
+},
+  {
+  id: 6,
+  slug: "fondos-indexados-para-principiantes-como-empezar-invertir",
+  title: "Fondos Indexados para Principiantes: Cómo Empezar a Invertir con Poco Dinero",
+  date: "3 de noviembre de 2025",
+  category: "Inversión",
+  readMins: 10,
+  cover: "/images/posts/fondos-indexados-para-principiantes/cover.jpg",
+  excerpt: "Descubre cómo empezar a invertir en fondos indexados con tan solo 50-150€ mensuales. Una guía completa para principiantes.",
+  description: "Guía paso a paso: qué son los fondos indexados, por qué son ideales para principiantes, cómo elegir una plataforma, construir una cartera de tres fondos y automatizar tu inversión.",
+  content: `
+    <h2 id="intro">¿Crees que necesitas miles de euros para empezar a invertir?</h2>
+    <p>La realidad es que con pequeñas aportaciones mensuales de 50-150€, puedes construir un patrimonio sólido a largo plazo. Los fondos indexados son la herramienta perfecta para hacerlo sin necesidad de ser un experto financiero. No se trata de elegir acciones individuales o intentar "vencer al mercado", sino de invertir de forma pasiva, diversificada y con costes mínimos.</p>
+
+    <h2 id="que-son">¿Qué son los fondos indexados?</h2>
+    <figure>
+      <img src="/images/posts/fondos-indexados-para-principiantes/que-son-fondos.jpg" alt="Concepto de fondos indexados" loading="lazy" />
+      <figcaption>Los fondos indexados replican índices completos en lugar de intentar superarlos.</figcaption>
+    </figure>
+    <p>Un fondo indexado es un fondo de inversión que <strong>replica pasivamente un índice de mercado</strong> en lugar de intentar superarlo. En lugar de que un gestor seleccione activamente acciones individuales, un fondo indexado simplemente compra todos (o una muestra representativa) de los valores en un índice específico, manteniéndolos en las mismas proporciones.</p>
+
+    <h3>Índices comunes:</h3>
+    <ul>
+      <li><strong>S&P 500:</strong> Las 500 mayores empresas estadounidenses</li>
+      <li><strong>MSCI World:</strong> Mercados desarrollados en todo el mundo</li>
+      <li><strong>EuroStoxx 50:</strong> Grandes empresas europeas</li>
+      <li><strong>MSCI Emergentes:</strong> Economías en crecimiento de países en desarrollo</li>
+    </ul>
+
+    <p>Cuando inviertes en un fondo indexado del S&P 500, posees una pequeña parte de las 500 empresas de ese índice. Si el índice sube un 10%, tu inversión sube aproximadamente un 10% (menos comisiones mínimas). Si cae un 5%, la tuya cae un 5%.</p>
+
+    <h2 id="por-que-principiantes">¿Por qué los fondos indexados son perfectos para principiantes?</h2>
+
+    <h3>1. Costes dramáticamente menores</h3>
+    <p>Esta es probablemente la ventaja más importante. Los fondos activos—gestionados por gestores profesionales—típicamente cobran <strong>1,5% a 2% o más anualmente</strong> en comisiones de gestión. Los fondos indexados cobran <strong>0,05% a 0,30%</strong>.</p>
+
+    <p>Esta diferencia aparentemente pequeña se compone en riqueza significativa con el tiempo. Considera este ejemplo: Una inversión de 10.000€ con aportaciones anuales de 200€ durante 25 años con un rendimiento anual del 7% resultaría en:</p>
+
+    <ul>
+      <li><strong>Fondo activo (1,8% comisiones):</strong> Aproximadamente 117.000€</li>
+      <li><strong>Fondo indexado (0,15% comisiones):</strong> Aproximadamente 142.000€</li>
+    </ul>
+
+    <p><strong>¡Eso es una diferencia de 25.000€ o más—simplemente eligiendo inversiones de menor coste!</strong></p>
+
+    <h3>2. Diversificación automática</h3>
+    <p>Con una única compra de fondo indexado, posees porciones de cientos o miles de empresas. Esta diversificación reduce dramáticamente el riesgo de que el fracaso de una sola empresa impacte significativamente tu cartera.</p>
+
+    <h3>3. Transparencia y predictibilidad</h3>
+    <p>Siempre sabes exactamente qué posees. Tus rendimientos rastrearán el índice, no dependerán de si un gestor está teniendo un buen o mal año.</p>
+
+    <h3>4. Evidencia histórica</h3>
+    <p>La investigación demuestra consistentemente que <strong>más del 80% de los gestores de fondos activos fracasan en superar su índice de referencia durante 10+ años</strong> cuando se consideran las comisiones. Incluso inversores profesionales con equipos de analistas no pueden superar consistentemente el mercado.</p>
+
+    <h2 id="comparativa">Fondos indexados vs. Fondos activos: Los números</h2>
+    <figure>
+      <img src="/images/posts/fondos-indexados-para-principiantes/activos-vs-pasivos.jpg" alt="Comparación fondos activos vs pasivos" loading="lazy" />
+      <figcaption>La diferencia de costes genera resultados completamente diferentes a largo plazo.</figcaption>
+    </figure>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Aspecto</th>
+          <th>Fondos Activos</th>
+          <th>Fondos Indexados</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Comisiones Anuales</strong></td>
+          <td>1,5% - 2%+</td>
+          <td>0,05% - 0,30%</td>
+        </tr>
+        <tr>
+          <td><strong>Tasa de Superación</strong></td>
+          <td>&lt;20% en 10 años</td>
+          <td>Rastrea mercado por diseño</td>
+        </tr>
+        <tr>
+          <td><strong>Transparencia</strong></td>
+          <td>Varía según gestor</td>
+          <td>Cristalina</td>
+        </tr>
+        <tr>
+          <td><strong>Volatilidad</strong></td>
+          <td>Igual que índice</td>
+          <td>Igual que índice</td>
+        </tr>
+        <tr>
+          <td><strong>Mejor para</strong></td>
+          <td>Gestores élite (raros)</td>
+          <td>99% de inversores</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 id="cartera-tres-fondos">Construye tu primer portafolio de fondos indexados</h2>
+    <figure>
+      <img src="/images/posts/fondos-indexados-para-principiantes/cartera-tres-fondos.jpg" alt="Cartera de tres fondos diversificada" loading="lazy" />
+      <figcaption>La estrategia de tres fondos es simple, efectiva y accesible para todos.</figcaption>
+    </figure>
+
+    <h3>La estrategia de tres fondos</h3>
+    <p>El enfoque más simple para principiantes es la <strong>cartera de tres fondos</strong>—una estrategia diversificada usando solo tres fondos indexados:</p>
+
+    <h4>1. Fondo de Renta Variable Global (60-75% de la cartera)</h4>
+    <ul>
+      <li><strong>Ejemplo:</strong> Vanguard Global Stock Index Fund EUR</li>
+      <li><strong>Propósito:</strong> Exposición a mercados desarrollados en todo el mundo</li>
+      <li><strong>TER (Total de Ratios de Gasto):</strong> ~0,18%</li>
+    </ul>
+
+    <h4>2. Fondo de Mercados Emergentes (10-15% de la cartera)</h4>
+    <ul>
+      <li><strong>Ejemplo:</strong> Vanguard Emerging Markets Stock Index Fund EUR</li>
+      <li><strong>Propósito:</strong> Captura crecimiento de economías en desarrollo</li>
+      <li><strong>TER:</strong> ~0,23%</li>
+    </ul>
+
+    <h4>3. Fondo de Renta Fija (10-30% de la cartera)</h4>
+    <ul>
+      <li><strong>Ejemplo:</strong> Vanguard Global Bond Index Fund EUR</li>
+      <li><strong>Propósito:</strong> Proporciona estabilidad e ingresos</li>
+      <li><strong>TER:</strong> ~0,20%</li>
+    </ul>
+
+    <h3>Asignaciones según tu edad</h3>
+    <h4>Cartera Conservadora (Mayor de 40 años):</h4>
+    <ul>
+      <li>50% Fondo de Renta Variable Global</li>
+      <li>10% Fondo de Mercados Emergentes</li>
+      <li>40% Fondo de Renta Fija</li>
+    </ul>
+
+    <h4>Cartera de Crecimiento (20-35 años):</h4>
+    <ul>
+      <li>70% Fondo de Renta Variable Global</li>
+      <li>15% Fondo de Mercados Emergentes</li>
+      <li>15% Fondo de Renta Fija</li>
+    </ul>
+
+    <h2 id="paso-a-paso">Empezando: Paso a paso</h2>
+
+    <h3>Paso 1: Elige tu plataforma</h3>
+    <p>En España, las mejores plataformas para invertir en fondos indexados incluyen:</p>
+
+    <h4>MyInvestor</h4>
+    <ul>
+      <li><strong>Inversión mínima:</strong> Desde 1€ (según el fondo)</li>
+      <li><strong>Comisiones:</strong> Bajas (solo comisiones internas del fondo)</li>
+      <li><strong>Características:</strong> 2.000+ fondos disponibles, automatización de inversión periódica</li>
+      <li><strong>Regulación:</strong> Supervisada por Banco de España y CNMV</li>
+      <li><strong>Mejor para:</strong> La mayoría de principiantes en España</li>
+    </ul>
+
+    <h4>Trade Republic</h4>
+    <ul>
+      <li><strong>Inversión mínima:</strong> Variable (muy baja para la mayoría de fondos)</li>
+      <li><strong>Comisiones:</strong> 1€ por orden</li>
+      <li><strong>Características:</strong> IBAN español, planes de inversión automática</li>
+      <li><strong>Regulación:</strong> Regulada en España</li>
+      <li><strong>Mejor para:</strong> Minimalistas que quieren simplicidad</li>
+    </ul>
+
+    <h4>Indexa Capital</h4>
+    <ul>
+      <li><strong>Inversión inicial mínima:</strong> 2.000€ (gestión automática)</li>
+      <li><strong>Comisiones:</strong> Integradas en comisiones de fondo</li>
+      <li><strong>Características:</strong> Gestión completa de roboadvisor, sin trabajo de reequilibrio</li>
+      <li><strong>Mejor para:</strong> Quienes quieren gestión completamente automática</li>
+    </ul>
+
+    <h3>Paso 2: Abre tu cuenta</h3>
+    <p>La mayoría de plataformas requieren:</p>
+    <ul>
+      <li>DNI válido</li>
+      <li>Comprobante de domicilio</li>
+      <li>Datos bancarios para transferencias</li>
+      <li>Firma electrónica</li>
+    </ul>
+    <p><strong>El proceso completo típicamente tarda 10-20 minutos.</strong></p>
+
+    <h3>Paso 3: Realiza tu primera inversión</h3>
+    <p>Empieza con lo que puedas permitirte. Aquí hay escenarios realistas:</p>
+
+    <h4>Escenario A: Capital Limitado</h4>
+    <ul>
+      <li><strong>Inversión inicial:</strong> 100€</li>
+      <li><strong>Aportación mensual:</strong> 50€</li>
+      <li><strong>Asignación:</strong> 100% a un fondo indexado global único</li>
+    </ul>
+
+    <h4>Escenario B: Capital Moderado</h4>
+    <ul>
+      <li><strong>Inversión inicial:</strong> 500€</li>
+      <li><strong>Aportación mensual:</strong> 150€</li>
+      <li><strong>Asignación:</strong> 70% renta variable, 30% renta fija</li>
+    </ul>
+
+    <h4>Escenario C: Capital Cómodo</h4>
+    <ul>
+      <li><strong>Inversión inicial:</strong> 1.000€</li>
+      <li><strong>Aportación mensual:</strong> 200€</li>
+      <li><strong>Asignación:</strong> 65% renta variable, 15% mercados emergentes, 20% renta fija</li>
+    </ul>
+
+    <h3>Paso 4: Automatiza tus aportaciones</h3>
+    <p><strong>Esto es crucial.</strong> Configura <strong>transferencias automáticas mensuales</strong> desde tu cuenta bancaria a tu cuenta de inversión. La automatización elimina la emoción de invertir y asegura que te beneficies del <strong>Dollar-Cost Averaging (DCA)</strong>—invertir la misma cantidad independientemente de las condiciones del mercado.</p>
+    <p>La investigación muestra que las inversiones periódicas reducen pérdidas a la mitad en 10 años y en un 36% en 5 años.</p>
+
+    <h2 id="ejemplos-rentabilidad">Entendiendo rendimientos: Ejemplos del mundo real</h2>
+    <figure>
+      <img src="/images/posts/fondos-indexados-para-principiantes/crecimiento-compuesto.jpg" alt="Crecimiento compuesto a largo plazo" loading="lazy" />
+      <figcaption>El poder del interés compuesto: tu mejor aliado en inversión a largo plazo.</figcaption>
+    </figure>
+
+    <h3>Ejemplo 1: Crecimiento Conservador en 25 Años</h3>
+    <ul>
+      <li><strong>Inversión inicial:</strong> 5.000€</li>
+      <li><strong>Aportación mensual:</strong> 250€</li>
+      <li><strong>Asignación de cartera:</strong> 60% acciones, 40% bonos</li>
+      <li><strong>Rendimiento anual promedio:</strong> 5,8%</li>
+      <li><strong>Resultado después de 25 años:</strong> ~120.000€</li>
+    </ul>
+
+    <p><strong>Desglose:</strong></p>
+    <ul>
+      <li>Total aportado: ~80.000€</li>
+      <li>Ganancias de inversión: ~40.000€</li>
+      <li>Rentabilidad sobre inversión: 50%</li>
+    </ul>
+
+    <h3>Ejemplo 2: Crecimiento Agresivo en 25 Años</h3>
+    <ul>
+      <li><strong>Inversión inicial:</strong> 5.000€</li>
+      <li><strong>Aportación mensual:</strong> 250€</li>
+      <li><strong>Asignación de cartera:</strong> 80% acciones, 20% bonos</li>
+      <li><strong>Rendimiento anual promedio:</strong> 8,9%</li>
+      <li><strong>Resultado después de 25 años:</strong> ~185.000€</li>
+    </ul>
+
+    <p><strong>Desglose:</strong></p>
+    <ul>
+      <li>Total aportado: ~80.000€</li>
+      <li>Ganancias de inversión: ~105.000€</li>
+      <li>Rentabilidad sobre inversión: 131%</li>
+    </ul>
+
+    <p>Estos ejemplos ilustran el poder del interés compuesto que Einstein llamó "la octava maravilla del mundo".</p>
+
+    <h2 id="riesgo">Consideraciones de riesgo y verificaciones de realidad</h2>
+
+    <h3>La volatilidad es normal</h3>
+    <p>Los fondos indexados rastrean todo el mercado. <strong>Cuando el mercado cae un 20%, tu fondo indexado cae un 20%.</strong> Esto no es un fracaso—es cómo funcionan los mercados. Históricamente, el mercado de valores ha:</p>
+    <ul>
+      <li>Recuperado de cada gran caída</li>
+      <li>Proporcionado rendimientos positivos durante cualquier período de 20 años</li>
+      <li>Recompensado consistentemente a los inversores pacientes</li>
+    </ul>
+    <p><strong>La clave es mantener tus aportaciones incluso durante las caídas.</strong> Comprar más acciones cuando los precios son bajos acelera tus rendimientos a largo plazo.</p>
+
+    <h3>No para necesidades a corto plazo</h3>
+    <p>Si necesitas tu dinero dentro de 5 años, los fondos indexados pueden no ser apropiados. Están diseñados para horizontes de 10+ años. Para objetivos más cortos, usa cuentas de ahorro o bonos a corto plazo.</p>
+
+    <h3>Error de seguimiento</h3>
+    <p>Mínimo pero real. La mayoría de fondos indexados se desvían menos del 0,1% de su índice de referencia anualmente debido a comisiones y costes administrativos. Esto es negligible durante décadas.</p>
+
+    <h2 id="dca">Dollar-Cost Averaging: Tu mejor aliado</h2>
+    <p><strong>Dollar-Cost Averaging (DCA)</strong> significa invertir una cantidad fija en intervalos regulares (semanales, mensuales, trimestrales), independientemente de las condiciones del mercado.</p>
+
+    <h3>¿Por qué funciona?</h3>
+    <ul>
+      <li>Compras más acciones cuando los precios son bajos</li>
+      <li>Compras menos acciones cuando los precios son altos</li>
+      <li>Tu coste promedio se convierte en el promedio del mercado</li>
+      <li>Se elimina la emoción de la toma de decisiones</li>
+    </ul>
+
+    <h3>Ejemplo de DCA en acción:</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Mes</th>
+          <th>Precio de Acción</th>
+          <th>Inversión Mensual</th>
+          <th>Acciones Compradas</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Enero</td>
+          <td>100€</td>
+          <td>200€</td>
+          <td>2,0</td>
+        </tr>
+        <tr>
+          <td>Febrero</td>
+          <td>95€</td>
+          <td>200€</td>
+          <td>2,11</td>
+        </tr>
+        <tr>
+          <td>Marzo</td>
+          <td>105€</td>
+          <td>200€</td>
+          <td>1,90</td>
+        </tr>
+        <tr>
+          <td>Abril</td>
+          <td>100€</td>
+          <td>200€</td>
+          <td>2,0</td>
+        </tr>
+        <tr>
+          <td><strong>Promedio</strong></td>
+          <td><strong>100€</strong></td>
+          <td><strong>200€ × 4</strong></td>
+          <td><strong>8,01</strong></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Tu coste promedio: 99,75€ por acción—¡exactamente el promedio del mercado! Has eliminado el riesgo de tiempo.</p>
+
+    <h2 id="psicologia">La psicología de la inversión a largo plazo</h2>
+    <p>Invertir en fondos indexados requiere disciplina, no inteligencia:</p>
+    <ul>
+      <li><strong>Ignora el ruido a corto plazo:</strong> ¿El mercado cae un 10%? Esto es normal. No entres en pánico.</li>
+      <li><strong>Celebra las caídas del mercado:</strong> Cuando los precios caen, tus aportaciones mensuales compran más acciones a precios más bajos.</li>
+      <li><strong>Configura y olvida:</strong> Revisa tu cartera anualmente, no diariamente.</li>
+      <li><strong>Mantén el curso:</strong> El mercado alcista más largo de la historia sigue a cada mercado bajista.</li>
+    </ul>
+
+    <h2 id="errores">Errores comunes a evitar</h2>
+    <ul>
+      <li><strong>Intentar cronometrar el mercado:</strong> Nadie puede predecir movimientos a corto plazo. DCA elimina este problema.</li>
+      <li><strong>Cambiar frecuentemente entre fondos:</strong> Cada cambio incurre en costes e implicaciones fiscales potenciales.</li>
+      <li><strong>Invertir dinero que necesitarás pronto:</strong> Solo invierte capital que puedas dejar sin tocar durante 10+ años.</li>
+      <li><strong>Detener aportaciones durante caídas:</strong> Este es precisamente cuando deberías continuar comprando.</li>
+      <li><strong>Pagar comisiones innecesarias:</strong> Siempre opta por la opción de menor coste disponible.</li>
+    </ul>
+
+    <h2 id="ventajas-fiscales">Ventajas fiscales en España</h2>
+    <p>Los fondos indexados en España ofrecen ventajas fiscales significativas comparadas con la negociación de acciones individuales:</p>
+    <ul>
+      <li><strong>Sin impuesto de ganancias de capital en traspasos entre fondos</strong> dentro de la misma familia de fondos</li>
+      <li><strong>Capitalización diferida de impuestos:</strong> No pagas impuestos sobre ganancias hasta que retiras</li>
+      <li><strong>Menores costes anuales</strong> significan menores cargas fiscales versus trading activo</li>
+    </ul>
+
+    <h2 id="plan-accion">Tu plan de acción: Empieza esta semana</h2>
+    <ul>
+      <li><strong>Lunes:</strong> Investiga y abre una cuenta en MyInvestor o Trade Republic (20 minutos)</li>
+      <li><strong>Martes:</strong> Elige tu asignación de tres fondos basada en tu edad y tolerancia al riesgo (15 minutos)</li>
+      <li><strong>Miércoles:</strong> Realiza tu primera inversión—incluso si es solo 50€ (10 minutos)</li>
+      <li><strong>Jueves:</strong> Configura transferencias automáticas mensuales para inversiones recurrentes (10 minutos)</li>
+      <li><strong>Viernes:</strong> Programa un recordatorio de calendario para revisar tu cartera anualmente (2 minutos)</li>
+    </ul>
+    <p><strong>Inversión de tiempo total: Menos de 1 hora para empezar a construir tu futuro financiero</strong></p>
+
+    <h2 id="conclusion">Conclusión: Los fondos indexados democratizan la inversión</h2>
+    <p>Los fondos indexados han transformado la construcción de riqueza de una actividad exclusiva que requiere conocimiento experto en algo que cualquier persona con acceso a internet y ahorros modestos puede hacer. La evidencia es abrumadora: <strong>compra una cartera diversificada de fondos indexados de bajo coste, invierte regularmente, ignora el ruido, y deja que el interés compuesto haga el trabajo pesado.</strong></p>
+
+    <p>No necesitas ser inteligente o afortunado para construir riqueza—solo necesitas ser <strong>paciente y consistente</strong>. Empieza pequeño, empieza hoy, y empieza con fondos indexados.</p>
+
+    <p><strong>Tu futuro financiero comienza ahora. ¡Adelante!</strong></p>
+  `
 }
 ];
 
