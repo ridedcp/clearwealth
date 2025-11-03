@@ -3,47 +3,96 @@
 
 export const postsEs = [
   {
-    id: 1,
-    slug: "como-ahorrar-100-euros-al-mes-sin-esfuerzo",
-    title: "Cómo ahorrar 100 euros al mes sin esfuerzo",
-    date: "15 de marzo de 2025",
-    category: "Ahorro",
-    readMins: 4,
-    cover: "/images/posts/como-ahorrar-100-euros-al-mes-sin-esfuerzo/cover.jpg",
-    excerpt: "Descubre estrategias prácticas para ahorrar 100€ mensuales sin cambiar drásticamente tu estilo de vida.",
-    description: "Guía paso a paso para ahorrar 100€ al mes con hábitos sencillos: suscripciones, cocina en casa, compra inteligente y automatización.",
-    content: `
-      <h2 id="intro">¿Crees que ahorrar 100€ al mes es imposible con tu salario actual?</h2>
-      <p>La realidad es que con pequeños ajustes en tus hábitos diarios, puedes lograr este objetivo sin sentir que estás haciendo sacrificios enormes.</p>
+  id: 1,
+  slug: "como-ahorrar-100-euros-al-mes-sin-esfuerzo",
+  title: "Cómo ahorrar 100 euros al mes sin esfuerzo",
+  date: "15 de marzo de 2025",
+  category: "Ahorro",
+  readMins: 8,
+  cover: "/images/posts/como-ahorrar-100-euros-al-mes-sin-esfuerzo/cover.jpg",
+  excerpt: "Descubre estrategias prácticas para ahorrar 100€ mensuales sin cambiar drásticamente tu estilo de vida.",
+  description: "Guía paso a paso para ahorrar 100€ al mes con hábitos sencillos: suscripciones, cocina en casa, compra inteligente y automatización.",
+  content: `
+    <h2 id="intro">¿Crees que ahorrar 100€ al mes es imposible con tu salario actual?</h2>
+    <p>La realidad es que con pequeños ajustes en tus hábitos diarios, puedes lograr este objetivo sin sentir que estás haciendo sacrificios enormes. No se trata de recortar gastos esenciales, sino de identificar fugas financieras, optimizar decisiones cotidianas y aprovechar la tecnología para hacer que el ahorro sea automático y sostenible.</p>
 
-      <h2 id="suscripciones">1. Revisa tus suscripciones mensuales</h2>
-      <figure>
-        <img src="/images/posts/como-ahorrar-100-euros-al-mes-sin-esfuerzo/suscripciones.jpg" alt="Revisión de suscripciones" loading="lazy" />
-        <figcaption>Lista tus servicios y cancela lo que no usas.</figcaption>
-      </figure>
-      <p>Analiza todas tus suscripciones: streaming, gimnasio, apps, etc. Cancela las que no uses regularmente.</p>
+    <h2 id="suscripciones">1. Revisa tus suscripciones mensuales</h2>
+    <figure>
+      <img src="/images/posts/como-ahorrar-100-euros-al-mes-sin-esfuerzo/suscripciones.jpg" alt="Revisión de suscripciones" loading="lazy" />
+      <figcaption>Lista tus servicios y cancela lo que no usas.</figcaption>
+    </figure>
+    <p>Las suscripciones son una de las mayores fuentes de gasto pasivo e invisible. Muchas personas pagan entre 30€ y 60€ al mes por servicios que apenas utilizan: streaming, apps de música, gimnasios, software premium, etc.</p>
+    <h3>¿Cómo actuar?</h3>
+    <ul>
+      <li><strong>Haz un inventario:</strong> Revisa tus extractos bancarios de los últimos 3 meses y lista todas las cargas recurrentes.</li>
+      <li><strong>Pregúntate:</strong> ¿He usado este servicio en las últimas 4 semanas? Si la respuesta es no, cancélate.</li>
+      <li><strong>Comparte planes:</strong> Muchos servicios (Netflix, Spotify, Amazon Prime) permiten perfiles familiares. Compartir puede reducir tu cuota a la mitad.</li>
+    </ul>
+    <h3>Herramientas útiles</h3>
+    <p>Aplicaciones como <strong>Rocket Money</strong>, <strong>Subscription Stopper</strong> o incluso <strong>Fintonic</strong> pueden detectar automáticamente tus suscripciones y ayudarte a cancelarlas con un clic.</p>
+    <p><strong>Ahorro estimado:</strong> Eliminar 2–3 suscripciones poco usadas puede liberar entre <strong>15€ y 30€ al mes</strong>.</p>
 
-      <h2 id="cocina">2. Cocina en casa</h2>
-      <figure>
-        <img src="/images/posts/como-ahorrar-100-euros-al-mes-sin-esfuerzo/cocinar.jpg" alt="Cocinar en casa para ahorrar" loading="lazy" />
-        <figcaption>Planifica 2-3 platos base para toda la semana.</figcaption>
-      </figure>
-      <p>Reducir comidas fuera de casa puede ahorrarte fácilmente 30–50€.</p>
+    <h2 id="cocina">2. Cocina en casa</h2>
+    <figure>
+      <img src="/images/posts/como-ahorrar-100-euros-al-mes-sin-esfuerzo/cocinar.jpg" alt="Cocinar en casa para ahorrar" loading="lazy" />
+      <figcaption>Planifica 2-3 platos base para toda la semana.</figcaption>
+    </figure>
+    <p>En España, el gasto promedio en comer fuera de casa supera los <strong>200€ mensuales</strong>. Cada comida en un restaurante cuesta entre 12€ (menú del día) y 40€ (cena en ciudad grande). En cambio, cocinar en casa reduce ese costo a 3–5€ por persona.</p>
+    <h3>Estrategias efectivas</h3>
+    <ul>
+      <li><strong>Batch cooking:</strong> Dedica 2–3 horas los domingos a preparar comidas para toda la semana (guisos, arroces, legumbres).</li>
+      <li><strong>Planificación semanal:</strong> Elige 2–3 recetas versátiles que puedas variar con diferentes acompañamientos.</li>
+      <li><strong>Evita el delivery:</strong> Una cena por app puede costar 20€ + propina + envío. Cocinar en casa elimina esos sobrecostos.</li>
+    </ul>
+    <h3>Apps recomendadas</h3>
+    <p>Usa <strong>Planifood</strong> o <strong>Mealime</strong> para crear menús semanales y generar listas de la compra automáticas. <strong>Nooddle</strong> sugiere recetas según lo que ya tienes en la nevera.</p>
+    <p><strong>Ahorro estimado:</strong> Reducir las comidas fuera de casa de 5 a 2 veces por semana puede ahorrarte entre <strong>30€ y 50€ mensuales</strong>.</p>
 
-      <h2 id="compra">3. Compra inteligente</h2>
-      <figure>
-        <img src="/images/posts/como-ahorrar-100-euros-al-mes-sin-esfuerzo/compra-inteligente.jpg" alt="Compra inteligente en el supermercado" loading="lazy" />
-        <figcaption>Compara precio por kilo y lleva lista de la compra.</figcaption>
-      </figure>
-      <p>Compara precios por kilo y haz lista.</p>
+    <h2 id="compra">3. Compra inteligente</h2>
+    <figure>
+      <img src="/images/posts/como-ahorrar-100-euros-al-mes-sin-esfuerzo/compra-inteligente.jpg" alt="Compra inteligente en el supermercado" loading="lazy" />
+      <figcaption>Compara precio por kilo y lleva lista de la compra.</figcaption>
+    </figure>
+    <p>Comprar sin planificación lleva a gastos innecesarios. La clave está en comparar, priorizar y evitar impulsos.</p>
+    <h3>Consejos prácticos</h3>
+    <ul>
+      <li><strong>Siempre con lista:</strong> Nunca vayas al supermercado sin una lista basada en tus menús semanales.</li>
+      <li><strong>Precio por unidad:</strong> Compara €/kg, €/litro o €/unidad, no el precio total del paquete.</li>
+      <li><strong>Marca blanca:</strong> Los productos de marca de distribución suelen ser un 20–30% más baratos y de calidad similar.</li>
+      <li><strong>Productos de temporada:</strong> Frutas y verduras en temporada son más baratas, frescas y sostenibles.</li>
+    </ul>
+    <h3>Herramientas digitales</h3>
+    <p>Aplicaciones como <strong>Soysuper</strong>, <strong>Ofertia</strong> y <strong>OCUMarket</strong> te permiten comparar precios entre supermercados (Mercadona, Carrefour, Eroski, etc.) en tiempo real. Escanea códigos de barras y encuentra el mejor precio cerca de ti.</p>
+    <p><strong>Ahorro estimado:</strong> Comprar de forma inteligente puede reducir tu factura del supermercado entre un <strong>15% y 25%</strong>, lo que equivale a unos <strong>20–30€ al mes</strong> en un hogar promedio.</p>
 
-      <h2 id="automatiza">4. Automatiza tu ahorro</h2>
-      <figure>
-        <img src="/images/posts/como-ahorrar-100-euros-al-mes-sin-esfuerzo/automatizar.jpg" alt="Automatizar una transferencia de ahorro" loading="lazy" />
-        <figcaption>Programa una transferencia el día de la nómina.</figcaption>
-      </figure>
-      <p>Transfiere 100€ el día de la nómina.</p>
-    `
+    <h2 id="automatiza">4. Automatiza tu ahorro</h2>
+    <figure>
+      <img src="/images/posts/como-ahorrar-100-euros-al-mes-sin-esfuerzo/automatizar.jpg" alt="Automatizar una transferencia de ahorro" loading="lazy" />
+      <figcaption>Programa una transferencia el día de la nómina.</figcaption>
+    </figure>
+    <p>El mayor obstáculo para ahorrar no es la falta de dinero, sino la falta de disciplina. La solución: <strong>haz que el ahorro sea automático</strong>.</p>
+    <h3>Cómo implementarlo</h3>
+    <ul>
+      <li><strong>Transferencia programada:</strong> Configura una transferencia automática de 100€ desde tu cuenta corriente a una cuenta de ahorro el mismo día que recibes la nómina.</li>
+      <li><strong>“Págate primero a ti mismo”:</strong> Trata el ahorro como un gasto fijo, no como un sobrante.</li>
+      <li><strong>Cuentas separadas:</strong> Usa una cuenta de ahorro distinta (idealmente en otro banco) para evitar tentaciones.</li>
+    </ul>
+    <h3>Tecnología al rescate</h3>
+    <p>Apps como <strong>Coinscrap</strong> redondean tus compras y transfieren los céntimos a ahorro. <strong>Qapital</strong> te permite crear reglas personalizadas (“ahorra 5€ cada vez que no pidas comida”). Y si tu banco lo permite, usa la opción de <strong>dividir la nómina</strong> directamente en origen.</p>
+    <p><strong>Beneficio clave:</strong> Al automatizar, nunca “ves” ese dinero, por lo que no lo extrañas. Con el tiempo, se convierte en un hábito invisible pero poderoso.</p>
+
+    <h2>Conclusión: 100€ al mes sí es posible</h2>
+    <p>Sumando los ahorros potenciales:
+    <ul>
+      <li>Suscripciones: <strong>+25€</strong></li>
+      <li>Cocina en casa: <strong>+40€</strong></li>
+      <li>Compra inteligente: <strong>+25€</strong></li>
+      <li>Ahorro automático: <strong>+10€</strong> (para completar la meta)</li>
+    </ul>
+    ¡Llegas fácilmente a los <strong>100€ mensuales</strong> sin renunciar a tu estilo de vida!
+    </p>
+    <p>Lo más importante no es cuánto ahorras hoy, sino que <strong>empieces y seas constante</strong>. Pequeños cambios, bien aplicados, generan grandes resultados a largo plazo.</p>
+  `
   },
   {
     id: 2,
