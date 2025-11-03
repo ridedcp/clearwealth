@@ -1108,6 +1108,375 @@ export const postsEn = [
     <h2>Final tip</h2>
     <p>The 50/30/20 isn’t rigid. In high-cost cities (London, NYC, Sydney), needs might be 60%. The goal is awareness—not perfection. Start today, and you’ll gain control within weeks.</p>
   `
+},
+  {
+  id: 6,
+  slug: "indexed-funds-for-beginners-how-to-start-investing-with-little-money",
+  title: "Indexed Funds for Beginners: How to Start Investing with Little Money",
+  date: "November 3, 2025",
+  category: "Investment",
+  readMins: 10,
+  cover: "/images/posts/fondos-indexados-para-principiantes/cover.jpg",
+  excerpt: "Discover how to start investing in indexed funds with just €50-150 monthly. A complete guide for beginners.",
+  description: "Step-by-step guide: what are indexed funds, why they're ideal for beginners, how to choose a platform, build a three-fund portfolio and automate your investments.",
+  content: `
+    <h2 id="intro">Do you think you need thousands of dollars to start investing?</h2>
+    <p>The reality is that with small monthly contributions of €50-150, you can build solid long-term wealth. Indexed funds are the perfect tool to do this without needing to be a financial expert. It's not about picking individual stocks or trying to "beat the market"—it's about investing passively, diversified, and with minimal costs.</p>
+
+    <h2 id="what-are">What are indexed funds?</h2>
+    <figure>
+      <img src="/images/posts/fondos-indexados-para-principiantes/que-son-fondos.jpg" alt="Concept of indexed funds" loading="lazy" />
+      <figcaption>Indexed funds replicate complete indices rather than trying to beat them.</figcaption>
+    </figure>
+    <p>An indexed fund is an investment fund that <strong>passively replicates a market index</strong> rather than trying to beat it. Instead of a manager actively selecting individual stocks, an indexed fund simply buys all (or a representative sample) of the securities in a specific index, holding them in the same proportions.</p>
+
+    <h3>Common indexes:</h3>
+    <ul>
+      <li><strong>S&P 500:</strong> The 500 largest U.S. companies</li>
+      <li><strong>MSCI World:</strong> Developed markets worldwide</li>
+      <li><strong>EuroStoxx 50:</strong> Major European companies</li>
+      <li><strong>MSCI Emerging:</strong> Growing economies in developing countries</li>
+    </ul>
+
+    <p>When you invest in an S&P 500 indexed fund, you own a small piece of all 500 companies in that index. If the index rises 10%, your investment rises approximately 10% (minus minimal fees). If it falls 5%, yours falls 5%.</p>
+
+    <h2 id="why-beginners">Why are indexed funds perfect for beginners?</h2>
+
+    <h3>1. Dramatically lower costs</h3>
+    <p>This is probably the most important advantage. Active funds—managed by professional stock pickers—typically charge <strong>1.5% to 2% or more annually</strong> in management fees. Indexed funds charge <strong>0.05% to 0.30%</strong>.</p>
+
+    <p>This seemingly small difference compounds into significant wealth over time. Consider this example: An investment of €10,000 with annual contributions of €200 over 25 years at a 7% annual return would result in:</p>
+
+    <ul>
+      <li><strong>Active fund (1.8% fees):</strong> Approximately €117,000</li>
+      <li><strong>Indexed fund (0.15% fees):</strong> Approximately €142,000</li>
+    </ul>
+
+    <p><strong>That's a difference of €25,000 or more—simply by choosing lower-cost investments!</strong></p>
+
+    <h3>2. Automatic diversification</h3>
+    <p>With a single indexed fund purchase, you own pieces of hundreds or thousands of companies. This diversification dramatically reduces the risk that any single company's failure will significantly impact your portfolio.</p>
+
+    <h3>3. Transparency and predictability</h3>
+    <p>You always know exactly what you own. Your returns will track the index, not depend on whether a manager is having a good or bad year.</p>
+
+    <h3>4. Historical evidence</h3>
+    <p>Research consistently shows that <strong>more than 80% of active fund managers fail to beat their benchmark index over 10+ years</strong> when accounting for fees. Even professional investors with analyst teams can't consistently outperform the market.</p>
+
+    <h2 id="comparison">Indexed funds vs. Active funds: The numbers</h2>
+    <figure>
+      <img src="/images/posts/fondos-indexados-para-principiantes/activos-vs-pasivos.jpg" alt="Comparison of active vs passive funds" loading="lazy" />
+      <figcaption>The difference in costs generates completely different results over the long term.</figcaption>
+    </figure>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Aspect</th>
+          <th>Active Funds</th>
+          <th>Indexed Funds</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Annual Fees</strong></td>
+          <td>1.5% - 2%+</td>
+          <td>0.05% - 0.30%</td>
+        </tr>
+        <tr>
+          <td><strong>Beat Market Rate</strong></td>
+          <td>&lt;20% over 10 years</td>
+          <td>Tracks market by design</td>
+        </tr>
+        <tr>
+          <td><strong>Transparency</strong></td>
+          <td>Varies by manager</td>
+          <td>Crystal clear</td>
+        </tr>
+        <tr>
+          <td><strong>Volatility</strong></td>
+          <td>Same as index</td>
+          <td>Same as index</td>
+        </tr>
+        <tr>
+          <td><strong>Best for</strong></td>
+          <td>Elite managers (rare)</td>
+          <td>99% of investors</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 id="portfolio-three-funds">Build your first indexed fund portfolio</h2>
+    <figure>
+      <img src="/images/posts/fondos-indexados-para-principiantes/cartera-tres-fondos.jpg" alt="Diversified three-fund portfolio" loading="lazy" />
+      <figcaption>The three-fund strategy is simple, effective, and accessible to everyone.</figcaption>
+    </figure>
+
+    <h3>The three-fund strategy</h3>
+    <p>The simplest approach for beginners is the <strong>three-fund portfolio</strong>—a diversified strategy using just three indexed funds:</p>
+
+    <h4>1. Global Equity Fund (60-75% of portfolio)</h4>
+    <ul>
+      <li><strong>Example:</strong> Vanguard Global Stock Index Fund EUR</li>
+      <li><strong>Purpose:</strong> Exposure to developed markets worldwide</li>
+      <li><strong>TER (Total Expense Ratio):</strong> ~0.18%</li>
+    </ul>
+
+    <h4>2. Emerging Markets Fund (10-15% of portfolio)</h4>
+    <ul>
+      <li><strong>Example:</strong> Vanguard Emerging Markets Stock Index Fund EUR</li>
+      <li><strong>Purpose:</strong> Captures growth from developing economies</li>
+      <li><strong>TER:</strong> ~0.23%</li>
+    </ul>
+
+    <h4>3. Fixed Income Fund (10-30% of portfolio)</h4>
+    <ul>
+      <li><strong>Example:</strong> Vanguard Global Bond Index Fund EUR</li>
+      <li><strong>Purpose:</strong> Provides stability and income</li>
+      <li><strong>TER:</strong> ~0.20%</li>
+    </ul>
+
+    <h3>Allocations by age</h3>
+    <h4>Conservative Portfolio (Over 40 years old):</h4>
+    <ul>
+      <li>50% Global Equity Fund</li>
+      <li>10% Emerging Markets Fund</li>
+      <li>40% Fixed Income Fund</li>
+    </ul>
+
+    <h4>Growth Portfolio (20-35 years old):</h4>
+    <ul>
+      <li>70% Global Equity Fund</li>
+      <li>15% Emerging Markets Fund</li>
+      <li>15% Fixed Income Fund</li>
+    </ul>
+
+    <h2 id="getting-started">Getting started: Step by step</h2>
+
+    <h3>Step 1: Choose your platform</h3>
+    <p>The best platforms for investing in indexed funds vary by region. In Europe, popular options include:</p>
+
+    <h4>Interactive Brokers</h4>
+    <ul>
+      <li><strong>Minimum investment:</strong> Low minimums for most funds</li>
+      <li><strong>Fees:</strong> Very competitive</li>
+      <li><strong>Features:</strong> Access to global markets, trading tools</li>
+      <li><strong>Regulation:</strong> Regulated in multiple countries</li>
+      <li><strong>Best for:</strong> Investors wanting broad market access</li>
+    </ul>
+
+    <h4>Degiro</h4>
+    <ul>
+      <li><strong>Minimum investment:</strong> Very low or none</li>
+      <li><strong>Fees:</strong> €0.50-€6 per transaction</li>
+      <li><strong>Features:</strong> Simple interface, automatic investment plans</li>
+      <li><strong>Regulation:</strong> Regulated across Europe</li>
+      <li><strong>Best for:</strong> Cost-conscious beginners</li>
+    </ul>
+
+    <h4>Vanguard Personal Advisor</h4>
+    <ul>
+      <li><strong>Minimum investment:</strong> €50,000 for advisory services</li>
+      <li><strong>Fees:</strong> Integrated in fund fees</li>
+      <li><strong>Features:</strong> Full robo-advisor management, automatic rebalancing</li>
+      <li><strong>Best for:</strong> Those wanting completely hands-off management</li>
+    </ul>
+
+    <h3>Step 2: Open your account</h3>
+    <p>Most platforms require:</p>
+    <ul>
+      <li>Valid ID</li>
+      <li>Proof of address</li>
+      <li>Bank details for transfers</li>
+      <li>Electronic signature</li>
+    </ul>
+    <p><strong>The entire process typically takes 10-20 minutes.</strong></p>
+
+    <h3>Step 3: Make your first investment</h3>
+    <p>Start with whatever you can afford. Here are realistic scenarios:</p>
+
+    <h4>Scenario A: Limited Capital</h4>
+    <ul>
+      <li><strong>Initial investment:</strong> €100</li>
+      <li><strong>Monthly contribution:</strong> €50</li>
+      <li><strong>Allocation:</strong> 100% to a single global indexed fund</li>
+    </ul>
+
+    <h4>Scenario B: Moderate Capital</h4>
+    <ul>
+      <li><strong>Initial investment:</strong> €500</li>
+      <li><strong>Monthly contribution:</strong> €150</li>
+      <li><strong>Allocation:</strong> 70% equities, 30% bonds</li>
+    </ul>
+
+    <h4>Scenario C: Comfortable Capital</h4>
+    <ul>
+      <li><strong>Initial investment:</strong> €1,000</li>
+      <li><strong>Monthly contribution:</strong> €200</li>
+      <li><strong>Allocation:</strong> 65% equities, 15% emerging markets, 20% bonds</li>
+    </ul>
+
+    <h3>Step 4: Automate your contributions</h3>
+    <p><strong>This is crucial.</strong> Set up <strong>automatic monthly transfers</strong> from your bank account to your investment account. Automation removes emotion from investing and ensures you benefit from <strong>Dollar-Cost Averaging (DCA)</strong>—investing the same amount regardless of market conditions.</p>
+    <p>Research shows that periodic investments cut losses in half over 10 years and by 36% over 5 years.</p>
+
+    <h2 id="understanding-returns">Understanding returns: Real-world examples</h2>
+    <figure>
+      <img src="/images/posts/fondos-indexados-para-principiantes/crecimiento-compuesto.jpg" alt="Long-term compound growth" loading="lazy" />
+      <figcaption>The power of compound interest: your best ally in long-term investment.</figcaption>
+    </figure>
+
+    <h3>Example 1: Conservative Growth Over 25 Years</h3>
+    <ul>
+      <li><strong>Initial investment:</strong> €5,000</li>
+      <li><strong>Monthly contribution:</strong> €250</li>
+      <li><strong>Portfolio allocation:</strong> 60% stocks, 40% bonds</li>
+      <li><strong>Average annual return:</strong> 5.8%</li>
+      <li><strong>Result after 25 years:</strong> ~€120,000</li>
+    </ul>
+
+    <p><strong>Breakdown:</strong></p>
+    <ul>
+      <li>Total contributed: ~€80,000</li>
+      <li>Investment gains: ~€40,000</li>
+      <li>Return on investment: 50%</li>
+    </ul>
+
+    <h3>Example 2: Aggressive Growth Over 25 Years</h3>
+    <ul>
+      <li><strong>Initial investment:</strong> €5,000</li>
+      <li><strong>Monthly contribution:</strong> €250</li>
+      <li><strong>Portfolio allocation:</strong> 80% stocks, 20% bonds</li>
+      <li><strong>Average annual return:</strong> 8.9%</li>
+      <li><strong>Result after 25 years:</strong> ~€185,000</li>
+    </ul>
+
+    <p><strong>Breakdown:</strong></p>
+    <ul>
+      <li>Total contributed: ~€80,000</li>
+      <li>Investment gains: ~€105,000</li>
+      <li>Return on investment: 131%</li>
+    </ul>
+
+    <p>These examples illustrate the power of compound interest that Einstein called "the eighth wonder of the world."</p>
+
+    <h2 id="risk">Risk considerations and reality checks</h2>
+
+    <h3>Volatility is normal</h3>
+    <p>Indexed funds track the entire market. <strong>When the market drops 20%, your indexed fund drops 20%.</strong> This is not a failure—it's how markets work. Historically, the stock market has:</p>
+    <ul>
+      <li>Recovered from every major crash</li>
+      <li>Provided positive returns over any 20-year period</li>
+      <li>Consistently rewarded patient investors</li>
+    </ul>
+    <p><strong>The key is maintaining your contributions even during downturns.</strong> Buying more shares when prices are low accelerates your long-term returns.</p>
+
+    <h3>Not for short-term needs</h3>
+    <p>If you need your money within 5 years, indexed funds may not be appropriate. They're designed for horizons of 10+ years. For shorter-term goals, use savings accounts or short-term bonds.</p>
+
+    <h3>Tracking error</h3>
+    <p>Minimal but real. Most indexed funds deviate less than 0.1% from their benchmark annually due to fees and administrative costs. This is negligible over decades.</p>
+
+    <h2 id="dca">Dollar-Cost Averaging: Your best ally</h2>
+    <p><strong>Dollar-Cost Averaging (DCA)</strong> means investing a fixed amount at regular intervals (weekly, monthly, quarterly), regardless of market conditions.</p>
+
+    <h3>Why it works:</h3>
+    <ul>
+      <li>You buy more shares when prices are low</li>
+      <li>You buy fewer shares when prices are high</li>
+      <li>Your average cost becomes the market average</li>
+      <li>Emotion is removed from decision-making</li>
+    </ul>
+
+    <h3>DCA in action:</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Month</th>
+          <th>Share Price</th>
+          <th>Monthly Investment</th>
+          <th>Shares Purchased</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>January</td>
+          <td>€100</td>
+          <td>€200</td>
+          <td>2.0</td>
+        </tr>
+        <tr>
+          <td>February</td>
+          <td>€95</td>
+          <td>€200</td>
+          <td>2.11</td>
+        </tr>
+        <tr>
+          <td>March</td>
+          <td>€105</td>
+          <td>€200</td>
+          <td>1.90</td>
+        </tr>
+        <tr>
+          <td>April</td>
+          <td>€100</td>
+          <td>€200</td>
+          <td>2.0</td>
+        </tr>
+        <tr>
+          <td><strong>Average</strong></td>
+          <td><strong>€100</strong></td>
+          <td><strong>€200 × 4</strong></td>
+          <td><strong>8.01</strong></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Your average cost: €99.75 per share—exactly the market average! You've eliminated timing risk.</p>
+
+    <h2 id="psychology">The psychology of long-term investing</h2>
+    <p>Investing in indexed funds requires discipline, not intelligence:</p>
+    <ul>
+      <li><strong>Ignore short-term noise:</strong> Market drops 10%? This is normal. Don't panic.</li>
+      <li><strong>Celebrate market declines:</strong> When prices fall, your monthly contributions buy more shares at lower prices.</li>
+      <li><strong>Set and forget:</strong> Review your portfolio annually, not daily.</li>
+      <li><strong>Stay the course:</strong> The longest bull market in history follows every bear market.</li>
+    </ul>
+
+    <h2 id="mistakes">Common mistakes to avoid</h2>
+    <ul>
+      <li><strong>Trying to time the market:</strong> Nobody can predict short-term movements. DCA eliminates this problem.</li>
+      <li><strong>Frequently switching between funds:</strong> Each switch incurs costs and potential tax consequences.</li>
+      <li><strong>Investing money you'll need soon:</strong> Only invest capital you can leave untouched for 10+ years.</li>
+      <li><strong>Stopping contributions during downturns:</strong> This is precisely when you should keep buying.</li>
+      <li><strong>Paying unnecessary fees:</strong> Always choose the lowest-cost option available.</li>
+    </ul>
+
+    <h2 id="tax">Tax advantages</h2>
+    <p>Indexed funds offer significant tax benefits compared to individual stock trading:</p>
+    <ul>
+      <li><strong>Tax-deferred compounding:</strong> You don't pay taxes on gains until you withdraw</li>
+      <li><strong>Lower annual costs</strong> mean lower tax burdens versus active trading</li>
+      <li><strong>Tax efficiency:</strong> Lower turnover means fewer taxable events</li>
+    </ul>
+
+    <h2 id="action-plan">Your action plan: Start this week</h2>
+    <ul>
+      <li><strong>Monday:</strong> Research and open an account (20 minutes)</li>
+      <li><strong>Tuesday:</strong> Choose your three-fund allocation based on your age and risk tolerance (15 minutes)</li>
+      <li><strong>Wednesday:</strong> Make your first investment—even if it's just €50 (10 minutes)</li>
+      <li><strong>Thursday:</strong> Set up automatic monthly transfers for recurring investments (10 minutes)</li>
+      <li><strong>Friday:</strong> Schedule a calendar reminder to review your portfolio annually (2 minutes)</li>
+    </ul>
+    <p><strong>Total time investment: Under 1 hour to start building your financial future</strong></p>
+
+    <h2 id="conclusion">Conclusion: Indexed funds democratize investing</h2>
+    <p>Indexed funds have transformed wealth-building from an exclusive activity requiring expert knowledge into something any person with internet access and modest savings can do. The evidence is overwhelming: <strong>buy a diversified portfolio of low-cost indexed funds, invest regularly, ignore the noise, and let compound interest do the heavy lifting.</strong></p>
+
+    <p>You don't need to be smart or lucky to build wealth—you just need to be <strong>patient and consistent</strong>. Start small, start today, and start with indexed funds.</p>
+
+    <p><strong>Your financial future starts now. Let's go!</strong></p>
+  `
 }
 ];
 
