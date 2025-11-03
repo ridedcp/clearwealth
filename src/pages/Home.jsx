@@ -1,56 +1,47 @@
 // src/pages/Home.jsx
 import { Link } from "react-router-dom";
 import SEO from "../seo/SEO";
+import AdPlaceholder from "../components/AdPlaceholder";
+import { translations } from "../i18n";
 import { getPosts } from "../data/posts";
 
 export default function Home({ lang = "es" }) {
-  const t = {
-    es: {
-      title: "Aprende a gestionar tu dinero de forma simple",
-      subtitle: "Ahorra, invierte y vive con inteligencia financiera.",
-      latest: "Últimos artículos",
-      topics: "Temas populares",
-      read: "Leer",
-      explore: "Ver todos los artículos",
-      guide_title: "Guía práctica: Ahorrar 100€/mes",
-      guide_text: "Descarga la guía en PDF con pasos y checklist accionables.",
-      guide_btn: "Descargar guía (PDF)",
-      blogPath: `/${lang}/blog`,
-    },
-    en: {
-      title: "Learn to manage your money the simple way",
-      subtitle: "Learn to save, invest, and live with financial intelligence.",
-      latest: "Latest articles",
-      topics: "Popular topics",
-      read: "Read",
-      explore: "View all articles",
-      guide_title: "Practical Guide: Save €100/month",
-      guide_text: "Download the PDF with steps and actionable checklists.",
-      guide_btn: "Download guide (PDF)",
-      blogPath: `/${lang}/blog`,
-    },
-  }[lang];
-
+  const t = translations[lang] || translations.es;
+  const path = `/${lang}/`;
   const posts = getPosts(lang);
   const featured = posts[0];
-  const latest = posts.slice(0, 4);
-  const categories = [...new Set(posts.map((p) => p.category).filter(Boolean))];
+  const latest = posts.slice(0, 6);
+  const categories = [...new Set(posts.map(p => p.category).filter(Boolean))];
+
+  // etiquetas mínimas sin tocar tu i18n actual
+  const L = lang === "es"
+    ? {
+        latest: "Últimos artículos",
+        topics: "Temas populares",
+        read: "Leer",
+        explore: "Ver todos los artículos",
+        featuredFallback: "Artículo destacado",
+      }
+    : {
+        latest: "Latest articles",
+        topics: "Popular topics",
+        read: "Read",
+        explore: "View all articles",
+        featuredFallback: "Featured article",
+      };
 
   const base = `/${lang}`;
-  const pdfHref = "/assets/guia-ahorrar-100-euros.pdf"; // ya lo generamos
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <SEO
-        lang={lang}
-        path={`${base}/`}
-        title={t.title}
-        description={t.subtitle}
-      />
+      <SEO lang={lang} path={path} title={t.brand} description={t.home.subtitle} />
 
-      {/* HERO destacado */}
+      {/* AdSense – Cabecera */}
+      <AdPlaceholder position="Cabecera" />
+
+      {/* HERO con destacado */}
       {featured && (
-        <section className="mb-10 overflow-hidden rounded-2xl border border-gray-800 bg-gray-900/40 p-6">
+        <section className="mt-6 mb-10 overflow-hidden rounded-2xl border border-gray-800 bg-gray-900/40 p-6">
           <div className="grid md:grid-cols-2 gap-6 items-center">
             <div>
               <h1 className="text-3xl md:text-4xl font-extrabold text-white">
@@ -62,13 +53,13 @@ export default function Home({ lang = "es" }) {
                   to={`${base}/blog/${featured.slug}`}
                   className="inline-flex items-center px-4 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-500"
                 >
-                  {t.read}
+                  {L.read}
                 </Link>
                 <Link
-                  to={t.blogPath}
+                  to={`${base}/blog`}
                   className="inline-flex items-center px-4 py-2 rounded-md border border-gray-700 text-gray-200 hover:bg-gray-800"
                 >
-                  {t.explore}
+                  {L.explore}
                 </Link>
               </div>
             </div>
@@ -83,8 +74,7 @@ export default function Home({ lang = "es" }) {
                 />
               ) : (
                 <div className="h-64 rounded-xl border border-dashed border-gray-700 flex items-center justify-center text-gray-500">
-                  {/* placeholder si no hay cover */}
-                  {lang === "es" ? "Artículo destacado" : "Featured article"}
+                  {L.featuredFallback}
                 </div>
               )}
             </div>
@@ -96,13 +86,13 @@ export default function Home({ lang = "es" }) {
       {categories.length > 0 && (
         <section className="mb-8">
           <h2 className="text-sm uppercase tracking-wide text-gray-400 mb-3">
-            {t.topics}
+            {L.topics}
           </h2>
           <div className="flex flex-wrap gap-2">
             {categories.map((c) => (
               <Link
                 key={c}
-                to={t.blogPath} // si más adelante filtras por query, añade ?cat=...
+                to={`${base}/blog`} // si luego filtras por query, añade ?cat=${encodeURIComponent(c)}
                 className="px-3 py-1 rounded-full bg-gray-800 text-gray-200 text-sm hover:bg-gray-700 border border-gray-700"
               >
                 {c}
@@ -112,20 +102,20 @@ export default function Home({ lang = "es" }) {
         </section>
       )}
 
-      {/* Últimos artículos */}
+      {/* Bloque de artículos */}
       <section className="mb-10">
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xl font-semibold text-white">{t.latest}</h2>
+          <h2 className="text-xl font-semibold text-white">{L.latest}</h2>
           <Link
-            to={t.blogPath}
+            to={`${base}/blog`}
             className="text-sm text-blue-400 hover:text-blue-300"
           >
-            {t.explore}
+            {L.explore}
           </Link>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {latest.map((p) => (
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {latest.map((p, idx) => (
             <article
               key={p.slug}
               className="rounded-xl border border-gray-800 bg-gray-900/40 hover:bg-gray-900 transition"
@@ -141,7 +131,9 @@ export default function Home({ lang = "es" }) {
                 </Link>
               )}
               <div className="p-4">
-                <div className="text-xs text-gray-400 mb-1">{p.category}</div>
+                {p.category && (
+                  <div className="text-xs text-gray-400 mb-1">{p.category}</div>
+                )}
                 <h3 className="font-semibold text-white leading-snug">
                   <Link to={`${base}/blog/${p.slug}`}>{p.title}</Link>
                 </h3>
@@ -152,7 +144,7 @@ export default function Home({ lang = "es" }) {
                   to={`${base}/blog/${p.slug}`}
                   className="mt-3 inline-block text-sm text-blue-400 hover:text-blue-300"
                 >
-                  {t.read}
+                  {L.read}
                 </Link>
               </div>
             </article>
@@ -160,19 +152,20 @@ export default function Home({ lang = "es" }) {
         </div>
       </section>
 
-      {/* Lead magnet: Guía PDF */}
-      <section className="rounded-2xl border border-blue-900 bg-gradient-to-r from-blue-800/40 to-indigo-800/40 p-6 text-center">
-        <h3 className="text-2xl font-bold text-white">{t.guide_title}</h3>
-        <p className="mt-2 text-gray-200">{t.guide_text}</p>
-        <a
-          href={pdfHref}
-          className="mt-4 inline-flex items-center px-5 py-2 rounded-md bg-white text-gray-900 hover:bg-gray-200 font-medium"
-          target="_blank"
-          rel="noopener noreferrer"
+      {/* AdSense – Mid list (opcional; borra si no lo quieres) */}
+      <AdPlaceholder position="Mid-list" />
+
+      {/* CTA final simple */}
+      <div className="mt-8 rounded-2xl border border-gray-800 bg-gray-900/40 p-6 text-center">
+        <h3 className="text-2xl font-bold text-white">{t.home.ctaTitle}</h3>
+        <p className="mt-2 text-gray-300 max-w-2xl mx-auto">{t.home.ctaText}</p>
+        <Link
+          to={`${base}/blog`}
+          className="mt-4 inline-flex items-center px-5 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-500 font-medium"
         >
-          {t.guide_btn}
-        </a>
-      </section>
+          {t.home.explore}
+        </Link>
+      </div>
     </div>
   );
 }
