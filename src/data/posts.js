@@ -469,76 +469,277 @@ export const postsEn = [
   `
   },
   {
-    id: 2,
-    slug: "best-expense-tracker-apps-2025",
-    title: "Best Expense Tracker Apps in 2025",
-    date: "March 10, 2025",
-    category: "Budgeting",
-    readMins: 4,
-    cover: "/images/posts/mejores-apps-controlar-gastos-2025/cover.jpg",
-    excerpt: "Digital tools to get full control over your personal finances.",
-    description: "Fintonic, Money Manager, Wallet, Sheets and Revolut: which fits you best?",
-    content: `
-      <h2 id="intro">Track it to tame it</h2><p>Five solid options for every style.</p>
-      <h2 id="fintonic">Fintonic</h2><p>Bank sync and insights.</p>
-      <h2 id="mm">Money Manager</h2><p>Manual input, clean charts.</p>
-      <h2 id="wallet">Wallet</h2><p>Goals and investments.</p>
-      <h2 id="sheets">Google Sheets</h2><p>Full control with templates.</p>
-      <h2 id="revolut">Revolut</h2><p>Auto-categorization and limits.</p>
-    `
-  },
+  id: 2,
+  slug: "best-expense-tracker-apps-2025",
+  title: "Best Expense Tracker Apps in 2025",
+  date: "March 10, 2025",
+  category: "Budgeting",
+  readMins: 6,
+  cover: "/images/posts/mejores-apps-controlar-gastos-2025/cover.jpg",
+  excerpt: "Digital tools to get full control over your personal finances.",
+  description: "Fintonic, Money Manager, Wallet, Sheets and Revolut: which fits you best?",
+  content: `
+    <h2 id="intro">Track it to tame it</h2>
+    <p>You’re not alone: 64% of Americans don’t track their spending (National Foundation for Credit Counseling). The good news? In 2025, powerful, user-friendly apps do the heavy lifting for you. Here’s our deep dive into the 5 best options—whether you’re in New York, London, Berlin, or Sydney.</p>
+
+    <h2 id="fintonic">1. Fintonic</h2>
+    <figure>
+      <img src="/images/posts/mejores-apps-controlar-gastos-2025/fintonic.jpg" alt="Fintonic app on smartphone" loading="lazy" />
+      <figcaption>Secure bank sync and real-time insights.</figcaption>
+    </figure>
+    <p><strong>Best for:</strong> EU residents who want automatic, hands-off expense tracking in their native language.</p>
+    <p>Fintonic connects to 150+ banks across Spain, France, Germany, and Italy via PSD2 (EU open banking). It auto-categorizes spending, flags unusual transactions, and offers monthly reports—all in Spanish, French, or German. Free with optional Premium (€4.99/month) for advanced analytics.</p>
+    <p><strong>Pros:</strong> Fully automatic, multilingual, bank-grade security.<br><strong>Cons:</strong> Limited outside Europe; key features behind paywall.</p>
+
+    <h2 id="mm">2. Money Manager Expense & Budget</h2>
+    <figure>
+      <img src="/images/posts/mejores-apps-controlar-gastos-2025/money-manager.jpg" alt="Money Manager interface" loading="lazy" />
+      <figcaption>Manual entry with clean charts and no bank linking.</figcaption>
+    </figure>
+    <p><strong>Best for:</strong> Privacy-focused users who prefer full control without sharing bank credentials.</p>
+    <p>With over 50 million downloads, this app lets you log income and expenses manually. Its intuitive pie charts show spending by category (groceries, transport, entertainment). Free version includes ads; Pro (US$2.99/month) removes them and adds cloud backup.</p>
+    <p><strong>Pros:</strong> Works offline, no bank access needed, lightweight.<br><strong>Cons:</strong> Requires discipline to log every transaction.</p>
+
+    <h2 id="wallet">3. Wallet by BudgetBakers</h2>
+    <figure>
+      <img src="/images/posts/mejores-apps-controlar-gastos-2025/wallet.jpg" alt="Wallet app with financial goals" loading="lazy" />
+      <figcaption>Track savings goals, debts, and investments in one place.</figcaption>
+    </figure>
+    <p><strong>Best for:</strong> Holistic financial managers who want to see net worth, not just spending.</p>
+    <p>Wallet syncs with banks globally but also lets you manually add assets like stocks, crypto, or student loans. Its standout feature: customizable goals. Set “$5,000 Emergency Fund” and it calculates how much to save weekly.</p>
+    <p><strong>Pros:</strong> Net worth tracking, cross-platform, detailed reports.<br><strong>Cons:</strong> Free version limited; Premium at $4.99/month.</p>
+
+    <h2 id="sheets">4. Google Sheets (with templates)</h2>
+    <figure>
+      <img src="/images/posts/mejores-apps-controlar-gastos-2025/google-sheets.jpg" alt="Budget template in Google Sheets" loading="lazy" />
+      <figcaption>Total control, free, and 100% customizable.</figcaption>
+    </figure>
+    <p><strong>Best for:</strong> Excel lovers, perfectionists, or DIY finance nerds.</p>
+    <p>Free templates like “Monthly Budget” by Vertex42 or “Personal Finance Dashboard” by Tiller offer automatic charts, goal tracking, and year-over-year comparisons. Works on any device, no ads, no subscriptions.</p>
+    <p><strong>Pros:</strong> Free forever, unlimited customization, no data sharing.<br><strong>Cons:</strong> Manual entry required; learning curve for beginners.</p>
+
+    <h2 id="revolut">5. Revolut</h2>
+    <figure>
+      <img src="/images/posts/mejores-apps-controlar-gastos-2025/revolut.jpg" alt="Automatic categorization in Revolut" loading="lazy" />
+      <figcaption>Auto-categorization and spending limits by category.</figcaption>
+    </figure>
+    <p><strong>Best for:</strong> Revolut users who want built-in budgeting without extra apps.</p>
+    <p>Revolut isn’t just a neobank—it’s a full financial hub. It auto-categorizes spending (e.g., “Groceries,” “Transport”) and lets you set monthly limits. Go over your “Dining Out” budget? You’ll get an instant alert.</p>
+    <p><strong>Pros:</strong> Seamless integration, multi-currency support, travel-friendly.<br><strong>Cons:</strong> Only useful if you use Revolut as your primary account.</p>
+
+    <h2>Which one should you choose?</h2>
+    <ul>
+      <li><strong>Automatic & EU-based:</strong> Fintonic</li>
+      <li><strong>Manual & privacy-first:</strong> Money Manager</li>
+      <li><strong>Holistic view (net worth + goals):</strong> Wallet</li>
+      <li><strong>Full control & free:</strong> Google Sheets</li>
+      <li><strong>If you use Revolut:</strong> Leverage its native tools</li>
+    </ul>
+    <p>Remember: the best app is the one you’ll actually use consistently.</p>
+  `
+},
   {
-    id: 3,
-    slug: "compound-interest-explained-easy",
-    title: "Compound Interest Explained the Easy Way",
-    date: "March 5, 2025",
-    category: "Investing",
-    readMins: 3,
-    cover: "/images/posts/interes-compuesto-explicado-facil/cover.jpg",
-    excerpt: "Understand the engine that multiplies your money over time.",
-    description: "Basics and example of compound interest to start early.",
-    content: `
-      <h2 id="intro">Interest on interest</h2><p>The earlier you start, the better.</p>
-      <h2 id="example">Example</h2><ul><li>Year 1: 1,050</li><li>Year 2: 1,102.5</li></ul>
-      <h2 id="make">Make it work</h2><p>Reinvest and keep contributions steady.</p>
-    `
-  },
+  id: 3,
+  slug: "compound-interest-explained-easy",
+  title: "Compound Interest Explained the Easy Way",
+  date: "March 5, 2025",
+  category: "Investing",
+  readMins: 4,
+  cover: "/images/posts/interes-compuesto-explicado-facil/cover.jpg",
+  excerpt: "Understand the engine that multiplies your money over time.",
+  description: "Basics and example of compound interest to start early.",
+  content: `
+    <h2 id="intro">Einstein’s “Eighth Wonder of the World”</h2>
+    <p>Compound interest means earning returns not just on your original investment, but also on the returns you’ve already earned. In short: <strong>“interest on interest.”</strong></p>
+    <p>It’s the silent engine behind long-term wealth—but only if you give it time to work.</p>
+
+    <h2 id="example">Real example: $1,000 at 7% annual return</h2>
+    <figure>
+      <img src="/images/posts/interes-compuesto-explicado-facil/ejemplo.jpg" alt="Exponential growth chart" loading="lazy" />
+      <figcaption>Growth with simple vs. compound interest.</figcaption>
+    </figure>
+    <ul>
+      <li><strong>Year 0:</strong> $1,000</li>
+      <li><strong>Year 1:</strong> $1,000 + (7% of $1,000) = <strong>$1,070</strong></li>
+      <li><strong>Year 2:</strong> $1,070 + (7% of $1,070) = <strong>$1,144.90</strong></li>
+      <li><strong>Year 10:</strong> <strong>$1,967.15</strong></li>
+      <li><strong>Year 30:</strong> <strong>$7,612.26</strong></li>
+    </ul>
+    <p>With simple interest (only on the original $1,000), you’d have just $3,100 after 30 years. With compounding: **more than double**.</p>
+
+    <h2 id="time">The power of starting early</h2>
+    <p>Meet two savers:
+      <ul>
+        <li><strong>Alex</strong> invests $300/month from age 25 to 35 (10 years), then stops.</li>
+        <li><strong>Jamie</strong> starts at 35 and invests $300/month until 65 (30 years).</li>
+      </ul>
+      Assuming a 7% annual return:
+      <ul>
+        <li>Alex contributes: $36,000 → Has at 65: <strong>≈$566,000</strong></li>
+        <li>Jamie contributes: $108,000 → Has at 65: <strong>≈$340,000</strong></li>
+      </ul>
+    </p>
+    <p>Alex invested **$72,000 less**… and ended up with **$226,000 more**—thanks to 40 years of compounding.</p>
+
+    <h2 id="make">How to make it work for you</h2>
+    <figure>
+      <img src="/images/posts/interes-compuesto-explicado-facil/reinvertir.jpg" alt="Reinvesting dividends" loading="lazy" />
+      <figcaption>Always reinvest your earnings.</figcaption>
+    </figure>
+    <ol>
+      <li><strong>Start now:</strong> Don’t wait to “have more.” Begin with what you have.</li>
+      <li><strong>Reinvest:</strong> In ETFs, index funds, or retirement accounts, enable “dividend reinvestment.”</li>
+      <li><strong>Be consistent:</strong> Automate monthly contributions, even small ones.</li>
+      <li><strong>Be patient:</strong> Growth is slow at first, explosive later.</li>
+    </ol>
+    <p>Compound interest isn’t magic—it’s math + time + consistency.</p>
+  `
+},
   {
-    id: 4,
-    slug: "five-financial-habits-to-improve",
-    title: "5 Financial Habits to Improve Your Money",
-    date: "March 1, 2025",
-    category: "Habits",
-    readMins: 3,
-    cover: "/images/posts/habitos-financieros-para-mejorar-tus-finanzas/cover.jpg",
-    excerpt: "Small daily changes that compound into big results.",
-    description: "Five simple financial habits for more control and stability.",
-    content: `
-      <h2 id="intro">Five habits</h2>
-      <ol>
-        <li id="weekly">Weekly money review</li>
-        <li id="payfirst">Pay yourself first</li>
-        <li id="belowmeans">Live below your means</li>
-        <li id="learn">Keep learning</li>
-        <li id="goals">Set clear goals</li>
-      </ol>
-    `
-  },
+  id: 4,
+  slug: "five-financial-habits-to-improve",
+  title: "5 Financial Habits to Improve Your Money",
+  date: "March 1, 2025",
+  category: "Habits",
+  readMins: 4,
+  cover: "/images/posts/habitos-financieros-para-mejorar-tus-finanzas/cover.jpg",
+  excerpt: "Small daily changes that compound into big results.",
+  description: "Five simple financial habits for more control and stability.",
+  content: `
+    <h2 id="intro">Wealth is built in silence, through habits</h2>
+    <p>Financial stability doesn’t come from windfalls—it comes from consistent routines. These 5 evidence-backed habits will give you clarity, control, and peace of mind.</p>
+
+    <h2 id="weekly">1. Weekly money check-in (10 minutes)</h2>
+    <figure>
+      <img src="/images/posts/habitos-financieros-para-mejorar-tus-finanzas/revision.jpg" alt="Weekly finance review on tablet" loading="lazy" />
+      <figcaption>Spend 10 minutes every Sunday reviewing your finances.</figcaption>
+    </figure>
+    <p>No audit needed. Just open your budgeting app or spreadsheet and ask:
+      <ul>
+        <li>Did I overspend in any category?</li>
+        <li>Is there a recurring charge I can cancel?</li>
+        <li>Did I hit my savings goal?</li>
+      </ul>
+    </p>
+    <p>This habit prevents surprises and builds financial awareness.</p>
+
+    <h2 id="payfirst">2. Pay yourself first</h2>
+    <figure>
+      <img src="/images/posts/habitos-financieros-para-mejorar-tus-finanzas/pagate-primero.jpg" alt="Automatic savings transfer" loading="lazy" />
+      <figcaption>Before bills, save a fixed percentage.</figcaption>
+    </figure>
+    <p>Instead of saving “what’s left,” allocate a fixed % (e.g., 10–20%) of your income to savings **on payday**. Automate it. Treat it like a non-negotiable bill.</p>
+    <p>This principle, from *The Richest Man in Babylon*, is the foundation of lasting wealth.</p>
+
+    <h2 id="belowmeans">3. Live below your means</h2>
+    <figure>
+      <img src="/images/posts/habitos-financieros-para-mejorar-tus-finanzas/vive-bajo.jpg" alt="Simple, happy lifestyle" loading="lazy" />
+      <figcaption>True wealth is needing less, not having more.</figcaption>
+    </figure>
+    <p>This isn’t about deprivation—it’s about avoiding “lifestyle inflation.” Before buying, ask: “Does this improve my life or just my image?”</p>
+    <p>Harvard studies show people who spend less than they earn report 60% lower financial stress.</p>
+
+    <h2 id="learn">4. Learn 15 minutes a day</h2>
+    <figure>
+      <img src="/images/posts/habitos-financieros-para-mejorar-tus-finanzas/educate.jpg" alt="Reading finance book" loading="lazy" />
+      <figcaption>Read, listen to podcasts, or follow finance educators.</figcaption>
+    </figure>
+    <p>Invest in your knowledge. Follow blogs, listen to podcasts like *The Dave Ramsey Show* or *BiggerPockets Money*, or read *I Will Teach You To Be Rich*.</p>
+    <p>85% of millionaires are self-taught in personal finance (*The Millionaire Next Door*).</p>
+
+    <h2 id="goals">5. Set clear, visible financial goals</h2>
+    <figure>
+      <img src="/images/posts/habitos-financieros-para-mejorar-tus-finanzas/metas.jpg" alt="Financial vision board" loading="lazy" />
+      <figcaption>Write goals and place them where you’ll see them daily.</figcaption>
+    </figure>
+    <p>Vague goals (“save more”) fail. SMART goals (“Save $5,000 for emergencies in 12 months”) are 42% more likely to succeed (Dominican University study).</p>
+    <p>Make them: Specific, Measurable, Achievable, Relevant, Time-bound.</p>
+
+    <h2>Final thought</h2>
+    <p>These habits require no extra money—just intention. Start with one this week. In 6 months, your financial life will be transformed.</p>
+  `
+},
   {
-    id: 5,
-    slug: "50-30-20-budget-method",
-    title: "How to Use the 50/30/20 Budget Method",
-    date: "Feb 25, 2025",
-    category: "Budgeting",
-    readMins: 3,
-    cover: "/images/posts/metodo-50-30-20-presupuesto/cover.jpg",
-    excerpt: "A simple formula to balance your income wisely.",
-    description: "Apply 50/30/20 and balance needs, wants and savings.",
-    content: `
-      <h2 id="intro">The split</h2><p>50% needs, 30% wants, 20% saving/investing.</p>
-      <h2 id="apply">Apply it</h2><p>Map your spending to the three buckets.</p>
-    `
-  }
+  id: 5,
+  slug: "50-30-20-budget-method",
+  title: "How to Use the 50/30/20 Budget Method",
+  date: "Feb 25, 2025",
+  category: "Budgeting",
+  readMins: 4,
+  cover: "/images/posts/metodo-50-30-20-presupuesto/cover.jpg",
+  excerpt: "A simple formula to balance your income wisely.",
+  description: "Apply 50/30/20 and balance needs, wants and savings.",
+  content: `
+    <h2 id="intro">The 50/30/20 Rule: Financial balance in three buckets</h2>
+    <p>Created by U.S. Senator and Harvard professor Elizabeth Warren, this method splits your **after-tax income** into three simple categories:</p>
+    <ul>
+      <li><strong>50% Needs:</strong> Essentials to live and work.</li>
+      <li><strong>30% Wants:</strong> Things that bring joy and comfort.</li>
+      <li><strong>20% Savings/Debt:</strong> Your future self’s safety net.</li>
+    </ul>
+    <p>It’s flexible, realistic, and perfect for beginners in the U.S., UK, EU, or Australia.</p>
+
+    <h2 id="needs">50%: Needs (non-negotiables)</h2>
+    <figure>
+      <img src="/images/posts/metodo-50-30-20-presupuesto/necesidades.jpg" alt="Essential bills and groceries" loading="lazy" />
+      <figcaption>Rent, utilities, basic groceries, work transport.</figcaption>
+    </figure>
+    <p>Includes:
+      <ul>
+        <li>Housing (rent or mortgage)</li>
+        <li>Basic groceries (not dining out)</li>
+        <li>Transportation to work (car, gas, public transit)</li>
+        <li>Essential insurance (health, car, home)</li>
+        <li>Minimum debt payments</li>
+        <li>Internet (if required for remote work)</li>
+      </ul>
+    </p>
+    <p>⚠️ If you exceed 50%, look to reduce here first (e.g., refinance loans, downsize housing).</p>
+
+    <h2 id="wants">30%: Wants (your happiness budget)</h2>
+    <figure>
+      <img src="/images/posts/metodo-50-30-20-presupuesto/deseos.jpg" alt="Dining out and hobbies" loading="lazy" />
+      <figcaption>Restaurants, streaming, travel, hobbies.</figcaption>
+    </figure>
+    <p>Includes:
+      <ul>
+        <li>Eating out or takeout</li>
+        <li>Streaming subscriptions (Netflix, Spotify)</li>
+        <li>Vacations and entertainment</li>
+        <li>Non-essential shopping</li>
+        <li>Hobbies, gym memberships, premium coffee</li>
+      </ul>
+    </p>
+    <p>This is your guilt-free “fun money.” If you optimize needs, you can enjoy this fully.</p>
+
+    <h2 id="save">20%: Savings and debt repayment</h2>
+    <figure>
+      <img src="/images/posts/metodo-50-30-20-presupuesto/ahorro.jpg" alt="Savings and investments" loading="lazy" />
+      <figcaption>Emergency fund, retirement, extra debt payments.</figcaption>
+    </figure>
+    <p>Includes:
+      <ul>
+        <li>Emergency fund contributions</li>
+        <li>Retirement accounts (401k, IRA, Superannuation, Pension)</li>
+        <li>Extra payments on high-interest debt (credit cards >15%)</li>
+        <li>Savings for goals (car, home, education)</li>
+      </ul>
+    </p>
+    <p>If you carry high-interest debt, prioritize paying it off before aggressive investing.</p>
+
+    <h2 id="apply">How to apply it step by step</h2>
+    <ol>
+      <li><strong>Calculate your monthly take-home pay.</strong> (e.g., $3,000)</li>
+      <li><strong>Multiply:</strong> 50% = $1,500 (needs), 30% = $900 (wants), 20% = $600 (savings/debt).</li>
+      <li><strong>Track your current spending</strong> into these buckets.</li>
+      <li><strong>Adjust:</strong> If needs are $2,000, find $500 to cut or increase income.</li>
+    </ol>
+    <p>Use apps like Mint, YNAB, or Google Sheets to automate this split.</p>
+
+    <h2>Final tip</h2>
+    <p>The 50/30/20 isn’t rigid. In high-cost cities (London, NYC, Sydney), needs might be 60%. The goal is awareness—not perfection. Start today, and you’ll gain control within weeks.</p>
+  `
+}
 ];
 
 export function getPosts(lang) { return lang === 'en' ? postsEn : postsEs; }
