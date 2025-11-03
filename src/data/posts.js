@@ -21,7 +21,7 @@ export const postsEs = [
       <img src="/images/posts/como-ahorrar-100-euros-al-mes-sin-esfuerzo/suscripciones.jpg" alt="Revisión de suscripciones" loading="lazy" />
       <figcaption>Lista tus servicios y cancela lo que no usas.</figcaption>
     </figure>
-    <p>Las suscripciones son una de las mayores fuentes de gasto pasivo e invisible. Muchas personas pagan entre 30€ y 60€ al mes por servicios que apenas utilizan: streaming, apps de música, gimnasios, software premium, etc.</p>
+    <p>Las suscripciones son una de las mayores fuentes de gasto pasivo e invisible. En España, muchas personas pagan entre 30€ y 60€ al mes por servicios que apenas utilizan. Pero no es solo aquí: en Alemania y Francia el gasto promedio en suscripciones ronda los 40€, mientras que en EE.UU. supera los 200 dólares (≈185€).</p>
     <h3>¿Cómo actuar?</h3>
     <ul>
       <li><strong>Haz un inventario:</strong> Revisa tus extractos bancarios de los últimos 3 meses y lista todas las cargas recurrentes.</li>
@@ -29,15 +29,15 @@ export const postsEs = [
       <li><strong>Comparte planes:</strong> Muchos servicios (Netflix, Spotify, Amazon Prime) permiten perfiles familiares. Compartir puede reducir tu cuota a la mitad.</li>
     </ul>
     <h3>Herramientas útiles</h3>
-    <p>Aplicaciones como <strong>Rocket Money</strong>, <strong>Subscription Stopper</strong> o incluso <strong>Fintonic</strong> pueden detectar automáticamente tus suscripciones y ayudarte a cancelarlas con un clic.</p>
-    <p><strong>Ahorro estimado:</strong> Eliminar 2–3 suscripciones poco usadas puede liberar entre <strong>15€ y 30€ al mes</strong>.</p>
+    <p>Aplicaciones como <strong>Rocket Money</strong> (global), <strong>Subscription Stopper</strong> (en español) o <strong>Fintonic</strong> pueden detectar automáticamente tus suscripciones y ayudarte a cancelarlas con un clic.</p>
+    <p><strong>Ahorro estimado:</strong> Eliminar 2–3 suscripciones poco usadas puede liberar entre <strong>15€ y 30€ al mes</strong> en la zona euro, y hasta 40€ en EE.UU.</p>
 
     <h2 id="cocina">2. Cocina en casa</h2>
     <figure>
       <img src="/images/posts/como-ahorrar-100-euros-al-mes-sin-esfuerzo/cocinar.jpg" alt="Cocinar en casa para ahorrar" loading="lazy" />
       <figcaption>Planifica 2-3 platos base para toda la semana.</figcaption>
     </figure>
-    <p>En España, el gasto promedio en comer fuera de casa supera los <strong>200€ mensuales</strong>. Cada comida en un restaurante cuesta entre 12€ (menú del día) y 40€ (cena en ciudad grande). En cambio, cocinar en casa reduce ese costo a 3–5€ por persona.</p>
+    <p>En España, el gasto promedio en comer fuera de casa supera los <strong>200€ mensuales</strong>. En Alemania y Francia, ronda los 180–220€. En contraste, en EE.UU. una sola cena puede costar 25 dólares (≈23€), y en el Reino Unido, una comida en pub cuesta entre 12 y 18 libras (≈14–21€). Cocinar en casa reduce ese costo a 3–5€ por persona en toda Europa.</p>
     <h3>Estrategias efectivas</h3>
     <ul>
       <li><strong>Batch cooking:</strong> Dedica 2–3 horas los domingos a preparar comidas para toda la semana (guisos, arroces, legumbres).</li>
@@ -45,15 +45,15 @@ export const postsEs = [
       <li><strong>Evita el delivery:</strong> Una cena por app puede costar 20€ + propina + envío. Cocinar en casa elimina esos sobrecostos.</li>
     </ul>
     <h3>Apps recomendadas</h3>
-    <p>Usa <strong>Planifood</strong> o <strong>Mealime</strong> para crear menús semanales y generar listas de la compra automáticas. <strong>Nooddle</strong> sugiere recetas según lo que ya tienes en la nevera.</p>
-    <p><strong>Ahorro estimado:</strong> Reducir las comidas fuera de casa de 5 a 2 veces por semana puede ahorrarte entre <strong>30€ y 50€ mensuales</strong>.</p>
+    <p>Usa <strong>Planifood</strong> (España), <strong>Soysuper Recetas</strong> (zona euro) o <strong>Mealime</strong> (global) para crear menús semanales y generar listas de la compra automáticas.</p>
+    <p><strong>Ahorro estimado:</strong> Reducir las comidas fuera de casa de 5 a 2 veces por semana puede ahorrarte entre <strong>30€ y 50€ mensuales</strong> en Europa, y hasta 60€ en EE.UU.</p>
 
     <h2 id="compra">3. Compra inteligente</h2>
     <figure>
       <img src="/images/posts/como-ahorrar-100-euros-al-mes-sin-esfuerzo/compra-inteligente.jpg" alt="Compra inteligente en el supermercado" loading="lazy" />
       <figcaption>Compara precio por kilo y lleva lista de la compra.</figcaption>
     </figure>
-    <p>Comprar sin planificación lleva a gastos innecesarios. La clave está en comparar, priorizar y evitar impulsos.</p>
+    <p>Comprar sin planificación lleva a gastos innecesarios. La clave está en comparar, priorizar y evitar impulsos. En todos los países desarrollados, los productos de marca blanca son un 20–30% más baratos que las marcas comerciales, con calidad muy similar.</p>
     <h3>Consejos prácticos</h3>
     <ul>
       <li><strong>Siempre con lista:</strong> Nunca vayas al supermercado sin una lista basada en tus menús semanales.</li>
@@ -62,15 +62,15 @@ export const postsEs = [
       <li><strong>Productos de temporada:</strong> Frutas y verduras en temporada son más baratas, frescas y sostenibles.</li>
     </ul>
     <h3>Herramientas digitales</h3>
-    <p>Aplicaciones como <strong>Soysuper</strong>, <strong>Ofertia</strong> y <strong>OCUMarket</strong> te permiten comparar precios entre supermercados (Mercadona, Carrefour, Eroski, etc.) en tiempo real. Escanea códigos de barras y encuentra el mejor precio cerca de ti.</p>
-    <p><strong>Ahorro estimado:</strong> Comprar de forma inteligente puede reducir tu factura del supermercado entre un <strong>15% y 25%</strong>, lo que equivale a unos <strong>20–30€ al mes</strong> en un hogar promedio.</p>
+    <p>En España y la zona euro, usa <strong>Soysuper</strong>, <strong>Ofertia</strong> o <strong>OCUMarket</strong> para comparar precios entre Mercadona, Carrefour, E.Leclerc o REWE. En EE.UU., <strong>Flipp</strong> hace lo mismo con Walmart o Kroger.</p>
+    <p><strong>Ahorro estimado:</strong> Comprar de forma inteligente puede reducir tu factura del supermercado entre un <strong>15% y 25%</strong>, lo que equivale a unos <strong>20–30€ al mes</strong> en Europa y hasta 35€ en EE.UU.</p>
 
     <h2 id="automatiza">4. Automatiza tu ahorro</h2>
     <figure>
       <img src="/images/posts/como-ahorrar-100-euros-al-mes-sin-esfuerzo/automatizar.jpg" alt="Automatizar una transferencia de ahorro" loading="lazy" />
       <figcaption>Programa una transferencia el día de la nómina.</figcaption>
     </figure>
-    <p>El mayor obstáculo para ahorrar no es la falta de dinero, sino la falta de disciplina. La solución: <strong>haz que el ahorro sea automático</strong>.</p>
+    <p>El mayor obstáculo para ahorrar no es la falta de dinero, sino la falta de disciplina. La solución: <strong>haz que el ahorro sea automático</strong>. Esta estrategia funciona igual en Madrid, Berlín, París, Nueva York o Sídney.</p>
     <h3>Cómo implementarlo</h3>
     <ul>
       <li><strong>Transferencia programada:</strong> Configura una transferencia automática de 100€ desde tu cuenta corriente a una cuenta de ahorro el mismo día que recibes la nómina.</li>
@@ -78,11 +78,11 @@ export const postsEs = [
       <li><strong>Cuentas separadas:</strong> Usa una cuenta de ahorro distinta (idealmente en otro banco) para evitar tentaciones.</li>
     </ul>
     <h3>Tecnología al rescate</h3>
-    <p>Apps como <strong>Coinscrap</strong> redondean tus compras y transfieren los céntimos a ahorro. <strong>Qapital</strong> te permite crear reglas personalizadas (“ahorra 5€ cada vez que no pidas comida”). Y si tu banco lo permite, usa la opción de <strong>dividir la nómina</strong> directamente en origen.</p>
+    <p>En la zona euro, apps como <strong>Coinscrap</strong> o <strong>N26 Spaces</strong> redondean compras y ahorran automáticamente. En EE.UU., <strong>Chime</strong> o <strong>Qapital</strong> ofrecen funciones similares. En el Reino Unido, <strong>Monzo Pots</strong> permite ahorrar por objetivos.</p>
     <p><strong>Beneficio clave:</strong> Al automatizar, nunca “ves” ese dinero, por lo que no lo extrañas. Con el tiempo, se convierte en un hábito invisible pero poderoso.</p>
 
     <h2>Conclusión: 100€ al mes sí es posible</h2>
-    <p>Sumando los ahorros potenciales:
+    <p>Sumando los ahorros potenciales en la zona euro:
     <ul>
       <li>Suscripciones: <strong>+25€</strong></li>
       <li>Cocina en casa: <strong>+40€</strong></li>
@@ -178,111 +178,98 @@ export const postsEn = [
   category: "Saving",
   readMins: 8,
   cover: "/images/posts/como-ahorrar-100-euros-al-mes-sin-esfuerzo/cover.jpg",
-  excerpt: "Practical strategies to consistently save €100/month (≈$110) without drastic lifestyle changes—works in the US, UK, EU, and Australia.",
-  description: "Simple, proven habits to save €100/month: audit subscriptions, cook at home, shop smarter, and automate savings—adapted for global readers.",
+  excerpt: "Practical strategies to save €100/month (≈$110) without drastic lifestyle changes—works in the US, UK, EU, and Australia.",
+  description: "Simple, proven habits to save €100/month: audit subscriptions, cook at home, shop smarter, and automate savings—with global comparisons.",
   content: `
-    <h2 id="intro">Yes, you can save €100 (or $110) a month—even on a tight budget</h2>
-    <p>Whether you’re in London, Berlin, Sydney, or Chicago, saving €100 (≈$110) per month is absolutely achievable—not by cutting essentials, but by making smarter, automated choices. Small daily tweaks compound into real financial freedom over time.</p>
+    <h2 id="intro">Think saving €100 a month is impossible on your current income?</h2>
+    <p>The truth is, with small daily tweaks, you can hit this goal without feeling like you’re making huge sacrifices. It’s not about cutting essentials—it’s about spotting hidden leaks, optimizing everyday choices, and using technology to make saving automatic and sustainable.</p>
 
     <h2 id="subs">1. Audit Your Subscriptions</h2>
-    <p>Subscription fatigue is real. The average person in the US spends <strong>$219/month</strong> on subscriptions—but believes they only spend $86! In the UK and EU, it’s common to pay for 4–6 streaming, fitness, or app services without using half of them.</p>
-    <h3>What to do:</h3>
+    <figure>
+      <img src="/images/posts/como-ahorrar-100-euros-al-mes-sin-esfuerzo/suscripciones.jpg" alt="Review your subscriptions" loading="lazy" />
+      <figcaption>List your services and cancel what you don’t use.</figcaption>
+    </figure>
+    <p>Subscriptions are a major source of invisible spending. In the U.S., people spend an average of <strong>$219/month</strong>—but think they only spend $86! In the UK, it’s around £40 (≈€47), while in Germany and France, it’s €35–45. Australians spend AU$50–70 (≈€30–42) monthly on unused apps and services.</p>
+    <h3>How to act:</h3>
     <ul>
-      <li><strong>List all recurring charges:</strong> Check bank/credit card statements for the last 90 days.</li>
-      <li><strong>Ask yourself:</strong> “Have I used this in the past month?” If not, cancel it.</li>
-      <li><strong>Share or rotate:</strong> Split Netflix, Spotify, or gym memberships with family (where allowed). Rotate streaming services seasonally.</li>
+      <li><strong>Take inventory:</strong> Review bank/credit card statements from the last 3 months.</li>
+      <li><strong>Ask yourself:</strong> “Have I used this in the past 4 weeks?” If not, cancel it.</li>
+      <li><strong>Share plans:</strong> Netflix, Spotify, and Amazon Prime allow family profiles—splitting costs cuts your bill in half.</li>
     </ul>
-    <h3>Tools by region:</h3>
-    <ul>
-      <li><strong>US/Global:</strong> Rocket Money, Truebill, or Trim (auto-cancel unused subs).</li>
-      <li><strong>UK/EU:</strong> Moneyhub, Emma, or Revolut’s subscription tracker.</li>
-      <li><strong>Australia:</strong> TrackMySubs or Pocketbook.</li>
-    </ul>
-    <p><strong>Potential savings:</strong> Canceling 2–3 unused services can free up <strong>€20–30 (≈$22–33) per month</strong>.</p>
+    <h3>Useful tools:</h3>
+    <p>Apps like <strong>Rocket Money</strong> (US/global), <strong>Emma</strong> (UK/EU), or <strong>Pocketbook</strong> (Australia) automatically detect subscriptions and help you cancel with one click.</p>
+    <p><strong>Estimated savings:</strong> Cutting 2–3 unused subscriptions frees up <strong>€20–30/month</strong> in Europe, <strong>$25–40</strong> in the US, and <strong>£20–25</strong> in the UK.</p>
 
-    <h2 id="cook">2. Cook at Home More Often</h2>
-    <p>Eating out adds up fast:
+    <h2 id="cook">2. Cook at Home</h2>
+    <figure>
+      <img src="/images/posts/como-ahorrar-100-euros-al-mes-sin-esfuerzo/cocinar.jpg" alt="Cook at home to save money" loading="lazy" />
+      <figcaption>Plan 2–3 base meals for the whole week.</figcaption>
+    </figure>
+    <p>Average meal costs:
       <ul>
-        <li><strong>US:</strong> Average meal = $15–25</li>
-        <li><strong>UK:</strong> Pub meal = £12–18 (≈€14–21)</li>
-        <li><strong>EU:</strong> Restaurant meal = €12–20</li>
-        <li><strong>AU:</strong> Café lunch = AU$20–30 (≈€12–18)</li>
+        <li><strong>US:</strong> $15–25 per meal</li>
+        <li><strong>UK:</strong> £12–18 (≈€14–21)</li>
+        <li><strong>Germany/France:</strong> €12–20</li>
+        <li><strong>Australia:</strong> AU$20–30 (≈€12–18)</li>
       </ul>
-      Meanwhile, a home-cooked meal costs just <strong>€3–5 (≈$3–6)</strong> per person.
+      Meanwhile, home-cooked meals cost just <strong>€3–5 (≈$3–6)</strong> per person across all regions.
     </p>
-    <h3>Smart strategies:</h3>
+    <h3>Effective strategies:</h3>
     <ul>
-      <li><strong>Batch cook:</strong> Prepare 2–3 versatile dishes (e.g., chili, curry, pasta sauce) on weekends.</li>
-      <li><strong>Plan weekly menus:</strong> Reduces impulse takeout and food waste.</li>
-      <li><strong>Use leftovers creatively:</strong> Turn roasted chicken into tacos, soup, or salad.</li>
+      <li><strong>Batch cooking:</strong> Spend 2–3 hours on Sunday preparing meals for the week (stews, curries, pasta).</li>
+      <li><strong>Weekly planning:</strong> Choose 2–3 versatile recipes you can adapt with different sides.</li>
+      <li><strong>Avoid delivery:</strong> A single takeout order can cost $25 + tip + fees. Cooking at home eliminates those markups.</li>
     </ul>
-    <h3>Helpful apps:</h3>
-    <ul>
-      <li><strong>Mealime</strong> (US/Global): Personalized meal plans + auto-shopping list.</li>
-      <li><strong>SuperCook</strong> (UK/EU): Finds recipes based on ingredients you already have.</li>
-      <li><strong>Easy Meals</strong> (AU): Budget-friendly recipes with Woolworths/Coles integration.</li>
-    </ul>
-    <p><strong>Potential savings:</strong> Cutting dining out from 5x to 2x/week saves <strong>€30–50 (≈$33–55) monthly</strong>.</p>
+    <h3>Recommended apps:</h3>
+    <p>Use <strong>Mealime</strong> (global), <strong>SuperCook</strong> (UK/EU), or <strong>Easy Meals</strong> (Australia) to generate weekly menus and auto-shopping lists.</p>
+    <p><strong>Estimated savings:</strong> Reducing dining out from 5x to 2x/week saves <strong>€30–50/month</strong> in Europe, <strong>$40–60</strong> in the US, and <strong>AU$50–70</strong> in Australia.</p>
 
-    <h2 id="shop">3. Shop Smarter at the Grocery Store</h2>
-    <p>Grocery bills are a major budget leak—but easy to optimize with a few habits.</p>
-    <h3>Universal tips:</h3>
+    <h2 id="shop">3. Smart Grocery Shopping</h2>
+    <figure>
+      <img src="/images/posts/como-ahorrar-100-euros-al-mes-sin-esfuerzo/compra-inteligente.jpg" alt="Smart shopping at the supermarket" loading="lazy" />
+      <figcaption>Compare price per kg and bring a shopping list.</figcaption>
+    </figure>
+    <p>Impulse buying inflates grocery bills everywhere. The key is comparison, planning, and discipline. Store brands are 20–30% cheaper than name brands in all major economies—with nearly identical quality.</p>
+    <h3>Practical tips:</h3>
     <ul>
-      <li><strong>Always shop with a list</strong> (based on your meal plan).</li>
-      <li><strong>Compare unit prices:</strong> Look at €/kg or $/lb—not just package price.</li>
-      <li><strong>Choose store brands:</strong> Often 20–30% cheaper with similar quality.</li>
-      <li><strong>Buy in-season produce:</strong> Fresher, tastier, and cheaper.</li>
+      <li><strong>Always shop with a list</strong> based on your weekly meal plan.</li>
+      <li><strong>Compare unit prices:</strong> Look at €/kg, $/lb, or £/unit—not just the package price.</li>
+      <li><strong>Choose store brands:</strong> Aldi, Lidl, Tesco Own Brand, Kirkland (Costco), or Woolworths Essentials offer great value.</li>
+      <li><strong>Buy seasonal produce:</strong> It’s cheaper, fresher, and more sustainable.</li>
     </ul>
-    <h3>Price-comparison apps by region:</h3>
-    <ul>
-      <li><strong>EU:</strong> <em>Soysuper</em> (Spain), <em>MySupermarket</em> (France/Germany)</li>
-      <li><strong>UK:</strong> <em>Trolley</em> or <em>MySupermarket.co.uk</em></li>
-      <li><strong>US:</strong> <em>Flipp</em> (compares local flyers), <em>Buy Me Once</em> (for durable goods)</li>
-      <li><strong>AU:</strong> <em>Half Price</em> or <em>Shopfully</em></li>
-    </ul>
-    <p><strong>Potential savings:</strong> Smart shopping can reduce your grocery bill by <strong>15–25%</strong>—that’s <strong>€20–30 (≈$22–33) per month</strong> for an average household.</p>
+    <h3>Digital tools:</h3>
+    <p>In the EU: <strong>Soysuper</strong> or <strong>MySupermarket</strong>. In the UK: <strong>Trolley</strong>. In the US: <strong>Flipp</strong>. In Australia: <strong>Shopfully</strong>. All let you compare real-time prices across supermarkets.</p>
+    <p><strong>Estimated savings:</strong> Smart shopping cuts your grocery bill by <strong>15–25%</strong>—that’s <strong>€20–30/month</strong> in Europe, <strong>$25–35</strong> in the US, and <strong>AU$30–40</strong> in Australia.</p>
 
     <h2 id="auto">4. Automate Your Savings</h2>
-    <p>The secret to consistent saving? <strong>Make it invisible.</strong> Behavioral economics shows we’re far more likely to save when it happens automatically—before we even see the money.</p>
+    <figure>
+      <img src="/images/posts/como-ahorrar-100-euros-al-mes-sin-esfuerzo/automatizar.jpg" alt="Automate a savings transfer" loading="lazy" />
+      <figcaption>Schedule a transfer on payday.</figcaption>
+    </figure>
+    <p>The biggest barrier to saving isn’t income—it’s inconsistency. The solution? <strong>Make saving automatic.</strong> This works whether you live in London, Berlin, New York, or Sydney.</p>
     <h3>How to set it up:</h3>
     <ul>
-      <li><strong>Payday transfer:</strong> Schedule an automatic transfer of €100 (or $110) to a separate savings account the same day you get paid.</li>
-      <li><strong>Round-up apps:</strong> Link your card to apps that round up purchases and save the change.</li>
-      <li><strong>Split direct deposit:</strong> In the US/UK/AU, many employers let you split your paycheck into multiple accounts.</li>
+      <li><strong>Scheduled transfer:</strong> Auto-transfer €100 (or $110) to a separate savings account on payday.</li>
+      <li><strong>“Pay yourself first”:</strong> Treat savings like a non-negotiable bill.</li>
+      <li><strong>Separate accounts:</strong> Keep savings in a different bank to reduce temptation.</li>
     </ul>
-    <h3>Top automation tools:</h3>
-    <ul>
-      <li><strong>US:</strong> Chime (automatic savings), Qapital (goal-based rules)</li>
-      <li><strong>UK:</strong> Monzo pots, Chip (AI-powered savings)</li>
-      <li><strong>EU:</strong> N26 Spaces, bunq (auto-save features)</li>
-      <li><strong>AU:</strong> Up Bank (Round Ups), Raiz (micro-investing)</li>
-    </ul>
-    <p><strong>Pro tip:</strong> Keep your savings account at a different bank—it reduces temptation to dip in.</p>
+    <h3>Technology to the rescue:</h3>
+    <p>In the US: <strong>Chime</strong> or <strong>Qapital</strong>. In the UK: <strong>Monzo Pots</strong> or <strong>Chip</strong>. In the EU: <strong>N26 Spaces</strong> or <strong>bunq</strong>. In Australia: <strong>Up Bank</strong> (Round Ups). All automate micro-savings effortlessly.</p>
+    <p><strong>Key benefit:</strong> When savings happen before you see the money, you never miss it. Over time, it becomes an invisible—but powerful—habit.</p>
 
-    <h2>Putting It All Together</h2>
-    <p>Here’s how the numbers add up across regions:</p>
-    <table>
-      <thead>
-        <tr>
-          <th>Strategy</th>
-          <th>Eurozone (€)</th>
-          <th>US ($)</th>
-          <th>UK (£)</th>
-          <th>Australia (AU$)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>Cancel unused subscriptions</td><td>€25</td><td>$28</td><td>£22</td><td>AU$40</td></tr>
-        <tr><td>Cook at home more</td><td>€40</td><td>$44</td><td>£35</td><td>AU$65</td></tr>
-        <tr><td>Smart grocery shopping</td><td>€25</td><td>$28</td><td>£20</td><td>AU$40</td></tr>
-        <tr><td>Automate the rest</td><td>€10</td><td>$10</td><td>£8</td><td>AU$15</td></tr>
-        <tr><td><strong>Total monthly savings</strong></td><td><strong>€100</strong></td><td><strong>$110</strong></td><td><strong>£85</strong></td><td><strong>AU$160</strong></td></tr>
-      </tbody>
-    </table>
-    <p>No extreme cuts. No guilt. Just smarter systems.</p>
-    <p><strong>Start small, stay consistent—and let automation do the heavy lifting.</strong> In one year, you’ll have saved €1,200 (≈$1,320), enough for an emergency fund, a vacation, or your next financial goal.</p>
+    <h2>Conclusion: €100 a month is absolutely possible</h2>
+    <p>Here’s how the savings add up globally:
+    <ul>
+      <li>Unused subscriptions: <strong>+€25</strong></li>
+      <li>Cooking at home: <strong>+€40</strong></li>
+      <li>Smart shopping: <strong>+€25</strong></li>
+      <li>Automated top-up: <strong>+€10</strong></li>
+    </ul>
+    You easily reach <strong>€100/month</strong> (≈<strong>$110</strong>, <strong>£85</strong>, or <strong>AU$160</strong>)—without sacrificing your lifestyle.
+    </p>
+    <p>The most important thing isn’t how much you save today—it’s that you <strong>start and stay consistent</strong>. Small, smart changes compound into real financial freedom over time.</p>
   `
-},
+  },
   {
     id: 2,
     slug: "best-expense-tracker-apps-2025",
