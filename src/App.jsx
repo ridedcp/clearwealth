@@ -1,19 +1,25 @@
 import { Routes, Route, Navigate, useParams } from 'react-router-dom';
-import { isSupportedLang } from './i18n';
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 import About from './pages/About';
 import Contact from './pages/Contact';
-import Privacy from './pages/Privacy';
-// 👇 NUEVO: páginas de gracias en 2 idiomas
+
+// ✅ Nuevas páginas separadas por idioma
+import PrivacidadES from './pages/es/Privacidad';
+import PrivacyEN from './pages/en/Privacy';
+import CookiesES from './pages/es/Cookies';
+import CookiesEN from './pages/en/Cookies';
+
+// Páginas de gracias
 import ThankYouEs from './pages/ThankYouEs';
 import ThankYouEn from './pages/ThankYouEn';
 
 function LangLayout() {
   const { lang } = useParams();
   const safeLang = ['es', 'en'].includes(lang) ? lang : 'es';
+  const isEn = safeLang === 'en';
 
   return (
     <Layout lang={safeLang}>
@@ -22,12 +28,19 @@ function LangLayout() {
         <Route path="blog" element={<Blog lang={safeLang} />} />
         <Route path="blog/:slug" element={<BlogPost lang={safeLang} />} />
         <Route path="sobre-mi" element={<About lang={safeLang} />} />
-        {/* Contacto: soporta ES y EN */}
+
+        {/* Contacto en ambos slugs */}
         <Route path="contacto" element={<Contact lang={safeLang} />} />
         <Route path="contact" element={<Contact lang={safeLang} />} />
-        <Route path="privacidad" element={<Privacy lang={safeLang} />} />
 
-        {/* 👇 Rutas de gracias para ambos idiomas */}
+        {/* ✅ Privacidad por idioma */}
+        <Route path="privacidad" element={<PrivacidadES />} />
+        <Route path="privacy" element={<PrivacyEN />} />
+
+        {/* ✅ Cookies (mismo slug en ambos idiomas) */}
+        <Route path="cookies" element={isEn ? <CookiesEN /> : <CookiesES />} />
+
+        {/* Gracias por idioma */}
         <Route path="gracias" element={<ThankYouEs />} />
         <Route path="thank-you" element={<ThankYouEn />} />
 
