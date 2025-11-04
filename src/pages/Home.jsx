@@ -1,4 +1,3 @@
-// src/pages/Home.jsx
 import { Link } from "react-router-dom";
 import SEO from "../seo/SEO";
 import AdPlaceholder from "../components/AdPlaceholder";
@@ -13,7 +12,6 @@ export default function Home({ lang = "es" }) {
   const latest = posts.slice(0, 6);
   const categories = [...new Set(posts.map(p => p.category).filter(Boolean))];
 
-  // etiquetas mínimas sin tocar tu i18n actual
   const L = lang === "es"
     ? {
         latest: "Últimos artículos",
@@ -36,8 +34,7 @@ export default function Home({ lang = "es" }) {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <SEO lang={lang} path={path} title={t.brand} description={t.home.subtitle} />
 
-      {/* AdSense – Cabecera */}
-      <AdPlaceholder position="Cabecera" />
+      {/* (Quitado) AdSense – Cabecera */}
 
       {/* HERO con destacado */}
       {featured && (
@@ -92,7 +89,7 @@ export default function Home({ lang = "es" }) {
             {categories.map((c) => (
               <Link
                 key={c}
-                to={`${base}/blog`} // si luego filtras por query, añade ?cat=${encodeURIComponent(c)}
+                to={`${base}/blog`}
                 className="px-3 py-1 rounded-full bg-gray-800 text-gray-200 text-sm hover:bg-gray-700 border border-gray-700"
               >
                 {c}
@@ -115,7 +112,7 @@ export default function Home({ lang = "es" }) {
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {latest.map((p, idx) => (
+          {latest.map((p) => (
             <article
               key={p.slug}
               className="rounded-xl border border-gray-800 bg-gray-900/40 hover:bg-gray-900 transition"
