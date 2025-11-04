@@ -31,7 +31,7 @@ export default function Footer({ lang = "es" }) {
             <div className="flex items-center gap-2 mb-4">
               <img
                 src="/logo-512.svg"
-                alt={lang === "es" ? "Tu Dinero Simple" : "Clear Financial Life"}
+                alt="Clear Financial Life"
                 width={28}
                 height={28}
                 loading="eager"
