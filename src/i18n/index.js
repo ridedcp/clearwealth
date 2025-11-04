@@ -1,7 +1,7 @@
 // ---- i18n dictionary (tu versión) ----
 export const translations = {
   es: {
-    brand: "Tu Dinero Simple",
+    brand: "Clear Financial Life",
     nav: { home: "Inicio", blog: "Blog", about: "Sobre mí", contact: "Contacto", privacy: "Privacidad" },
     home: {
       h1: "Aprende a gestionar tu dinero de forma simple",
