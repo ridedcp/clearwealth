@@ -1,87 +1,102 @@
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 
-/**
- * Empuja el render de AdSense cuando el <ins> está en el árbol.
- * No pinta nada en desarrollo o si faltan credenciales.
- */
-function useAdsensePush(shouldRun) {
-  useEffect(() => {
-    if (!shouldRun) return;
-    try {
-      // eslint-disable-next-line no-undef
-      (window.adsbygoogle = window.adsbygoogle || []).push({});
-    } catch {
-      // Silencio: AdSense aún no cargado o bloqueado por el navegador.
-    }
-  }, [shouldRun]);
+const CLIENT = import.meta.env.VITE_ADSENSE_CLIENT; // ej: ca-pub-XXXX
+const hasClient = typeof CLIENT === "string" && CLIENT.length > 0;
+
+// Por si en algún build falta el script del index.html, lo inyectamos una vez.
+function ensureAdScriptOnce() {
+  if (typeof window === "undefined") return;
+  const id = "adsbygoogle-lib";
+  if (document.getElementById(id)) return;
+
+  const s = document.createElement("script");
+  s.id = id;
+  s.async = true;
+  s.crossOrigin = "anonymous";
+  s.src = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${encodeURIComponent(
+    CLIENT || ""
+  )}`;
+  document.head.appendChild(s);
 }
 
-/**
- * Display responsive (auto). Úsalo para cabeceras, laterales, final de artículo, etc.
- *
- * Props:
- * - slot (requerido): tu data-ad-slot
- * - client (opcional): por defecto VITE_ADSENSE_CLIENT
- * - style: CSS inline (por defecto display:block)
- * - format: "auto" (default) | "rectangle" | ...
- * - responsive: "true" | "false"
- * - className adicional
- */
+/** Llama a (adsbygoogle = window.adsbygoogle || []).push({}) */
+function useFillAd(on = true) {
+  useEffect(() => {
+    if (!on || typeof window === "undefined") return;
+    try {
+      // Garantiza que el script existe
+      ensureAdScriptOnce();
+      // Rellena el bloque (si no hay inventario no rompe layout)
+      (window.adsbygoogle = window.adsbygoogle || []).push({});
+    } catch (_) {
+      // silencioso: AdSense a veces lanza warning si aún no cargó
+    }
+  }, [on]);
+}
+
+/** Bloque display/responsive genérico (cabecera, footer…) */
 export function AdSlot({
   slot,
-  client = import.meta.env.VITE_ADSENSE_CLIENT,
+  className = "",
   style,
   format = "auto",
-  responsive = "true",
-  className = "",
+  fullWidthResponsive = true,
+  collapse = false, // si true y no hay inventario, minimiza el alto
 }) {
-  const isProd = import.meta.env.PROD;
-  const canRender = Boolean(isProd && client && slot);
+  const enabled = hasClient && !!slot;
 
-  useAdsensePush(canRender);
+  useFillAd(enabled);
 
-  if (!canRender) return null;
+  // key distinto por slot + url = fuerza repintado al cambiar de ruta
+  const key = useMemo(() => {
+    const path = typeof window !== "undefined" ? window.location.pathname : "";
+    return `${slot || "noslot"}::${path}`;
+  }, [slot]);
+
+  if (!enabled) return null;
 
   return (
     <ins
+      key={key}
       className={`adsbygoogle ${className}`}
-      style={style || { display: "block" }}
-      data-ad-client={client}
+      style={{
+        display: "block",
+        minHeight: collapse ? 0 : 250,
+        ...style,
+      }}
+      data-ad-client={CLIENT}
       data-ad-slot={slot}
       data-ad-format={format}
-      data-full-width-responsive={responsive}
+      data-full-width-responsive={fullWidthResponsive ? "true" : "false"}
     />
   );
 }
 
-/**
- * In-article (fluid). Útil entre secciones dentro de un post.
- *
- * Props:
- * - slot (requerido)
- * - client (opcional): por defecto VITE_ADSENSE_CLIENT
- * - className (opcional)
- */
+/** Bloque “In-article” oficial de AdSense */
 export function AdInArticle({
   slot,
-  client = import.meta.env.VITE_ADSENSE_CLIENT,
   className = "",
+  collapse = true,
 }) {
-  const isProd = import.meta.env.PROD;
-  const canRender = Boolean(isProd && client && slot);
+  const enabled = hasClient && !!slot;
+  useFillAd(enabled);
 
-  useAdsensePush(canRender);
+  const key = useMemo(() => {
+    const path = typeof window !== "undefined" ? window.location.pathname : "";
+    return `in-article::${slot || "noslot"}::${path}`;
+  }, [slot]);
 
-  if (!canRender) return null;
+  if (!enabled) return null;
 
   return (
     <ins
+      key={key}
       className={`adsbygoogle ${className}`}
-      style={{ display: "block", textAlign: "center" }}
-      data-ad-layout="in-article"
-      data-ad-format="fluid"
-      data-ad-client={client}
+      style={{ display: "block", minHeight: collapse ? 0 : 120 }}
+      data-ad-client={CLIENT}
       data-ad-slot={slot}
+      data-ad-format="fluid"
+      data-ad-layout="in-article"
     />
   );
 }
