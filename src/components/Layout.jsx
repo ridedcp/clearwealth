@@ -1,13 +1,14 @@
+// src/components/Layout.jsx
 import Header from "./Header";
 import Footer from "./Footer";
 
-// 👇 RUTAS CORRECTAS (mismo directorio 'components', subcarpeta 'ads')
-import AdSlot from "./ads/AdSlot";
-import AdInArticle from "./ads/AdInArticle";
+// ✅ Un único archivo fuente: components/ads/AdSense.jsx
+import { AdSlot /*, AdInArticle */ } from "./ads/AdSense";
 
 export default function Layout({ lang = "es", children }) {
   // páginas donde NO queremos mostrar anuncios
-  const pathname = typeof window !== "undefined" ? window.location.pathname : "";
+  const pathname =
+    typeof window !== "undefined" ? window.location.pathname : "";
   const noAds =
     pathname.endsWith("/gracias") ||
     pathname.endsWith("/thank-you") ||
@@ -19,8 +20,8 @@ export default function Layout({ lang = "es", children }) {
       <Header lang={lang} />
 
       <main id="main-content">
-        {/* Cabecera de anuncios (display) */}
-        {!noAds && (
+        {/* Cabecera de anuncios (display). Quita este bloque si no quieres nada arriba */}
+        {!noAds && import.meta.env.VITE_ADSENSE_SLOT_HEADER && (
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-4">
             <AdSlot
               slot={import.meta.env.VITE_ADSENSE_SLOT_HEADER}
@@ -34,16 +35,16 @@ export default function Layout({ lang = "es", children }) {
 
         {children}
 
-        {/* In-article: si quieres que aparezca globalmente justo antes del footer,
-           deja esto; si NO lo quieres global, elimínalo y ya lo ponemos solo en BlogPost */}
-        {/* {!noAds && (
+        {/* In-article global (normalmente lo dejamos solo en BlogPost) */}
+        {/*
+        {!noAds && import.meta.env.VITE_ADSENSE_SLOT_INARTICLE && (
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 my-8">
             <AdInArticle slot={import.meta.env.VITE_ADSENSE_SLOT_INARTICLE} />
           </div>
-        )} */}
+        )}
+        */}
       </main>
 
-      {/* Footer con display */}
       <Footer lang={lang} />
     </div>
   );
