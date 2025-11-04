@@ -9,14 +9,13 @@ function openCookieManager() {
 export default function CookiesEN() {
   const path = "/en/cookies";
   const title = "Cookies Policy";
+  const contactEmail = "contact@clearfinanciallife.com";
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
       <SEO lang="en" path={path} title={title} />
       <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">{title}</h1>
-      <p className="text-sm text-gray-600 dark:text-gray-400 mb-8">
-        Last updated: 4 November 2025
-      </p>
+      <p className="text-sm text-gray-600 dark:text-gray-400 mb-8">Last updated: 4 November 2025</p>
 
       <div className="prose prose-neutral dark:prose-invert max-w-none prose-h2:mt-10">
         <h2>1. What are cookies?</h2>
@@ -25,29 +24,26 @@ export default function CookiesEN() {
           and help us obtain usage statistics of the site.
         </p>
 
-        <h2>2. Types of cookies we use</h2>
+        <h2>2. Types of cookies I use</h2>
         <ul>
           <li><strong>Essential/technical:</strong> required for the site to function (e.g., security, session).</li>
           <li><strong>Preference/customization:</strong> remember settings such as language or region.</li>
-          <li><strong>Analytics/measurement:</strong> help us understand usage (requires your consent).</li>
+          <li><strong>Analytics/measurement:</strong> help understand usage (requires your consent).</li>
           <li><strong>Advertising/remarketing:</strong> provide relevant ads (requires your consent).</li>
         </ul>
 
         <h2>3. Legal basis</h2>
-        <p>
-          We set essential cookies under legitimate interest. Analytics and advertising cookies are set only with your consent.
-        </p>
+        <p>I set essential cookies under legitimate interest. Analytics and advertising cookies are set only with your consent.</p>
 
-        <h2>4. Who uses this information?</h2>
+        <h2>4. Who uses the information?</h2>
         <p>
-          We and, where applicable, our providers (e.g., analytics or advertising) as processors.
-          If transfers occur outside the EEA, adequate safeguards apply (adequacy or SCCs).
+          I and, where applicable, providers (analytics or advertising) as processors. If transfers occur outside the EEA,
+          adequate safeguards apply (adequacy or SCCs).
         </p>
 
         <h2>5. Managing preferences</h2>
         <p>
-          You can accept, reject or configure cookies at any time via our consent manager.
-          You can also configure your browser to block or delete cookies.
+          You can accept, reject or configure cookies at any time through the consent manager or your browser settings.
         </p>
 
         <p>
@@ -68,16 +64,13 @@ export default function CookiesEN() {
           <li><strong>Edge:</strong> Settings &gt; Cookies and site permissions.</li>
         </ul>
 
-        <h2>7. Changes to this policy</h2>
-        <p>We may update this policy to reflect legal or service changes. We will publish the current version on this page.</p>
+        <h2>7. Changes</h2>
+        <p>I may update this policy to reflect legal or service changes. I will publish the current version on this page.</p>
 
         <h2>8. Contact</h2>
-        <p>Cookie questions: <a href="mailto:contact@clearfinanciallife.com">contact@clearfinanciallife.com</a>.</p>
+        <p>Cookie questions: <a href={`mailto:${contactEmail}`}>{contactEmail}</a>.</p>
 
         <h2>9. Cookie table (optional)</h2>
-        <p>
-          If you use a consent tool, you can list detected cookies here (name, provider, purpose, duration). Example:
-        </p>
         <pre>
 {`Name           Provider           Purpose                   Duration
 _ga             Google Analytics   Audience measurement      13 months
