@@ -11,11 +11,13 @@ export default function BlogPost({ lang }) {
     return (
       <div className="max-w-3xl mx-auto px-4 py-16">
         <SEO
-          lang={lang}
-          path={`/${lang}/blog/${slug}`}
-          title={lang === "es" ? "Artículo no encontrado" : "Post not found"}
-          noindex
-        />
+        lang={lang}
+        path={path}
+        title={post.title}       // solo título del post
+        description={post.excerpt}
+        type="article"
+        image={post.ogImage}     // opcional: "/og/mi-post.jpg"
+      />
         <h1 className="text-2xl font-bold">
           {lang === "es" ? "Artículo no encontrado" : "Post not found"}
         </h1>
