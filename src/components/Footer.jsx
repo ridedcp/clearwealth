@@ -1,13 +1,27 @@
 import { NavLink } from "react-router-dom";
 import { translations } from "../i18n";
-import AdSense from "../components/AdSense";
+import AdSlot from "./ads/AdSlot"; // <- CORRECTO
 
 export default function Footer({ lang = "es" }) {
   const t = translations[lang] || translations.es;
   const base = `/${lang}`;
+  const slotFooter = import.meta.env.VITE_ADSENSE_SLOT_FOOTER;
 
   return (
     <footer className="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 mt-16">
+      {/* Bloque de anuncio en el footer (opcional) */}
+      {slotFooter && (
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
+          <AdSlot
+            slot={slotFooter}
+            style={{ display: "block" }}
+            format="auto"
+            responsive="true"
+            className="my-4"
+          />
+        </div>
+      )}
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Columna marca */}
@@ -42,78 +56,23 @@ export default function Footer({ lang = "es" }) {
 
           {/* Columna navegación */}
           <div>
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-4">
-              {t.legal.nav}
-            </h4>
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-4">{t.legal.nav}</h4>
             <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-300">
-              <li>
-                <NavLink
-                  to={`${base}/`}
-                  className="hover:text-blue-600 dark:hover:text-blue-400"
-                >
-                  {t.nav.home}
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to={`${base}/blog`}
-                  className="hover:text-blue-600 dark:hover:text-blue-400"
-                >
-                  {t.nav.blog}
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to={`${base}/sobre-mi`}
-                  className="hover:text-blue-600 dark:hover:text-blue-400"
-                >
-                  {t.nav.about}
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to={`${base}/contacto`}
-                  className="hover:text-blue-600 dark:hover:text-blue-400"
-                >
-                  {t.nav.contact}
-                </NavLink>
-              </li>
+              <li><NavLink to={`${base}/`} className="hover:text-blue-600 dark:hover:text-blue-400">{t.nav.home}</NavLink></li>
+              <li><NavLink to={`${base}/blog`} className="hover:text-blue-600 dark:hover:text-blue-400">{t.nav.blog}</NavLink></li>
+              <li><NavLink to={`${base}/sobre-mi`} className="hover:text-blue-600 dark:hover:text-blue-400">{t.nav.about}</NavLink></li>
+              <li><NavLink to={`${base}/contacto`} className="hover:text-blue-600 dark:hover:text-blue-400">{t.nav.contact}</NavLink></li>
             </ul>
           </div>
 
           {/* Columna legal */}
           <div>
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-4">
-              {t.legal.legal}
-            </h4>
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-4">{t.legal.legal}</h4>
             <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-300">
-              <li>
-                <NavLink
-                  to={`${base}/privacidad`}
-                  className="hover:text-blue-600 dark:hover:text-blue-400"
-                >
-                  {t.nav.privacy}
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to={`${base}/privacidad`}
-                  className="hover:text-blue-600 dark:hover:text-blue-400"
-                >
-                  {t.legal.cookies}
-                </NavLink>
-              </li>
+              <li><NavLink to={`${base}/privacidad`} className="hover:text-blue-600 dark:hover:text-blue-400">{t.nav.privacy}</NavLink></li>
+              <li><NavLink to={`${base}/privacidad`} className="hover:text-blue-600 dark:hover:text-blue-400">{t.legal.cookies}</NavLink></li>
             </ul>
           </div>
-        </div>
-
-        {/* AdSense en el footer (display) */}
-        <div className="mt-10 flex justify-center">
-          <AdSense
-            type="display"
-            slot={import.meta.env.VITE_ADSENSE_SLOT_FOOTER}
-            className="w-full max-w-[728px]"
-          />
         </div>
       </div>
     </footer>
