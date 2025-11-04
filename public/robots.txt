@@ -1,11 +1,17 @@
+# Permitir explícitamente a los bots de anuncios de Google
 User-agent: Mediapartners-Google
 Allow: /
 
 User-agent: AdsBot-Google
 Allow: /
 
+User-agent: AdsBot-Google-Mobile
+Allow: /
+
+# Regla general para el resto de bots
 User-agent: *
 Disallow: /es/gracias
 Disallow: /en/thank-you
 
+# Sitemap principal
 Sitemap: https://clearfinanciallife.com/sitemap.xml
