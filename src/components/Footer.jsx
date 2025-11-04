@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { translations } from "../i18n";
-import AdSlot from "./ads/AdSlot"; // <- CORRECTO
+import { AdSlot } from "./ads/AdSense";
 
 export default function Footer({ lang = "es" }) {
   const t = translations[lang] || translations.es;
@@ -9,14 +9,13 @@ export default function Footer({ lang = "es" }) {
 
   return (
     <footer className="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 mt-16">
-      {/* Bloque de anuncio en el footer (opcional) */}
       {slotFooter && (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
           <AdSlot
             slot={slotFooter}
             style={{ display: "block" }}
             format="auto"
-            responsive="true"
+            fullWidthResponsive
             className="my-4"
           />
         </div>
@@ -24,7 +23,6 @@ export default function Footer({ lang = "es" }) {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid md:grid-cols-4 gap-8">
-          {/* Columna marca */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-2 mb-4">
               <img
@@ -54,7 +52,6 @@ export default function Footer({ lang = "es" }) {
             </p>
           </div>
 
-          {/* Columna navegación */}
           <div>
             <h4 className="font-semibold text-gray-900 dark:text-white mb-4">{t.legal.nav}</h4>
             <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-300">
@@ -65,7 +62,6 @@ export default function Footer({ lang = "es" }) {
             </ul>
           </div>
 
-          {/* Columna legal */}
           <div>
             <h4 className="font-semibold text-gray-900 dark:text-white mb-4">{t.legal.legal}</h4>
             <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-300">
