@@ -1,9 +1,7 @@
 import SEO from "../seo/SEO";
 import { getPostBySlug } from "../data/posts";
 import { useParams } from "react-router-dom";
-
-// ✅ Import correcto del bloque in-article
-import AdInArticle from "../components/ads/AdInArticle";
+import { AdInArticle } from "../components/ads/AdSense";
 
 export default function BlogPost({ lang }) {
   const { slug } = useParams();
@@ -30,15 +28,12 @@ export default function BlogPost({ lang }) {
   const description = post.description || post.excerpt || "";
   const cover = post.cover;
 
-  // Slots AdSense
   const inArticleSlot = import.meta.env.VITE_ADSENSE_SLOT_INARTICLE;
 
-  // TOC simple: extrae anclas id="..."
   const toc = Array.from(
     post.content.matchAll(/<h2 id="([^"]+)">([^<]+)<\/h2>/g)
   ).map((m) => ({ id: m[1], text: m[2] }));
 
-  // ---- JSON-LD Article ----
   const siteBase = "https://clearfinanciallife.com";
   const pageUrl = `${siteBase}${path}`;
   const absoluteImage =
@@ -80,11 +75,9 @@ export default function BlogPost({ lang }) {
     <div className="max-w-4xl mx-auto px-4 py-8">
       <SEO lang={lang} path={path} title={title} description={description} image={cover} />
 
-      {/* JSON-LD Article */}
       <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
 
       <article className="bg-gray-900/40 dark:bg-gray-800/60 rounded-2xl border border-gray-800 p-6">
-        {/* Meta */}
         <div className="flex items-center gap-3 mb-4 text-sm text-gray-400">
           {post.category && (
             <span className="inline-block px-2 py-1 rounded-full bg-blue-900/30 text-blue-300">
@@ -105,12 +98,10 @@ export default function BlogPost({ lang }) {
           )}
         </div>
 
-        {/* Título */}
         <h1 className="text-3xl md:text-4xl font-extrabold text-white mb-4">
           {post.title}
         </h1>
 
-        {/* Portada */}
         {cover && (
           <div className="mb-6">
             <img
@@ -123,7 +114,6 @@ export default function BlogPost({ lang }) {
           </div>
         )}
 
-        {/* TOC */}
         {toc.length > 1 && (
           <nav className="mb-8 text-sm">
             <div className="font-semibold text-gray-300 mb-2">
@@ -141,16 +131,13 @@ export default function BlogPost({ lang }) {
           </nav>
         )}
 
-        {/* Bloque in-article encima del contenido */}
         {inArticleSlot && <AdInArticle slot={inArticleSlot} className="my-8" />}
 
-        {/* Contenido */}
         <div
           className="prose prose-invert max-w-none prose-img:rounded-xl prose-img:border prose-img:border-gray-800"
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
 
-        {/* (Opcional) Segundo bloque in-article al final */}
         {inArticleSlot && <AdInArticle slot={inArticleSlot} className="my-8" />}
       </article>
     </div>
