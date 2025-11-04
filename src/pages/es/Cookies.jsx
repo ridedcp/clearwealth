@@ -1,8 +1,7 @@
 import SEO from "../../seo/SEO";
 
 function openCookieManager() {
-  // Engancha aquí tu CMP si existe (Cookiebot, CookieYes, OneTrust, etc.)
-  // Ejemplos comunes:
+  // Conecta tu CMP aquí (Cookiebot, CookieYes, OneTrust, etc.)
   if (window?.Cookiebot?.renew) return window.Cookiebot.renew();
   if (window?.cookieConsent?.open) return window.cookieConsent.open();
   alert("Abre el gestor de cookies de tu sitio (CMP).");
@@ -11,6 +10,7 @@ function openCookieManager() {
 export default function CookiesES() {
   const path = "/es/cookies";
   const title = "Política de Cookies";
+  const contactEmail = "contact@clearfinanciallife.com";
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
@@ -27,29 +27,28 @@ export default function CookiesES() {
           recordar tus preferencias y obtener estadísticas de uso del sitio.
         </p>
 
-        <h2>2. ¿Qué tipos de cookies utilizamos?</h2>
+        <h2>2. ¿Qué tipos de cookies utilizo?</h2>
         <ul>
           <li><strong>Esenciales o técnicas:</strong> necesarias para el funcionamiento del sitio (p. ej., seguridad, sesión).</li>
-          <li><strong>De preferencia o personalización:</strong> recuerdan ajustes como idioma o región.</li>
-          <li><strong>Analíticas o de medición:</strong> nos ayudan a entender cómo se usa el sitio (requieren tu consentimiento).</li>
+          <li><strong>Preferencias o personalización:</strong> recuerdan ajustes como idioma o región.</li>
+          <li><strong>Analíticas o de medición:</strong> ayudan a entender cómo se usa el sitio (requieren tu consentimiento).</li>
           <li><strong>Publicitarias/remarketing:</strong> muestran anuncios relevantes (requieren tu consentimiento).</li>
         </ul>
 
         <h2>3. Base legal</h2>
         <p>
-          Instalamos cookies esenciales por interés legítimo. Las analíticas y publicitarias sólo se instalan con tu consentimiento.
+          Instalo cookies esenciales por interés legítimo. Las analíticas y publicitarias sólo se instalan con tu consentimiento.
         </p>
 
         <h2>4. ¿Quién utiliza la información?</h2>
         <p>
-          Nosotros y, en su caso, nuestros proveedores (p. ej., analítica o publicidad) en calidad de encargados del tratamiento.
-          Si existen transferencias fuera del EEE, aplicamos garantías adecuadas (adecuación o Cláusulas Contractuales Tipo).
+          Yo y, en su caso, proveedores (analítica o publicidad) como encargados del tratamiento. Si hay transferencias fuera del EEE,
+          aplico garantías adecuadas (adecuación o Cláusulas Contractuales Tipo).
         </p>
 
         <h2>5. Gestión de preferencias</h2>
         <p>
-          Puedes aceptar, rechazar o configurar las cookies en cualquier momento a través de nuestro gestor de consentimiento.
-          También puedes configurar tu navegador para bloquear o eliminar cookies.
+          Puedes aceptar, rechazar o configurar las cookies en cualquier momento desde el gestor de consentimiento o tu navegador.
         </p>
 
         <p>
@@ -65,22 +64,18 @@ export default function CookiesES() {
         <h2>6. Cómo borrar o bloquear cookies en tu navegador</h2>
         <ul>
           <li><strong>Chrome:</strong> Configuración &gt; Privacidad y seguridad &gt; Cookies y otros datos de sitios.</li>
-          <li><strong>Firefox:</strong> Opciones &gt; Privacidad &amp; Seguridad &gt; Cookies y datos del sitio.</li>
+          <li><strong>Firefox:</strong> Opciones &gt; Privacidad y seguridad &gt; Cookies y datos del sitio.</li>
           <li><strong>Safari:</strong> Preferencias &gt; Privacidad &gt; Cookies y datos de sitios web.</li>
           <li><strong>Edge:</strong> Configuración &gt; Cookies y permisos del sitio.</li>
         </ul>
 
-        <h2>7. Cambios en esta política</h2>
-        <p>Podremos actualizar esta política para reflejar cambios legales o del servicio. Publicaremos la versión vigente en esta página.</p>
+        <h2>7. Cambios</h2>
+        <p>Podré actualizar esta política para reflejar cambios legales o del servicio. Publicaré la versión vigente en esta página.</p>
 
         <h2>8. Contacto</h2>
-        <p>Para dudas sobre cookies, escríbenos a <a href="mailto:contact@clearfinanciallife.com">contact@clearfinanciallife.com</a>.</p>
+        <p>Dudas sobre cookies: <a href={`mailto:${contactEmail}`}>{contactEmail}</a>.</p>
 
         <h2>9. Tabla de cookies (opcional)</h2>
-        <p>
-          Si usas una herramienta de consentimiento, puedes listar aquí las cookies detectadas automáticamente
-          (nombre, proveedor, finalidad, duración). Ejemplo:
-        </p>
         <pre>
 {`Nombre         Proveedor          Finalidad                 Duración
 _ga            Google Analytics   Métrica de audiencia       13 meses
