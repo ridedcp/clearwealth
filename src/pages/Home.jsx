@@ -32,8 +32,13 @@ export default function Home({ lang = "es" }) {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <SEO lang={lang} path={path} title={t.brand} description={t.home.subtitle} />
-
+      <SEO
+        lang={lang}
+        path={path}
+        title={t.home.title}           // solo el título de la página
+        description={t.home.subtitle}  // opcional
+        type="website"
+      />
       {/* HERO con destacado */}
       {featured && (
         <section className="mt-2 mb-10 overflow-hidden rounded-2xl border border-gray-800 bg-gray-900/40 p-6">
