@@ -1,7 +1,9 @@
 import SEO from "../seo/SEO";
 import { getPostBySlug } from "../data/posts";
 import { useParams } from "react-router-dom";
-import AdSense from "../components/AdSense"; // ⟵ nuevo
+
+// ✅ Import correcto del bloque in-article
+import AdInArticle from "../components/ads/AdInArticle";
 
 export default function BlogPost({ lang }) {
   const { slug } = useParams();
@@ -27,6 +29,9 @@ export default function BlogPost({ lang }) {
   const title = post.title;
   const description = post.description || post.excerpt || "";
   const cover = post.cover;
+
+  // Slots AdSense
+  const inArticleSlot = import.meta.env.VITE_ADSENSE_SLOT_INARTICLE;
 
   // TOC simple: extrae anclas id="..."
   const toc = Array.from(
@@ -73,13 +78,7 @@ export default function BlogPost({ lang }) {
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
-      <SEO
-        lang={lang}
-        path={path}
-        title={title}
-        description={description}
-        image={cover}
-      />
+      <SEO lang={lang} path={path} title={title} description={description} image={cover} />
 
       {/* JSON-LD Article */}
       <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
@@ -124,9 +123,6 @@ export default function BlogPost({ lang }) {
           </div>
         )}
 
-        {/* Bloque AdSense in-article (entre cabecera y contenido) */}
-        <AdSense type="in-article" className="my-8" />
-
         {/* TOC */}
         {toc.length > 1 && (
           <nav className="mb-8 text-sm">
@@ -145,18 +141,17 @@ export default function BlogPost({ lang }) {
           </nav>
         )}
 
+        {/* Bloque in-article encima del contenido */}
+        {inArticleSlot && <AdInArticle slot={inArticleSlot} className="my-8" />}
+
         {/* Contenido */}
         <div
           className="prose prose-invert max-w-none prose-img:rounded-xl prose-img:border prose-img:border-gray-800"
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
 
-        {/* Bloque AdSense al final del artículo (display) */}
-        <AdSense
-          type="display"
-          slot={import.meta.env.VITE_ADSENSE_SLOT_ARTICLE_FOOTER}
-          className="mt-10"
-        />
+        {/* (Opcional) Segundo bloque in-article al final */}
+        {inArticleSlot && <AdInArticle slot={inArticleSlot} className="my-8" />}
       </article>
     </div>
   );
