@@ -1,7 +1,6 @@
 import { Helmet } from 'react-helmet-async';
+import { translations } from '../i18n';
 
-// Marca por idioma
-const BRAND = { es: 'Tu Dinero Simple', en: 'Clear Financial Life' };
 const BASE = 'https://clearfinanciallife.com';
 
 // Slugs que cambian entre idiomas
@@ -29,7 +28,6 @@ function computeAltHref({ lang, path }) {
   const other = lang === 'es' ? 'en' : 'es';
   const map = ALT_MAP[lang] ?? {};
   if (map[path]) return `${BASE}${map[path]}`;
-  // Fallback genérico: cambia el prefijo /es|/en
   const replaced = path.replace(new RegExp(`^/${lang}`), `/${other}`);
   return `${BASE}${replaced}`;
 }
@@ -37,17 +35,26 @@ function computeAltHref({ lang, path }) {
 export default function SEO({
   lang = 'es',
   path = '/es/',
-  title,
+  title,            // solo título de página (sin marca)
   description,
-  image,          // ruta absoluta o relativa
+  image,
   noindex = false,
-  type = 'website', // 'website' | 'article'
-  alternates,     // opcional: [{ hrefLang:'en', href:'...' }, ...]
+  type = 'website',
+  alternates,
+  brand,            // opcional: fuerza marca
 }) {
   const current = normalizeUrl(BASE, path);
-  const siteName = BRAND[lang] || BRAND.es;
 
-  // Imagen OG absoluta si procede
+  // 🔒 Marca unificada: siempre "Clear Financial Life"
+  const siteName =
+    brand ??
+    'Clear Financial Life'; // ignoramos translations.brand para evitar divergencias
+
+  // Título: "Clear Financial Life — Página"
+  const pageTitle = title?.trim();
+  const finalTitle = pageTitle ? `${siteName} — ${pageTitle}` : siteName;
+
+  // Imagen OG absoluta
   const ogImage = image
     ? (image.startsWith('http') ? image : `${BASE}${image}`)
     : undefined;
@@ -74,7 +81,7 @@ export default function SEO({
   return (
     <Helmet>
       <html lang={lang} />
-      <title>{title || siteName}</title>
+      <title>{finalTitle}</title>
 
       {description && <meta name="description" content={description} />}
       {noindex && <meta name="robots" content="noindex,nofollow" />}
@@ -87,7 +94,7 @@ export default function SEO({
       {/* Open Graph */}
       <meta property="og:type" content={type} />
       <meta property="og:locale" content={lang === 'es' ? 'es_ES' : 'en_US'} />
-      <meta property="og:title" content={title || siteName} />
+      <meta property="og:title" content={finalTitle} />
       {description && <meta property="og:description" content={description} />}
       <meta property="og:url" content={current} />
       <meta property="og:site_name" content={siteName} />
@@ -95,7 +102,7 @@ export default function SEO({
 
       {/* Twitter */}
       <meta name="twitter:card" content={ogImage ? 'summary_large_image' : 'summary'} />
-      <meta name="twitter:title" content={title || siteName} />
+      <meta name="twitter:title" content={finalTitle} />
       {description && <meta name="twitter:description" content={description} />}
       {ogImage && <meta name="twitter:image" content={ogImage} />}
 
