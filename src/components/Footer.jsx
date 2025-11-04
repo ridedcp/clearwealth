@@ -7,6 +7,10 @@ export default function Footer({ lang = "es" }) {
   const base = `/${lang}`;
   const slotFooter = import.meta.env.VITE_ADSENSE_SLOT_FOOTER;
 
+  // Rutas legales por idioma
+  const privacyPath = lang === "en" ? `${base}/privacy` : `${base}/privacidad`;
+  const cookiesPath = `${base}/cookies`; // misma ruta en ES/EN ("/es/cookies" / "/en/cookies")
+
   return (
     <footer className="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 mt-16">
       {slotFooter && (
@@ -65,8 +69,16 @@ export default function Footer({ lang = "es" }) {
           <div>
             <h4 className="font-semibold text-gray-900 dark:text-white mb-4">{t.legal.legal}</h4>
             <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-300">
-              <li><NavLink to={`${base}/privacidad`} className="hover:text-blue-600 dark:hover:text-blue-400">{t.nav.privacy}</NavLink></li>
-              <li><NavLink to={`${base}/privacidad`} className="hover:text-blue-600 dark:hover:text-blue-400">{t.legal.cookies}</NavLink></li>
+              <li>
+                <NavLink to={privacyPath} className="hover:text-blue-600 dark:hover:text-blue-400">
+                  {t.nav.privacy}
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to={cookiesPath} className="hover:text-blue-600 dark:hover:text-blue-400">
+                  {t.legal.cookies}
+                </NavLink>
+              </li>
             </ul>
           </div>
         </div>
