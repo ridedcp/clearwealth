@@ -3,7 +3,7 @@ import SEO from "../../seo/SEO";
 export default function PrivacidadES() {
   const path = "/es/privacidad";
   const title = "Política de Privacidad";
-  const controllerName = "Dani Cano"; // Cambia si lo prefieres
+  const controllerName = "clearfinanciallife"; // Cambia si lo prefieres
   const contactEmail = "contact@clearfinanciallife.com";
 
   return (
