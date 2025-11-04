@@ -6,7 +6,11 @@ export default function About({ lang }) {
   const path = `/${lang}/sobre-mi`;
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <SEO lang={lang} path={path} title={t.about.title} />
+     <SEO
+        lang={lang}
+        path={path}
+        title={lang === "en" ? "About me" : "Sobre mí"}
+      />
 
       {/* Título centrado */}
       <div className="text-center mb-12">
