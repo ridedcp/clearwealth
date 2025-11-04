@@ -37,7 +37,7 @@ export default function Header({ lang='es' }) {
           <NavLink to={`${base}/`} end className="flex items-center gap-2">
             <img
               src="/logo-512.svg"
-              alt={lang === 'es' ? 'Tu Dinero Simple' : 'Clear Financial Life'}
+              alt="Clear Financial Life"
               width={28}
               height={28}
               loading="eager"
