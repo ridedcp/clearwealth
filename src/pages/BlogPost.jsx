@@ -1,6 +1,7 @@
 import SEO from "../seo/SEO";
 import { getPostBySlug } from "../data/posts";
 import { useParams } from "react-router-dom";
+import AdSense from "../components/AdSense"; // ⟵ nuevo
 
 export default function BlogPost({ lang }) {
   const { slug } = useParams();
@@ -35,11 +36,9 @@ export default function BlogPost({ lang }) {
   // ---- JSON-LD Article ----
   const siteBase = "https://clearfinanciallife.com";
   const pageUrl = `${siteBase}${path}`;
-
   const absoluteImage =
     cover && (cover.startsWith("http") ? cover : `${siteBase}${cover}`);
 
-  // Normaliza fecha a ISO (si no es parseable usa ahora)
   const isoDate = (() => {
     try {
       const d = new Date(post.date);
@@ -51,8 +50,6 @@ export default function BlogPost({ lang }) {
 
   const publisherName =
     lang === "es" ? "Tu Dinero Simple" : "Clear Financial Life";
-
-  // Preferimos SVG; si cambias a PNG, actualiza la URL
   const publisherLogo = `${siteBase}/logo-512.svg`;
 
   const jsonLd = {
@@ -66,19 +63,11 @@ export default function BlogPost({ lang }) {
     dateModified: isoDate,
     inLanguage: lang === "es" ? "es-ES" : "en-US",
     articleSection: post.category || (lang === "es" ? "Blog" : "Blog"),
-    author: {
-      "@type": "Organization",
-      name: publisherName,
-      url: siteBase
-    },
+    author: { "@type": "Organization", name: publisherName, url: siteBase },
     publisher: {
       "@type": "Organization",
       name: publisherName,
-      logo: {
-        "@type": "ImageObject",
-        url: publisherLogo
-        // width: 512, height: 512 // opcional
-      }
+      logo: { "@type": "ImageObject", url: publisherLogo }
     }
   };
 
@@ -93,9 +82,7 @@ export default function BlogPost({ lang }) {
       />
 
       {/* JSON-LD Article */}
-      <script type="application/ld+json">
-        {JSON.stringify(jsonLd)}
-      </script>
+      <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
 
       <article className="bg-gray-900/40 dark:bg-gray-800/60 rounded-2xl border border-gray-800 p-6">
         {/* Meta */}
@@ -137,6 +124,9 @@ export default function BlogPost({ lang }) {
           </div>
         )}
 
+        {/* Bloque AdSense in-article (entre cabecera y contenido) */}
+        <AdSense type="in-article" className="my-8" />
+
         {/* TOC */}
         {toc.length > 1 && (
           <nav className="mb-8 text-sm">
@@ -159,6 +149,13 @@ export default function BlogPost({ lang }) {
         <div
           className="prose prose-invert max-w-none prose-img:rounded-xl prose-img:border prose-img:border-gray-800"
           dangerouslySetInnerHTML={{ __html: post.content }}
+        />
+
+        {/* Bloque AdSense al final del artículo (display) */}
+        <AdSense
+          type="display"
+          slot={import.meta.env.VITE_ADSENSE_SLOT_ARTICLE_FOOTER}
+          className="mt-10"
         />
       </article>
     </div>
