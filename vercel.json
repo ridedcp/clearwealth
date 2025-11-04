@@ -1,4 +1,11 @@
 {
+  "redirects": [
+    { "source": "/en/sobre-mi", "destination": "/en/about", "statusCode": 301 },
+    { "source": "/en/privacidad", "destination": "/en/privacy", "statusCode": 301 },
+    { "source": "/es/privacy", "destination": "/es/privacidad", "statusCode": 301 },
+    { "source": "/privacidad", "destination": "/es/privacidad", "statusCode": 301 },
+    { "source": "/privacy", "destination": "/en/privacy", "statusCode": 301 }
+  ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ]
