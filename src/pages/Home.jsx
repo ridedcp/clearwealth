@@ -1,6 +1,6 @@
+// src/pages/Home.jsx
 import { Link } from "react-router-dom";
 import SEO from "../seo/SEO";
-import AdPlaceholder from "../components/AdPlaceholder";
 import { translations } from "../i18n";
 import { getPosts } from "../data/posts";
 
@@ -34,11 +34,9 @@ export default function Home({ lang = "es" }) {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <SEO lang={lang} path={path} title={t.brand} description={t.home.subtitle} />
 
-      {/* (Quitado) AdSense – Cabecera */}
-
       {/* HERO con destacado */}
       {featured && (
-        <section className="mt-6 mb-10 overflow-hidden rounded-2xl border border-gray-800 bg-gray-900/40 p-6">
+        <section className="mt-2 mb-10 overflow-hidden rounded-2xl border border-gray-800 bg-gray-900/40 p-6">
           <div className="grid md:grid-cols-2 gap-6 items-center">
             <div>
               <h1 className="text-3xl md:text-4xl font-extrabold text-white">
@@ -99,14 +97,11 @@ export default function Home({ lang = "es" }) {
         </section>
       )}
 
-      {/* Bloque de artículos */}
-      <section className="mb-10">
+      {/* Últimos artículos */}
+      <section className="mb-2">
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-xl font-semibold text-white">{L.latest}</h2>
-          <Link
-            to={`${base}/blog`}
-            className="text-sm text-blue-400 hover:text-blue-300"
-          >
+          <Link to={`${base}/blog`} className="text-sm text-blue-400 hover:text-blue-300">
             {L.explore}
           </Link>
         </div>
@@ -148,9 +143,6 @@ export default function Home({ lang = "es" }) {
           ))}
         </div>
       </section>
-
-      {/* AdSense – Mid list (opcional; borra si no lo quieres) */}
-      <AdPlaceholder position="Mid-list" />
     </div>
   );
 }
