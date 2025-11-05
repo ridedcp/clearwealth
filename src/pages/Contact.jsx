@@ -7,12 +7,10 @@ export default function Contact({ lang }) {
   const t = translations[lang] || translations.es;
   const path = lang === "es" ? "/es/contacto" : "/en/contact";
 
-  // Token desde variable de entorno (sin fallback para no ocultar errores de configuración)
-  const token = import.meta.env.VITE_FORMSUBMIT_TOKEN;
-  if (!token) {
-    throw new Error("Falta VITE_FORMSUBMIT_TOKEN en las variables de entorno (Vercel → Settings → Environment Variables).");
-  }
-  const ajaxEndpoint = `https://formsubmit.co/ajax/${token}`;
+  // ✅ FormSubmit sin token: usa el email como endpoint
+  const endpointEmail = "contact@clearfinanciallife.com";
+  const ajaxEndpoint = `https://formsubmit.co/ajax/${encodeURIComponent(endpointEmail)}`;
+  const actionFallback = `https://formsubmit.co/${encodeURIComponent(endpointEmail)}`;
 
   // URL absoluta de “gracias”
   const siteBase =
@@ -32,7 +30,10 @@ export default function Contact({ lang }) {
     fd.set("_captcha", "false");
     fd.set("_template", "table");
     fd.set("_replyto", form.email);
-    fd.set("_subject", `Nuevo mensaje de ${form.name}`);
+    fd.set(
+      "_subject",
+      lang === "es" ? `Nuevo mensaje de ${form.name}` : `New message from ${form.name}`
+    );
     fd.set("_next", thankYouUrl); // por si algún día usas POST tradicional
 
     try {
@@ -42,15 +43,23 @@ export default function Contact({ lang }) {
         body: fd,
       });
     } catch {
-      // ignoramos error de red: mantenemos UX consistente redirigiendo igual
+      // si falla AJAX, el hidden _next + action del form harán la redirección en envío tradicional
+      e.currentTarget.submit();
+      return;
     } finally {
+      // UX consistente: navegamos igualmente
       window.location.assign(thankYouUrl);
     }
   }
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <SEO lang={lang} path={path} title={t.contact.title} description={t.contact.seo?.description} />
+      <SEO
+        lang={lang}
+        path={path}
+        title={t.contact.title}
+        description={t.contact.seo?.description}
+      />
 
       <div className="text-center mb-12">
         <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
@@ -81,13 +90,27 @@ export default function Contact({ lang }) {
           </div>
         </div>
 
-        {/* Columna formulario (AJAX) */}
+        {/* Columna formulario */}
         <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-700">
           <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
             {lang === "es" ? "Envía un mensaje" : "Send a message"}
           </h2>
 
-          <form onSubmit={handleSubmit} className="space-y-4" noValidate>
+          <form
+            onSubmit={handleSubmit}
+            action={actionFallback}               // ← fallback POST tradicional
+            method="POST"
+            className="space-y-4"
+            noValidate
+          >
+            {/* Honeypot anti-spam */}
+            <input type="text" name="_honey" style={{ display: "none" }} tabIndex={-1} autoComplete="off" />
+
+            {/* Hidden fields para POST tradicional */}
+            <input type="hidden" name="_next" value={thankYouUrl} />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+
             <div>
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                 {t.contact.form.name}
@@ -130,9 +153,6 @@ export default function Contact({ lang }) {
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
               />
             </div>
-
-            {/* Honeypot anti-spam */}
-            <input type="text" name="_honey" style={{ display: "none" }} tabIndex={-1} autoComplete="off" />
 
             <button
               type="submit"
