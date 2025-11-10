@@ -3,6 +3,72 @@
 
 export const postsEs = [
   {
+  id: 7,
+  slug: "ia-finanzas-personales-2025",
+  title: "¿Cómo la Inteligencia Artificial Puede Transformar Tus Finanzas Personales en 2025?",
+  date: "10 de noviembre de 2025",
+  category: "Tecnología",
+  readMins: 7,
+  cover: "/images/posts/ia-finanzas-personales-2025/futuro_ia_finanzas.png",
+  excerpt: "Cómo usar IA para presupuestar, ahorrar y decidir mejor con tu dinero.",
+  description: "Guía práctica 2025: apps de presupuesto con IA, asistentes, privacidad, configuración y futuro.",
+  content: `
+    <h2 id="revolucion">La Revolución de la IA en las Finanzas Personales</h2>
+    <p>La inteligencia artificial ya está al alcance de cualquiera para mejorar su salud financiera, automatizar tareas y tomar decisiones más inteligentes. En 2025 la verás en apps de presupuesto, asistentes virtuales, simuladores de inversión y plataformas de ahorro.</p>
+    <p>Imagina una app que analiza tus gastos, detecta patrones y sugiere dónde recortar o cómo aumentar el ahorro. Eso ya existe y cada vez más usuarios lo adoptan para blindarse ante la incertidumbre económica.</p>
+    <figure>
+      <img src="/images/posts/ia-finanzas-personales-2025/ia_finanzas.png" alt="Persona usando una app de IA para gestionar sus finanzas" loading="lazy" />
+      <figcaption>Revisa tu presupuesto con ayuda de IA.</figcaption>
+    </figure>
+
+    <h2 id="ejemplos">Ejemplos prácticos de IA en la vida diaria</h2>
+    <ul>
+      <li><strong>Automatización de presupuestos:</strong> Clasificación automática de gastos y alertas cuando superas límites.</li>
+      <li><strong>Asistentes financieros:</strong> Chatbots que te ayudan a ahorrar, gestionar deudas y planificar metas conversando.</li>
+      <li><strong>Simuladores de inversión:</strong> Recomendaciones de carteras según tu perfil de riesgo, incluso si empiezas de cero.</li>
+    </ul>
+    <figure>
+      <img src="/images/posts/ia-finanzas-personales-2025/app_presupuesto_ia.png" alt="Captura de una app de presupuesto con IA" loading="lazy" />
+      <figcaption>Panel de presupuesto con predicciones y anomalías.</figcaption>
+    </figure>
+
+    <h2 id="beneficios-riesgos">Beneficios y riesgos</h2>
+    <p><strong>Beneficios:</strong> Eficiencia, ahorro de tiempo y decisiones más informadas. <strong>Riesgos:</strong></p>
+    <ul>
+      <li><strong>Privacidad:</strong> Revisa políticas de datos y seguridad antes de conectar cuentas.</li>
+      <li><strong>Dependencia:</strong> La IA apoya; tú mantienes el control y la última palabra.</li>
+      <li><strong>Errores:</strong> Valida periódicamente clasificaciones y recomendaciones.</li>
+    </ul>
+    <figure>
+      <img src="/images/posts/ia-finanzas-personales-2025/privacidad_ia.png" alt="Persona revisando la política de privacidad de una app de IA" loading="lazy" />
+      <figcaption>Comprueba cómo tratan tus datos.</figcaption>
+    </figure>
+
+    <h2 id="como-empezar">Cómo empezar a usar IA en tus finanzas</h2>
+    <ol>
+      <li>Descarga una app de gestión con IA.</li>
+      <li>Conecta cuentas y tarjetas para analizar gastos.</li>
+      <li>Configura alertas y metas de ahorro.</li>
+      <li>Revisa informes y aplica recomendaciones.</li>
+      <li>Prueba simuladores de inversión según tu perfil.</li>
+    </ol>
+    <figure>
+      <img src="/images/posts/ia-finanzas-personales-2025/configurar_app_ia.png" alt="Persona configurando una app de IA para finanzas" loading="lazy" />
+      <figcaption>Activa seguimiento de gastos y análisis de presupuesto.</figcaption>
+    </figure>
+
+    <h2 id="futuro">El futuro de la IA en finanzas personales</h2>
+    <p>Veremos predicción de gastos más precisa, negociación automática de tarifas y automatizaciones financieras más seguras. La clave será usarla con responsabilidad y adaptarla a tus necesidades.</p>
+    <figure>
+      <img src="/images/posts/ia-finanzas-personales-2025/futuro_ia_finanzas.png" alt="Representación futurista de la IA en finanzas personales" loading="lazy" />
+      <figcaption>IA como motor de decisiones financieras.</figcaption>
+    </figure>
+
+    <h2 id="cierre">Conclusión</h2>
+    <p>La tecnología no sustituye tu criterio, pero te da herramientas para decidir mejor y ganar tiempo. Empieza con una app, establece metas y mide resultados.</p>
+  `
+},
+  {
   id: 1,
   slug: "como-ahorrar-100-euros-al-mes-sin-esfuerzo",
   title: "Cómo ahorrar 100 euros al mes sin esfuerzo",
@@ -737,6 +803,73 @@ export const postsEs = [
 ];
 
 export const postsEn = [
+  {
+  id: 7,
+  slug: "ai-personal-finance-2025",
+  title: "How AI Can Transform Your Personal Finances in 2025",
+  date: "November 10, 2025",
+  category: "Technology",
+  readMins: 7,
+  // Reutilizamos las mismas imágenes del post en ES
+  cover: "/images/posts/ia-finanzas-personales-2025/futuro_ia_finanzas.png",
+  excerpt: "Practical ways to use AI to budget, save, and make smarter money decisions.",
+  description: "Hands-on guide: AI budgeting apps, assistants, privacy, setup steps, and what’s next.",
+  content: `
+    <h2 id="revolution">The AI revolution in personal finance</h2>
+    <p>AI is now mainstream for everyday money management—automating tasks and improving decisions. In 2025 you’ll find it inside budgeting apps, virtual assistants, investment simulators, and savings platforms.</p>
+    <p>Imagine an app that analyzes your spending, detects patterns, and suggests where to cut or how to save more. That’s real today—and adoption keeps growing.</p>
+    <figure>
+      <img src="/images/posts/ia-finanzas-personales-2025/ia_finanzas.png" alt="Person using an AI app to manage finances" loading="lazy" />
+      <figcaption>Review your budget with AI assistance.</figcaption>
+    </figure>
+
+    <h2 id="examples">Everyday examples</h2>
+    <ul>
+      <li><strong>Automated budgeting:</strong> Auto-categorization and alerts when you exceed limits.</li>
+      <li><strong>Financial assistants:</strong> Chatbots that help you save, manage debt, and plan goals by chatting.</li>
+      <li><strong>Investment simulators:</strong> Portfolio ideas tailored to your risk profile—even if you’re a beginner.</li>
+    </ul>
+    <figure>
+      <img src="/images/posts/ia-finanzas-personales-2025/app_presupuesto_ia.png" alt="Screenshot of an AI budgeting app" loading="lazy" />
+      <figcaption>Forecasts and anomaly detection at a glance.</figcaption>
+    </figure>
+
+    <h2 id="pros-cons">Benefits and risks</h2>
+    <p><strong>Benefits:</strong> Efficiency, time savings, better insights. <strong>Risks:</strong></p>
+    <ul>
+      <li><strong>Privacy:</strong> Read data and security policies before connecting accounts.</li>
+      <li><strong>Over-reliance:</strong> AI supports you; you keep final control.</li>
+      <li><strong>Errors:</strong> Periodically validate categories and tips.</li>
+    </ul>
+    <figure>
+      <img src="/images/posts/ia-finanzas-personales-2025/privacidad_ia.png" alt="Person checking an app's privacy policy" loading="lazy" />
+      <figcaption>Know how your data is handled.</figcaption>
+    </figure>
+
+    <h2 id="get-started">How to get started</h2>
+    <ol>
+      <li>Download a finance app with AI.</li>
+      <li>Connect bank accounts and cards.</li>
+      <li>Set alerts and savings goals.</li>
+      <li>Review reports and apply recommendations.</li>
+      <li>Try investment simulators matched to your profile.</li>
+    </ol>
+    <figure>
+      <img src="/images/posts/ia-finanzas-personales-2025/configurar_app_ia.png" alt="Person configuring an AI finance app" loading="lazy" />
+      <figcaption>Enable expense tracking and budget analysis.</figcaption>
+    </figure>
+
+    <h2 id="future">What’s next for AI & money</h2>
+    <p>Expect better spend forecasting, automated rate negotiation, and safer financial automations. The key is responsible use tailored to your needs.</p>
+    <figure>
+      <img src="/images/posts/ia-finanzas-personales-2025/futuro_ia_finanzas.png" alt="Futuristic representation of AI in personal finance" loading="lazy" />
+      <figcaption>AI as the engine for smarter money decisions.</figcaption>
+    </figure>
+
+    <h2 id="wrap">Bottom line</h2>
+    <p>AI won’t replace your judgment, but it will amplify it. Start with one app, set goals, and measure results.</p>
+  `
+},
   {
   id: 1,
   slug: "how-to-save-100-euros-a-month",
