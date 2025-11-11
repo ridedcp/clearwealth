@@ -3,6 +3,62 @@
 
 export const postsEs = [
   {
+  id: 13,
+  slug: "fondos-indexados-vs-fondos-activos",
+  title: "Fondos indexados vs fondos activos: cuál te conviene en 2025",
+  date: "11 de noviembre de 2025",
+  category: "Inversión",
+  readMins: 10,
+  cover: "/images/posts/fondos-indexados-vs-fondos-activos/cover.jpg",
+  excerpt: "Comparamos gestión pasiva y activa: costes, rentabilidad, riesgos y perfiles de inversor.",
+  description: "Análisis completo entre fondos indexados y fondos activos: diferencias clave, impacto de comisiones, resultados históricos y recomendaciones prácticas para elegir la opción más eficiente según tu perfil.",
+  content: `
+    <figure>
+      <img src="/images/posts/fondos-indexados-vs-fondos-activos/cover.jpg" alt="Comparativa visual entre fondos indexados y fondos activos" loading="lazy" />
+      <figcaption>Los fondos indexados y los fondos activos siguen caminos diferentes, pero ambos pueden coexistir en una cartera bien equilibrada.</figcaption>
+    </figure>
+
+    <h2 id="que-son">Qué son</h2>
+    <p><strong>Fondos indexados</strong>: replican un índice (S&P 500, MSCI World, IBEX 35) con el objetivo de igualar su comportamiento. No intentan “batir” al mercado, sino seguirlo con costes mínimos.</p>
+    <p><strong>Fondos activos</strong>: son gestionados por analistas y gestores que seleccionan valores buscando superar un índice de referencia. Requieren más análisis, operaciones y, por tanto, más comisiones.</p>
+
+    <h2 id="diferencias">Principales diferencias</h2>
+    <ul>
+      <li><strong>Costes</strong>: los fondos indexados tienen comisiones anuales del 0,05–0,25 %; los activos suelen superar el 1 %.</li>
+      <li><strong>Transparencia</strong>: los indexados publican su índice de referencia y composición exacta; los activos pueden cambiar la cartera sin aviso.</li>
+      <li><strong>Riesgo gestor</strong>: en los indexados es bajo; en los activos depende de la habilidad del gestor.</li>
+      <li><strong>Objetivo</strong>: los indexados buscan igualar al mercado; los activos intentan superarlo (aunque la mayoría no lo logran a largo plazo).</li>
+    </ul>
+
+    <h2 id="costes">Costes y su impacto</h2>
+    <p>Las comisiones, aunque parezcan pequeñas, erosionan mucho la rentabilidad compuesta a largo plazo. Un 1 % adicional anual puede restar hasta un 20–25 % del capital final tras 20 años de inversión. Los fondos indexados parten con esa ventaja estructural.</p>
+
+    <figure>
+      <img src="/images/posts/fondos-indexados-vs-fondos-activos/grafico-comparativo.jpg" alt="Gráfico comparativo entre fondos indexados y fondos activos" loading="lazy" />
+      <figcaption>El coste acumulado puede marcar una diferencia de miles de euros en rentabilidad neta.</figcaption>
+    </figure>
+
+    <h2 id="rentabilidad">Rentabilidad histórica</h2>
+    <p>Estudios de S&P y Morningstar muestran que más del 85 % de los fondos activos no baten a su índice en periodos de más de 10 años. En España, según Indexa Capital, entre 2006 y 2020 los fondos indexados ofrecieron rentabilidades medias de 2 a 5 veces superiores a las de gestión activa después de comisiones.</p>
+
+    <h2 id="ventajas">Ventajas y desventajas</h2>
+    <ul>
+      <li><strong>Fondos indexados:</strong> baratos, diversificados, simples, transparentes. Desventaja: nunca superan al mercado.</li>
+      <li><strong>Fondos activos:</strong> potencial de rentabilidad superior y flexibilidad. Desventaja: comisiones altas, riesgo del gestor y resultados impredecibles.</li>
+    </ul>
+
+    <h2 id="perfil">Qué tipo de inversor eres</h2>
+    <p>Si buscas <em>simplicidad, costes bajos y horizonte largo</em>, los indexados son para ti. Si disfrutas analizando estrategias, confías en un buen gestor y asumes el riesgo, puedes destinar una parte de tu cartera a fondos activos.</p>
+
+    <h2 id="estrategia">Estrategia combinada</h2>
+    <p>Muchos inversores optan por una <strong>cartera mixta</strong>: núcleo indexado (70–90 %) para eficiencia y una porción activa (10–30 %) para intentar añadir “alfa”. Revisa anualmente si el fondo activo realmente justifica su coste.</p>
+
+    <h2 id="conclusion">Conclusión</h2>
+    <p>La evidencia es clara: la gestión pasiva gana en eficiencia y consistencia a largo plazo. Sin embargo, la gestión activa puede tener sentido en nichos concretos o si eliges gestores con historial probado. Lo importante es entender en qué inviertes, cuánto pagas y qué esperas obtener.</p>
+    <p>Si tu prioridad es <strong>maximizar rentabilidad neta con el mínimo esfuerzo</strong>, los fondos indexados son la opción más lógica. Si buscas un toque personal o una estrategia diferenciada, añade un componente activo, pero con cabeza y sin dejarte llevar por promesas de rentabilidad.</p>
+  `
+},
+  {
   id: 9,
   slug: "ia-privacidad-seguridad-sesgos",
   title: "Checklist de privacidad, seguridad y sesgos al usar apps de IA financiera",
@@ -1103,6 +1159,62 @@ export const postsEs = [
 ];
 
 export const postsEn = [
+  {
+  id: 13,
+  slug: "index-funds-vs-active-funds",
+  title: "Index funds vs active funds: which is best for you in 2025",
+  date: "11 November 2025",
+  category: "Investing",
+  readMins: 10,
+  cover: "/images/posts/fondos-indexados-vs-fondos-activos/cover.jpg",
+  excerpt: "We compare passive and active investing: costs, returns, risks and investor profiles.",
+  description: "Comprehensive comparison between index and active funds: key differences, cost impact, historical results and practical advice to choose the most efficient option for your profile.",
+  content: `
+    <figure>
+      <img src="/images/posts/fondos-indexados-vs-fondos-activos/cover.jpg" alt="Visual comparison between index and active funds" loading="lazy" />
+      <figcaption>Two paths, one goal: achieving long-term growth efficiently.</figcaption>
+    </figure>
+
+    <h2 id="definition">Definition</h2>
+    <p><strong>Index funds</strong> replicate a market index (S&P 500, MSCI World, IBEX 35) aiming to match its performance. They do not try to beat the market — only to follow it efficiently with minimal costs.</p>
+    <p><strong>Active funds</strong> are managed by professionals who select securities to outperform a benchmark. This approach requires research, active trading and therefore higher fees.</p>
+
+    <h2 id="differences">Key differences</h2>
+    <ul>
+      <li><strong>Fees</strong>: index funds charge around 0.05–0.25 % yearly; active funds often exceed 1 %.</li>
+      <li><strong>Transparency</strong>: index funds disclose their exact benchmark and composition; active ones can change holdings at any time.</li>
+      <li><strong>Manager risk</strong>: minimal in index funds; significant in active funds as performance depends on human decisions.</li>
+      <li><strong>Objective</strong>: index funds aim to match the market; active funds aim to beat it (most fail in the long run).</li>
+    </ul>
+
+    <figure>
+      <img src="/images/posts/fondos-indexados-vs-fondos-activos/grafico-comparativo.jpg" alt="Comparison chart between index and active fund performance" loading="lazy" />
+      <figcaption>Over most 10-year periods, index funds outperform the majority of active funds after fees.</figcaption>
+    </figure>
+
+    <h2 id="costs">Costs and long-term impact</h2>
+    <p>Even small fee differences compound dramatically over time. Paying 1 % more per year can reduce your final capital by 20–25 % after two decades. This structural advantage is why low-cost index investing dominates.</p>
+
+    <h2 id="returns">Historical performance</h2>
+    <p>Studies from S&P Dow Jones and Morningstar show that over 85 % of active funds underperform their benchmarks after 10 years. In Spain, Indexa Capital found that between 2006–2020, passive funds delivered 2–5× higher average net returns than active funds.</p>
+
+    <h2 id="pros-cons">Pros and cons</h2>
+    <ul>
+      <li><strong>Index funds:</strong> low cost, diversified, simple, transparent. Drawback: will never outperform the market.</li>
+      <li><strong>Active funds:</strong> potential to outperform and more flexibility. Drawback: higher cost, higher risk, inconsistent outcomes.</li>
+    </ul>
+
+    <h2 id="investor-type">Investor suitability</h2>
+    <p>If you prefer <em>simplicity, low fees and long-term focus</em>, index funds fit best. If you enjoy research, believe in skilled managers and accept higher uncertainty, allocating a portion to active funds can make sense.</p>
+
+    <h2 id="mix-strategy">Balanced strategy</h2>
+    <p>Many investors use a <strong>core-satellite approach</strong>: a core of global index funds (70–90 %) for efficiency and a small satellite (10–30 %) of active funds for potential alpha. Review annually whether active performance justifies its cost.</p>
+
+    <h2 id="conclusion">Conclusion</h2>
+    <p>The evidence is strong: passive management wins in cost efficiency and long-term consistency. Active management may work in niche segments or with exceptional managers, but the burden of proof is high.</p>
+    <p>If your goal is <strong>maximizing net returns with minimal effort</strong>, index funds are the rational choice. If you seek a more hands-on or tactical edge, include active exposure — but do it consciously and avoid marketing hype.</p>
+  `
+},
   {
   id: 9,
   slug: "ai-privacy-security-bias-checklist",
