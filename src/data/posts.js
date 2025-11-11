@@ -3,6 +3,78 @@
 
 export const postsEs = [
   {
+  id: 9,
+  slug: "ia-privacidad-seguridad-sesgos",
+  title: "Checklist de privacidad, seguridad y sesgos al usar apps de IA financiera",
+  date: "10 de noviembre de 2025",
+  category: "Privacidad",
+  readMins: 10,
+  cover: "/images/posts/ia-privacidad-seguridad-sesgos/cover.jpg",
+  excerpt: "Lo que debes verificar antes de conectar tu banco a una app de IA.",
+  description: "Guía práctica: permisos mínimos, cifrado, exportación/borrado de datos, explicabilidad, sesgos y plan de contingencia.",
+  content: `
+    <h2 id="por-que">Por qué importa (y cómo se filtra el dinero)</h2>
+    <p>Una filtración de datos financieros no es solo un problema técnico: impacta tu poder de negociación, tu seguridad y tu tranquilidad. Este checklist prioriza <strong>control</strong>, <strong>reversibilidad</strong> y <strong>transparencia</strong>.</p>
+
+    <h2 id="permisos">1) Permisos mínimos</h2>
+    <ul>
+      <li>Prefiere <strong>solo lectura</strong> (read-only). Evita acceso de escritura salvo automatizaciones críticas.</li>
+      <li>Separa fuentes: banco principal y tarjeta secundaria en conexiones distintas.</li>
+      <li>Revisa <em>scope</em> cada 90 días y revoca accesos inactivos.</li>
+    </ul>
+
+    <h2 id="cifrado">2) Cifrado y almacenamiento</h2>
+    <ul>
+      <li><strong>TLS</strong> en tránsito y <strong>cifrado en reposo</strong> documentado.</li>
+      <li>Política de retención: ¿cuándo y cómo se eliminan tus datos?</li>
+      <li>Backups: asegúrate de que la eliminación también aplica a copias.</li>
+    </ul>
+
+    <h2 id="psd2">3) Proveedor PSD2/Open Banking</h2>
+    <ul>
+      <li>Licencias vigentes, auditorías y responsable de seguridad público.</li>
+      <li>Logs de consentimiento: fecha, alcance y revocación.</li>
+    </ul>
+
+    <h2 id="derechos">4) Exportación y borrado</h2>
+    <ol>
+      <li>Exporta CSV/JSON mensual (cifrado y con checksum).</li>
+      <li>Solicita borrado y exige confirmación con referencia interna.</li>
+      <li>Verifica que también borran modelos derivados si contienen datos identificables.</li>
+    </ol>
+
+    <h2 id="explicabilidad">5) Explicabilidad y correcciones</h2>
+    <ul>
+      <li>La app debe explicar <em>por qué</em> clasificó/marcó algo.</li>
+      <li>Corrige categorías y re-entrena reglas (<strong>feedback loop</strong> activo).</li>
+    </ul>
+
+    <h2 id="sesgos">6) Sesgos y equidad</h2>
+    <ul>
+      <li>Evita reglas que penalizan zonas/tiendas sin contexto.</li>
+      <li>Audita resultados por categorías: ¿hay errores sistemáticos?</li>
+    </ul>
+
+    <h2 id="contingencia">7) Plan de contingencia</h2>
+    <ul>
+      <li>Cuenta “offline” espejo con presupuesto base para seguir operando sin la app.</li>
+      <li>Seguro de ciber y límites de responsabilidad en contrato.</li>
+    </ul>
+
+    <figure>
+      <img src="/images/posts/ia-privacidad-seguridad-sesgos/politica-privacidad.jpg" alt="Revisión de política de privacidad en smartphone" loading="lazy" />
+      <figcaption>Comprueba políticas y responsables antes de conectar bancos.</figcaption>
+    </figure>
+
+    <h2 id="plantillas">Plantillas útiles</h2>
+    <h3>Solicitud de borrado</h3>
+    <pre><code>Solicito el borrado íntegro de mis datos, copias y derivados. Confirmad por escrito con ID de caso.</code></pre>
+
+    <h2 id="cierre">Conclusión</h2>
+    <p>Privacidad ≠ paranoia. Es disciplina operativa para que tu IA sume y nunca reste.</p>
+  `
+},
+  {
   id: 8,
   slug: "ia-flujos-automaticos-ahorro-2025",
   title: "10 flujos automáticos con IA para ahorrar dinero (2025)",
@@ -74,78 +146,6 @@ export const postsEs = [
 
     <h2 id="cierre">Conclusión</h2>
     <p>Empieza pequeño, mide, itera. La clave no es añadir más reglas, sino mantener las que <em>sí</em> te generan ahorro real.</p>
-  `
-},
-{
-  id: 9,
-  slug: "ia-privacidad-seguridad-sesgos",
-  title: "Checklist de privacidad, seguridad y sesgos al usar apps de IA financiera",
-  date: "10 de noviembre de 2025",
-  category: "Privacidad",
-  readMins: 10,
-  cover: "/images/posts/ia-privacidad-seguridad-sesgos/cover.jpg",
-  excerpt: "Lo que debes verificar antes de conectar tu banco a una app de IA.",
-  description: "Guía práctica: permisos mínimos, cifrado, exportación/borrado de datos, explicabilidad, sesgos y plan de contingencia.",
-  content: `
-    <h2 id="por-que">Por qué importa (y cómo se filtra el dinero)</h2>
-    <p>Una filtración de datos financieros no es solo un problema técnico: impacta tu poder de negociación, tu seguridad y tu tranquilidad. Este checklist prioriza <strong>control</strong>, <strong>reversibilidad</strong> y <strong>transparencia</strong>.</p>
-
-    <h2 id="permisos">1) Permisos mínimos</h2>
-    <ul>
-      <li>Prefiere <strong>solo lectura</strong> (read-only). Evita acceso de escritura salvo automatizaciones críticas.</li>
-      <li>Separa fuentes: banco principal y tarjeta secundaria en conexiones distintas.</li>
-      <li>Revisa <em>scope</em> cada 90 días y revoca accesos inactivos.</li>
-    </ul>
-
-    <h2 id="cifrado">2) Cifrado y almacenamiento</h2>
-    <ul>
-      <li><strong>TLS</strong> en tránsito y <strong>cifrado en reposo</strong> documentado.</li>
-      <li>Política de retención: ¿cuándo y cómo se eliminan tus datos?</li>
-      <li>Backups: asegúrate de que la eliminación también aplica a copias.</li>
-    </ul>
-
-    <h2 id="psd2">3) Proveedor PSD2/Open Banking</h2>
-    <ul>
-      <li>Licencias vigentes, auditorías y responsable de seguridad público.</li>
-      <li>Logs de consentimiento: fecha, alcance y revocación.</li>
-    </ul>
-
-    <h2 id="derechos">4) Exportación y borrado</h2>
-    <ol>
-      <li>Exporta CSV/JSON mensual (cifrado y con checksum).</li>
-      <li>Solicita borrado y exige confirmación con referencia interna.</li>
-      <li>Verifica que también borran modelos derivados si contienen datos identificables.</li>
-    </ol>
-
-    <h2 id="explicabilidad">5) Explicabilidad y correcciones</h2>
-    <ul>
-      <li>La app debe explicar <em>por qué</em> clasificó/marcó algo.</li>
-      <li>Corrige categorías y re-entrena reglas (<strong>feedback loop</strong> activo).</li>
-    </ul>
-
-    <h2 id="sesgos">6) Sesgos y equidad</h2>
-    <ul>
-      <li>Evita reglas que penalizan zonas/tiendas sin contexto.</li>
-      <li>Audita resultados por categorías: ¿hay errores sistemáticos?</li>
-    </ul>
-
-    <h2 id="contingencia">7) Plan de contingencia</h2>
-    <ul>
-      <li>Cuenta “offline” espejo con presupuesto base para seguir operando sin la app.</li>
-      <li>Seguro de ciber y límites de responsabilidad en contrato.</li>
-    </ul>
-
-    <figure>
-      <img src="/images/posts/ia-privacidad-seguridad-sesgos/politica-privacidad.jpg" alt="Revisión de política de privacidad en smartphone" loading="lazy" />
-      <figcaption>Comprueba políticas y responsables antes de conectar bancos.</figcaption>
-    </figure>
-
-    <h2 id="plantillas">Plantillas útiles</h2>
-    <h3>Solicitud de borrado</h3>
-    <pre><code>Solicito el borrado íntegro de mis datos, copias y derivados. Confirmad por escrito con ID de caso.</code></pre>
-
-    <h2 id="cierre">Conclusión</h2>
-    <p>Privacidad ≠ paranoia. Es disciplina operativa para que tu IA sume y nunca reste.</p>
   `
 },
 {
@@ -1104,67 +1104,6 @@ export const postsEs = [
 
 export const postsEn = [
   {
-  id: 8,
-  slug: "ai-money-automation-flows-2025",
-  title: "10 AI Money Automation Flows to Save More (2025)",
-  date: "November 10, 2025",
-  category: "Automation",
-  readMins: 10,
-  cover: "/images/posts/ai-money-automation-flows-2025/cover.jpg",
-  excerpt: "Practical automations so saving happens on autopilot.",
-  description: "AI workflows that auto-categorize, forecast, round up purchases, and prioritize goals—hands off, results on.",
-  content: `
-    <h2 id="intro">Save without thinking: Detection → Decision → Action</h2>
-    <p>Good personal finance is consistency, not heroics. AI shines at small decisions made thousands of times. Build three layers: detection (what's happening), decision (what's optimal), action (what to execute).</p>
-
-    <h2 id="flows">15 recommended flows</h2>
-    <ol>
-      <li><strong>Smart round-ups</strong> → spare change to Emergency.</li>
-      <li><strong>Anomaly alerts</strong> → +35% vs 90-day average triggers suggestions.</li>
-      <li><strong>Dynamic caps</strong> → freeze “Fun” at 80% and propose low-cost swaps.</li>
-      <li><strong>Payday split</strong> → 10% emergency, 10% goals, 5% investing, rest to fixed bills.</li>
-      <li><strong>Sleeping subs</strong> → unused 30 days → review; 7 more → cancel draft.</li>
-      <li><strong>Month-end forecast</strong> → soft cuts to land positive.</li>
-      <li><strong>1% rule</strong> → unplanned &gt;1% income → confirm.</li>
-      <li><strong>Cashback redirect</strong> → top active goal.</li>
-      <li><strong>Grocery unit-price coach</strong> → seasonal swaps.</li>
-      <li><strong>Sunday review</strong> → weekly digest + one micro-action.</li>
-      <li><strong>Freelance taxes</strong> → auto-stash per invoice.</li>
-      <li><strong>Car “wear” fund</strong> → bump contributions when transport spikes.</li>
-      <li><strong>Insurance renewal</strong> → benchmark + negotiation script.</li>
-      <li><strong>Basic antifraud</strong> → duplicates & suspicious merchants.</li>
-      <li><strong>Behavioral micro-saves</strong> → no-delivery day → +€3–5 to “Vacation”.</li>
-    </ol>
-
-    <figure>
-      <img src="/images/posts/ai-money-automation-flows-2025/automation-dashboard.jpg" alt="AI savings automations dashboard" loading="lazy" />
-      <figcaption>Automations that run your budget for you.</figcaption>
-    </figure>
-
-    <h2 id="stack">Rollout plan</h2>
-    <ol>
-      <li><strong>Layer 1:</strong> Round-ups + Sunday review.</li>
-      <li><strong>Layer 2:</strong> Forecast, Sleeping subs, Dynamic caps.</li>
-      <li><strong>Layer 3:</strong> Grocery coach, Insurance renewal, Antifraud.</li>
-    </ol>
-
-    <h2 id="metrics">Metrics</h2>
-    <ul>
-      <li><strong>Execution rate</strong>, <strong>Net monthly savings</strong>, <strong>Alert fatigue</strong>.</li>
-    </ul>
-
-    <h2 id="risks">Risks</h2>
-    <ul>
-      <li>Over-automation → keep a monthly manual review.</li>
-      <li>Excessive permissions → prefer read-only and rotate keys.</li>
-      <li>False positives → retrain categories.</li>
-    </ul>
-
-    <h2 id="wrap">Bottom line</h2>
-    <p>Start small, measure, iterate. Fewer, better automations beat dozens you’ll ignore.</p>
-  `
-},
-{
   id: 9,
   slug: "ai-privacy-security-bias-checklist",
   title: "AI Finance Apps: Privacy, Security & Bias Checklist",
@@ -1232,6 +1171,67 @@ export const postsEn = [
 
     <h2 id="wrap">Bottom line</h2>
     <p>Privacy is an operating discipline. Make it routine and your AI will only ever help you.</p>
+  `
+},
+  {
+  id: 8,
+  slug: "ai-money-automation-flows-2025",
+  title: "10 AI Money Automation Flows to Save More (2025)",
+  date: "November 10, 2025",
+  category: "Automation",
+  readMins: 10,
+  cover: "/images/posts/ai-money-automation-flows-2025/cover.jpg",
+  excerpt: "Practical automations so saving happens on autopilot.",
+  description: "AI workflows that auto-categorize, forecast, round up purchases, and prioritize goals—hands off, results on.",
+  content: `
+    <h2 id="intro">Save without thinking: Detection → Decision → Action</h2>
+    <p>Good personal finance is consistency, not heroics. AI shines at small decisions made thousands of times. Build three layers: detection (what's happening), decision (what's optimal), action (what to execute).</p>
+
+    <h2 id="flows">15 recommended flows</h2>
+    <ol>
+      <li><strong>Smart round-ups</strong> → spare change to Emergency.</li>
+      <li><strong>Anomaly alerts</strong> → +35% vs 90-day average triggers suggestions.</li>
+      <li><strong>Dynamic caps</strong> → freeze “Fun” at 80% and propose low-cost swaps.</li>
+      <li><strong>Payday split</strong> → 10% emergency, 10% goals, 5% investing, rest to fixed bills.</li>
+      <li><strong>Sleeping subs</strong> → unused 30 days → review; 7 more → cancel draft.</li>
+      <li><strong>Month-end forecast</strong> → soft cuts to land positive.</li>
+      <li><strong>1% rule</strong> → unplanned &gt;1% income → confirm.</li>
+      <li><strong>Cashback redirect</strong> → top active goal.</li>
+      <li><strong>Grocery unit-price coach</strong> → seasonal swaps.</li>
+      <li><strong>Sunday review</strong> → weekly digest + one micro-action.</li>
+      <li><strong>Freelance taxes</strong> → auto-stash per invoice.</li>
+      <li><strong>Car “wear” fund</strong> → bump contributions when transport spikes.</li>
+      <li><strong>Insurance renewal</strong> → benchmark + negotiation script.</li>
+      <li><strong>Basic antifraud</strong> → duplicates & suspicious merchants.</li>
+      <li><strong>Behavioral micro-saves</strong> → no-delivery day → +€3–5 to “Vacation”.</li>
+    </ol>
+
+    <figure>
+      <img src="/images/posts/ai-money-automation-flows-2025/automation-dashboard.jpg" alt="AI savings automations dashboard" loading="lazy" />
+      <figcaption>Automations that run your budget for you.</figcaption>
+    </figure>
+
+    <h2 id="stack">Rollout plan</h2>
+    <ol>
+      <li><strong>Layer 1:</strong> Round-ups + Sunday review.</li>
+      <li><strong>Layer 2:</strong> Forecast, Sleeping subs, Dynamic caps.</li>
+      <li><strong>Layer 3:</strong> Grocery coach, Insurance renewal, Antifraud.</li>
+    </ol>
+
+    <h2 id="metrics">Metrics</h2>
+    <ul>
+      <li><strong>Execution rate</strong>, <strong>Net monthly savings</strong>, <strong>Alert fatigue</strong>.</li>
+    </ul>
+
+    <h2 id="risks">Risks</h2>
+    <ul>
+      <li>Over-automation → keep a monthly manual review.</li>
+      <li>Excessive permissions → prefer read-only and rotate keys.</li>
+      <li>False positives → retrain categories.</li>
+    </ul>
+
+    <h2 id="wrap">Bottom line</h2>
+    <p>Start small, measure, iterate. Fewer, better automations beat dozens you’ll ignore.</p>
   `
 },
 {
