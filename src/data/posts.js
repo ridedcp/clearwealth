@@ -30,11 +30,6 @@ export const postsEs = [
       <li><strong>Rentabilidad</strong>: el ahorro apenas supera la inflación; invertir busca ganarle claramente al aumento de precios.</li>
     </ul>
 
-    <figure>
-      <img src="/images/posts/ahorrar-vs-invertir/grafico-evolucion.png" alt="Evolución comparativa de ahorrar e invertir en el tiempo" loading="lazy" />
-      <figcaption>A largo plazo, el dinero invertido tiende a crecer más rápido que el dinero ahorrado sin rendimiento.</figcaption>
-    </figure>
-
     <h2 id="cuandocadauno">Cuándo ahorrar y cuándo invertir</h2>
     <p>El error más común es creer que son excluyentes. Ambos se complementan:</p>
     <ul>
@@ -91,11 +86,6 @@ export const postsEs = [
 
     <h2 id="costes">Costes y su impacto</h2>
     <p>Las comisiones, aunque parezcan pequeñas, erosionan mucho la rentabilidad compuesta a largo plazo. Un 1 % adicional anual puede restar hasta un 20–25 % del capital final tras 20 años de inversión. Los fondos indexados parten con esa ventaja estructural.</p>
-
-    <figure>
-      <img src="/images/posts/fondos-indexados-vs-fondos-activos/grafico-comparativo.jpg" alt="Gráfico comparativo entre fondos indexados y fondos activos" loading="lazy" />
-      <figcaption>El coste acumulado puede marcar una diferencia de miles de euros en rentabilidad neta.</figcaption>
-    </figure>
 
     <h2 id="rentabilidad">Rentabilidad histórica</h2>
     <p>Estudios de S&P y Morningstar muestran que más del 85 % de los fondos activos no baten a su índice en periodos de más de 10 años. En España, según Indexa Capital, entre 2006 y 2020 los fondos indexados ofrecieron rentabilidades medias de 2 a 5 veces superiores a las de gestión activa después de comisiones.</p>
@@ -1246,11 +1236,6 @@ export const postsEn = [
       <li><strong>Return</strong>: savings barely beat inflation; investing aims to grow above it.</li>
     </ul>
 
-    <figure>
-      <img src="/images/posts/ahorrar-vs-invertir/grafico-evolucion.png" alt="Growth comparison between saving and investing" loading="lazy" />
-      <figcaption>Over time, invested money compounds faster than saved money.</figcaption>
-    </figure>
-
     <h2 id="when">When to save and when to invest</h2>
     <p>They are not opposites — they work together:</p>
     <ul>
@@ -1304,11 +1289,6 @@ export const postsEn = [
       <li><strong>Manager risk</strong>: minimal in index funds; significant in active funds as performance depends on human decisions.</li>
       <li><strong>Objective</strong>: index funds aim to match the market; active funds aim to beat it (most fail in the long run).</li>
     </ul>
-
-    <figure>
-      <img src="/images/posts/fondos-indexados-vs-fondos-activos/grafico-comparativo.jpg" alt="Comparison chart between index and active fund performance" loading="lazy" />
-      <figcaption>Over most 10-year periods, index funds outperform the majority of active funds after fees.</figcaption>
-    </figure>
 
     <h2 id="costs">Costs and long-term impact</h2>
     <p>Even small fee differences compound dramatically over time. Paying 1 % more per year can reduce your final capital by 20–25 % after two decades. This structural advantage is why low-cost index investing dominates.</p>
