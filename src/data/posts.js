@@ -13,11 +13,6 @@ export const postsEs = [
   excerpt: "Entiende la diferencia entre ahorrar e invertir y cuándo hacer cada uno según tus objetivos.",
   description: "Comparamos ahorrar e invertir: estabilidad frente a crecimiento, seguridad frente a rentabilidad. Aprende a equilibrar ambos según tu perfil y horizonte financiero.",
   content: `
-    <figure>
-      <img src="/images/posts/ahorrar-vs-invertir/cover.png" alt="Comparativa entre ahorrar e invertir" loading="lazy" />
-      <figcaption>Ahorrar protege tu presente; invertir construye tu futuro.</figcaption>
-    </figure>
-
     <h2 id="definicion">Qué significa realmente “ahorrar” y “invertir”</h2>
     <p><strong>Ahorrar</strong> es reservar parte de tus ingresos y mantenerlos en instrumentos seguros y líquidos (cuentas, depósitos, efectivo). El objetivo principal es <em>preservar el capital</em>.</p>
     <p><strong>Invertir</strong> implica poner ese dinero a trabajar en activos que pueden fluctuar de valor (acciones, bonos, fondos, inmuebles), con el objetivo de <em>hacer crecer el capital</em> a largo plazo.</p>
@@ -29,6 +24,11 @@ export const postsEs = [
       <li><strong>Liquidez</strong>: el ahorro se puede retirar en cualquier momento; las inversiones pueden requerir esperar o vender en momentos desfavorables.</li>
       <li><strong>Rentabilidad</strong>: el ahorro apenas supera la inflación; invertir busca ganarle claramente al aumento de precios.</li>
     </ul>
+
+    <figure>
+      <img src="/images/posts/ahorrar-vs-invertir/grafico-evolucion.png" alt="Evolución comparativa de ahorrar e invertir en el tiempo" loading="lazy" />
+      <figcaption>A largo plazo, el dinero invertido tiende a crecer más rápido que el dinero ahorrado sin rendimiento.</figcaption>
+    </figure>
 
     <h2 id="cuandocadauno">Cuándo ahorrar y cuándo invertir</h2>
     <p>El error más común es creer que son excluyentes. Ambos se complementan:</p>
@@ -1219,11 +1219,6 @@ export const postsEn = [
   excerpt: "Understand the difference between saving and investing — and when to do each according to your goals.",
   description: "We compare saving and investing: safety versus growth, stability versus return. Learn how to balance both depending on your goals and time horizon.",
   content: `
-    <figure>
-      <img src="/images/posts/ahorrar-vs-invertir/cover.png" alt="Comparison between saving and investing" loading="lazy" />
-      <figcaption>Saving protects your present; investing builds your future.</figcaption>
-    </figure>
-
     <h2 id="definition">What saving and investing really mean</h2>
     <p><strong>Saving</strong> means setting aside part of your income in safe and liquid instruments (cash, savings accounts, deposits). Its goal is to <em>preserve capital</em>.</p>
     <p><strong>Investing</strong> means putting money to work in assets that can fluctuate in value (stocks, bonds, funds, real estate) to <em>grow capital</em> over time.</p>
@@ -1235,6 +1230,11 @@ export const postsEn = [
       <li><strong>Liquidity</strong>: savings are immediately available; investments may need time or favorable conditions to sell.</li>
       <li><strong>Return</strong>: savings barely beat inflation; investing aims to grow above it.</li>
     </ul>
+
+    <figure>
+      <img src="/images/posts/ahorrar-vs-invertir/grafico-evolucion.png" alt="Growth comparison between saving and investing" loading="lazy" />
+      <figcaption>Over time, invested money compounds faster than saved money.</figcaption>
+    </figure>
 
     <h2 id="when">When to save and when to invest</h2>
     <p>They are not opposites — they work together:</p>
