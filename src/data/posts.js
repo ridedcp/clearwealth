@@ -3,6 +3,306 @@
 
 export const postsEs = [
   {
+  id: 8,
+  slug: "ia-flujos-automaticos-ahorro-2025",
+  title: "10 flujos automáticos con IA para ahorrar dinero (2025)",
+  date: "10 de noviembre de 2025",
+  category: "Automatización",
+  readMins: 10,
+  cover: "/images/posts/ia-flujos-automaticos-ahorro-2025/cover.jpg",
+  excerpt: "Recetas prácticas de IA para que el ahorro ocurra solo.",
+  description: "Automatizaciones con IA que clasifican gastos, prevén desvíos, redondean compras y priorizan metas sin esfuerzo.",
+  content: `
+    <h2 id="intro">Ahorra sin pensar: deja que la IA haga el trabajo</h2>
+    <p>La IA es perfecta para tareas repetitivas y decisiones microfinancieras. Bien configurada, reduce fricción, aumenta la constancia y elimina olvidos que te cuestan dinero. Aquí tienes un sistema completo en tres capas: <strong>detección</strong> (qué pasa), <strong>decisión</strong> (qué conviene) y <strong>acción</strong> (qué ejecutar).</p>
+
+    <h2 id="flujos">15 flujos recomendados (de 0 a avanzado)</h2>
+    <ol>
+      <li><strong>Redondeo inteligente</strong>: redondea cada gasto al euro superior y mueve la diferencia al “Fondo de emergencia”.</li>
+      <li><strong>Alertas de anomalía</strong>: si una categoría sube +35% vs. media de 90 días, envía alerta con 3 propuestas de ajuste.</li>
+      <li><strong>Tope dinámico</strong>: al llegar al 80% de “Ocio”, congela gasto opcional y propone actividades low-cost.</li>
+      <li><strong>Payday split</strong>: el día de nómina, distribuye: 10% emergencia, 10% metas, 5% inversión, resto a gastos fijos.</li>
+      <li><strong>Suscripciones dormidas</strong>: sin uso en 30 días → etiqueta para revisión; sin interacción en 7 días → prepara baja.</li>
+      <li><strong>Previsión fin de mes</strong>: predice saldo al día 28 y sugiere recortes suaves (3 rubros).</li>
+      <li><strong>Regla 1%</strong>: gasto imprevisto &gt;1% del ingreso → pide confirmación y sugiere alternativa.</li>
+      <li><strong>Cashback automático</strong>: ingresa reembolsos al objetivo principal activo.</li>
+      <li><strong>Coach del súper</strong>: compara precio por unidad y estacionalidad; sugiere sustituciones ahorradoras.</li>
+      <li><strong>Revisión dominical</strong>: resumen semanal con desviaciones, metas y una micro-acción prioritaria.</li>
+      <li><strong>Impuestos freelance</strong>: separa automáticamente el % de impuestos estimado en cada cobro.</li>
+      <li><strong>Fondo “averías”</strong>: si el gasto en transporte sube de media, eleva la aportación a un sobre de mantenimiento.</li>
+      <li><strong>Seguro optimizado</strong>: antes de renovar, compara 3 ofertas y genera guion de renegociación.</li>
+      <li><strong>Antifraude básico</strong>: detecta cargos duplicados, suscripciones duplicadas y merchants sospechosos.</li>
+      <li><strong>Micro-ahorros conducta</strong>: cada día sin delivery, mueve 3–5€ a “Vacaciones”.</li>
+    </ol>
+
+    <figure>
+      <img src="/images/posts/ia-flujos-automaticos-ahorro-2025/flujo-panel.jpg" alt="Panel de automatizaciones de ahorro con IA" loading="lazy" />
+      <figcaption>Automatizaciones que ejecutan el presupuesto por ti.</figcaption>
+    </figure>
+
+    <h2 id="casos">3 casos reales simplificados</h2>
+    <h3>1) “Siempre llego justo”</h3>
+    <p>Activar Redondeo + Previsión fin de mes + Revisión dominical ahorra de 40€ a 90€/mes sin cambiar estilo de vida. </p>
+    <h3>2) “Gasto impulsivo”</h3>
+    <p>Regla 1% + Tope dinámico + Micro-ahorros conducta reducen compras por impulso y convierten la abstención en progreso visible.</p>
+    <h3>3) “Freelance con picos”</h3>
+    <p>Impuestos freelance + Payday split + Fondo “averías” estabilizan el flujo de caja y evitan sustos.</p>
+
+    <h2 id="implementacion">Cómo implementarlo por capas</h2>
+    <ol>
+      <li><strong>Capa 1 (2 flujos)</strong>: Redondeo + Revisión dominical (impacto alto, complejidad baja).</li>
+      <li><strong>Capa 2 (+3)</strong>: Previsión, Suscripciones dormidas, Tope dinámico.</li>
+      <li><strong>Capa 3 (avanzado)</strong>: Coach del súper, Seguro optimizado, Antifraude básico.</li>
+    </ol>
+
+    <h2 id="metricas">Métricas y control</h2>
+    <ul>
+      <li><strong>Tasa de ejecución</strong> (acciones realizadas/acciones recomendadas).</li>
+      <li><strong>Ahorro neto mensual</strong> (ahorros – costes/fees).</li>
+      <li><strong>Fatiga</strong> (nº alertas ignoradas). Reduce notificaciones si &gt;40% sin leer.</li>
+    </ul>
+
+    <h2 id="riesgos">Riesgos y cómo mitigarlos</h2>
+    <ul>
+      <li><strong>Sobre-automatización</strong>: mantén revisiones manuales mensuales.</li>
+      <li><strong>Permisos excesivos</strong>: solo lectura cuando sea posible; revísalos trimestralmente.</li>
+      <li><strong>“Falsos positivos”</strong>: entrena corrigiendo categorías y comerciantes.</li>
+    </ul>
+
+    <h2 id="faq">FAQ rápido</h2>
+    <p><strong>¿Cuánto ahorraré?</strong> Usuarios típicos reportan 4–10% del ingreso mensual tras 60–90 días con 5–7 flujos activos.</p>
+
+    <h2 id="cierre">Conclusión</h2>
+    <p>Empieza pequeño, mide, itera. La clave no es añadir más reglas, sino mantener las que <em>sí</em> te generan ahorro real.</p>
+  `
+},
+{
+  id: 9,
+  slug: "ia-privacidad-seguridad-sesgos",
+  title: "Checklist de privacidad, seguridad y sesgos al usar apps de IA financiera",
+  date: "10 de noviembre de 2025",
+  category: "Privacidad",
+  readMins: 10,
+  cover: "/images/posts/ia-privacidad-seguridad-sesgos/cover.jpg",
+  excerpt: "Lo que debes verificar antes de conectar tu banco a una app de IA.",
+  description: "Guía práctica: permisos mínimos, cifrado, exportación/borrado de datos, explicabilidad, sesgos y plan de contingencia.",
+  content: `
+    <h2 id="por-que">Por qué importa (y cómo se filtra el dinero)</h2>
+    <p>Una filtración de datos financieros no es solo un problema técnico: impacta tu poder de negociación, tu seguridad y tu tranquilidad. Este checklist prioriza <strong>control</strong>, <strong>reversibilidad</strong> y <strong>transparencia</strong>.</p>
+
+    <h2 id="permisos">1) Permisos mínimos</h2>
+    <ul>
+      <li>Prefiere <strong>solo lectura</strong> (read-only). Evita acceso de escritura salvo automatizaciones críticas.</li>
+      <li>Separa fuentes: banco principal y tarjeta secundaria en conexiones distintas.</li>
+      <li>Revisa <em>scope</em> cada 90 días y revoca accesos inactivos.</li>
+    </ul>
+
+    <h2 id="cifrado">2) Cifrado y almacenamiento</h2>
+    <ul>
+      <li><strong>TLS</strong> en tránsito y <strong>cifrado en reposo</strong> documentado.</li>
+      <li>Política de retención: ¿cuándo y cómo se eliminan tus datos?</li>
+      <li>Backups: asegúrate de que la eliminación también aplica a copias.</li>
+    </ul>
+
+    <h2 id="psd2">3) Proveedor PSD2/Open Banking</h2>
+    <ul>
+      <li>Licencias vigentes, auditorías y responsable de seguridad público.</li>
+      <li>Logs de consentimiento: fecha, alcance y revocación.</li>
+    </ul>
+
+    <h2 id="derechos">4) Exportación y borrado</h2>
+    <ol>
+      <li>Exporta CSV/JSON mensual (cifrado y con checksum).</li>
+      <li>Solicita borrado y exige confirmación con referencia interna.</li>
+      <li>Verifica que también borran modelos derivados si contienen datos identificables.</li>
+    </ol>
+
+    <h2 id="explicabilidad">5) Explicabilidad y correcciones</h2>
+    <ul>
+      <li>La app debe explicar <em>por qué</em> clasificó/marcó algo.</li>
+      <li>Corrige categorías y re-entrena reglas (<strong>feedback loop</strong> activo).</li>
+    </ul>
+
+    <h2 id="sesgos">6) Sesgos y equidad</h2>
+    <ul>
+      <li>Evita reglas que penalizan zonas/tiendas sin contexto.</li>
+      <li>Audita resultados por categorías: ¿hay errores sistemáticos?</li>
+    </ul>
+
+    <h2 id="contingencia">7) Plan de contingencia</h2>
+    <ul>
+      <li>Cuenta “offline” espejo con presupuesto base para seguir operando sin la app.</li>
+      <li>Seguro de ciber y límites de responsabilidad en contrato.</li>
+    </ul>
+
+    <figure>
+      <img src="/images/posts/ia-privacidad-seguridad-sesgos/politica-privacidad.jpg" alt="Revisión de política de privacidad en smartphone" loading="lazy" />
+      <figcaption>Comprueba políticas y responsables antes de conectar bancos.</figcaption>
+    </figure>
+
+    <h2 id="plantillas">Plantillas útiles</h2>
+    <h3>Solicitud de borrado</h3>
+    <pre><code>Solicito el borrado íntegro de mis datos, copias y derivados. Confirmad por escrito con ID de caso.</code></pre>
+
+    <h2 id="cierre">Conclusión</h2>
+    <p>Privacidad ≠ paranoia. Es disciplina operativa para que tu IA sume y nunca reste.</p>
+  `
+},
+{
+  id: 10,
+  slug: "presupuesto-ia-ingresos-irregulares",
+  title: "Presupuesto con IA si tienes ingresos irregulares",
+  date: "10 de noviembre de 2025",
+  category: "Presupuesto",
+  readMins: 10,
+  cover: "/images/posts/presupuesto-ia-ingresos-irregulares/cover.jpg",
+  excerpt: "Cómo estabilizar meses impredecibles usando modelos de previsión y sobres inteligentes.",
+  description: "Método base cero con colchón variable, sobres inteligentes y previsión de ingresos con IA para freelancers y autónomos.",
+  content: `
+    <h2 id="problema">El problema (y la solución por capas)</h2>
+    <p>Con ingresos variables no falla el Excel: falla la <em>predecibilidad</em>. La IA aporta tres cosas: previsión probabilística, reglas adaptativas y ajustes en tiempo real.</p>
+
+    <h2 id="sistema">Sistema en 5 pasos</h2>
+    <ol>
+      <li><strong>Sueldo base</strong>: media móvil de 6 meses × 0,8 → tu cifra piso.</li>
+      <li><strong>Colchón variable</strong>: la IA estima ingreso del mes (P50/P90) y fija colchón 10–30% según riesgo.</li>
+      <li><strong>Base cero</strong>: asigna cada euro a un sobre (necesidades, impuestos, deuda, ahorro, ocio).</li>
+      <li><strong>Rebalanceo quincenal</strong>: ajusta sobres con datos reales.</li>
+      <li><strong>Post-mortem mensual</strong>: aprende de desvíos y reentrena reglas.</li>
+    </ol>
+
+    <figure>
+      <img src="/images/posts/presupuesto-ia-ingresos-irregulares/panel-prevision.jpg" alt="Panel de previsión de ingresos y sobres con IA" loading="lazy" />
+      <figcaption>Previsión (P50/P90) y ajustes de sobres en tiempo real.</figcaption>
+    </figure>
+
+    <h2 id="impuestos">Impuestos, reservas y “baches”</h2>
+    <ul>
+      <li><strong>Impuestos</strong>: separa un % por factura, no al final del trimestre.</li>
+      <li><strong>Reserva de picos</strong>: meses altos → refuerza 2 sobres: emergencia y baja demanda.</li>
+      <li><strong>Facturación</strong>: fracciona cobros grandes en 2–3 tramos si tu cliente lo admite.</li>
+    </ul>
+
+    <h2 id="tablas">Tabla modelada (ejemplo)</h2>
+    <table>
+      <thead><tr><th>Concepto</th><th>%</th><th>Comentario</th></tr></thead>
+      <tbody>
+        <tr><td>Necesidades</td><td>45%</td><td>Renta, luz, transporte</td></tr>
+        <tr><td>Impuestos</td><td>18%</td><td>Separación automática</td></tr>
+        <tr><td>Deuda</td><td>7%</td><td>Alta prioridad</td></tr>
+        <tr><td>Ahorro/Emergencia</td><td>20%</td><td>Colchón variable</td></tr>
+        <tr><td>Ocio</td><td>10%</td><td>Se congela si hay desvíos</td></tr>
+      </tbody>
+    </table>
+
+    <h2 id="errores">Errores comunes</h2>
+    <ul>
+      <li>Confundir “mes bueno” con “nuevo normal”.</li>
+      <li>No separar impuestos por factura.</li>
+      <li>No revisar proyecciones cada 15 días.</li>
+    </ul>
+
+    <h2 id="cierre">Conclusión</h2>
+    <p>Tu presupuesto no debe adivinar el futuro: debe <em>absorberlo</em>. Con IA, ese margen de absorción se programa.</p>
+  `
+},
+{
+  id: 11,
+  slug: "ia-negociar-reducir-facturas",
+  title: "Usa la IA para negociar y reducir facturas (luz, internet, seguros)",
+  date: "10 de noviembre de 2025",
+  category: "Ahorro",
+  readMins: 10,
+  cover: "/images/posts/ia-negociar-reducir-facturas/cover.jpg",
+  excerpt: "Plantillas y estrategias para bajar costes recurrentes con ayuda de IA.",
+  description: "Cómo generar contraofertas, detectar cláusulas y programar recordatorios de renovación para ahorrar en facturas recurrentes.",
+  content: `
+    <h2 id="analisis">Análisis de factura con IA</h2>
+    <p>Sube tu PDF: la app extrae conceptos (cuota, consumo, penalizaciones), compara mercado y detecta <em>add-ons</em> inútiles. Resultado: <strong>objetivo de ahorro</strong> y <strong>argumentos</strong> para negociar.</p>
+
+    <h2 id="tacticas">Tácticas de negociación</h2>
+    <ol>
+      <li><strong>Benchmark</strong>: 3 ofertas equivalentes → fija objetivo (ahorro 12–18%).</li>
+      <li><strong>Anclaje</strong>: pide 20–25% para cerrar en 10–15%.</li>
+      <li><strong>Silencio táctico</strong>: espera contraoferta; la IA sugiere respuesta.</li>
+      <li><strong>Ventana de renovación</strong>: contacta 30/10/3 días antes.</li>
+    </ol>
+
+    <figure>
+      <img src="/images/posts/ia-negociar-reducir-facturas/analisis-factura.jpg" alt="Análisis de factura con IA en una app" loading="lazy" />
+      <figcaption>Desglose de cargos y comparativa rápida.</figcaption>
+    </figure>
+
+    <h2 id="plantillas">Plantillas</h2>
+    <h3>Email</h3>
+    <pre><code>He recibido ofertas por X €/mes con condiciones equivalentes. Si igualáis o mejoráis (−15%), mantengo la permanencia. ¿Podemos cerrar hoy?</code></pre>
+    <h3>Guion de llamada</h3>
+    <pre><code>— He visto una tarifa inferior con mismas coberturas.<br/>— ¿Qué mejora podéis ofrecer sin cambiar prestaciones?</code></pre>
+
+    <h2 id="roi">Calcula el ROI</h2>
+    <p>Ahorrar 12€ al mes en internet = 144€/año. Cinco facturas renegociadas → 300–500€ anuales sin renunciar a nada.</p>
+
+    <h2 id="etica">Buenas prácticas</h2>
+    <ul>
+      <li>Evita ofertas “gancho” con permanencias.</li>
+      <li>Pide confirmación escrita de nuevas condiciones.</li>
+      <li>Guarda el número de caso.</li>
+    </ul>
+
+    <h2 id="cierre">Conclusión</h2>
+    <p>La negociación anual, asistida por IA, es el hábito con mejor retorno de tiempo invertido.</p>
+  `
+},
+{
+  id: 12,
+  slug: "ia-inversion-limites-buenas-practicas-2025",
+  title: "IA para invertir: límites, riesgos y buenas prácticas (2025)",
+  date: "10 de noviembre de 2025",
+  category: "Inversión",
+  readMins: 10,
+  cover: "/images/posts/ia-inversion-limites-buenas-practicas-2025/cover.jpg",
+  excerpt: "Dónde brilla la IA al invertir y dónde debes tener cuidado.",
+  description: "Uso responsable de IA en inversión: screening, rebalanceos, alertas y gestión de sesgos; qué evitar y cómo validar señales.",
+  content: `
+    <h2 id="utilidad">Dónde es útil (y medible)</h2>
+    <ul>
+      <li><strong>Screening</strong>: filtra por TER, liquidez, tracking error y drawdown histórico.</li>
+      <li><strong>Rebalanceo</strong>: alertas por desvío (&plusmn;3–5%) y órdenes programadas mensuales.</li>
+      <li><strong>Eficiencia fiscal</strong>: preferencia por instrumentos y ventanas con menor impacto fiscal.</li>
+      <li><strong>Alertas</strong>: cambios de régimen (volatilidad/ correlación) y costes.</li>
+    </ul>
+
+    <h2 id="limites">Límites que debes respetar</h2>
+    <ul>
+      <li>La IA no predice el mercado de forma consistente.</li>
+      <li>Overfitting: modelos que “ganan” el pasado y pierden el futuro.</li>
+      <li>Datos sesgados: periodos alcistas prolongados engañan.</li>
+    </ul>
+
+    <h2 id="reglas">Reglas operativas</h2>
+    <ol>
+      <li><strong>IPS</strong> (política de inversión) por escrito: objetivos, % por activo, cuándo rebalancear.</li>
+      <li><strong>Costes bajos</strong> y diversificación amplia primero; “señales” después.</li>
+      <li><strong>Auditoría trimestral</strong>: documenta decisiones y resultados vs. benchmark.</li>
+    </ol>
+
+    <figure>
+      <img src="/images/posts/ia-inversion-limites-buenas-practicas-2025/grafico-ia.jpg" alt="Gráfico con señales de IA para inversión" loading="lazy" />
+      <figcaption>Señales útiles si comprendes sus supuestos y límites.</figcaption>
+    </figure>
+
+    <h2 id="checklist">Checklist previo a ejecutar señales</h2>
+    <ul>
+      <li>Explicabilidad: ¿entiendes la razón económica?</li>
+      <li>Riesgo: ¿qué pasa si sale mal? (pérdida esperada)</li>
+      <li>Coste de rotación: comisiones e impuestos.</li>
+    </ul>
+
+    <h2 id="cierre">Conclusión</h2>
+    <p>La IA suma si te ayuda a <em>cumplir el plan</em> con menos fricción. No la uses para saltarte el plan.</p>
+  `
+},
+  {
   id: 7,
   slug: "ia-finanzas-personales-2025",
   title: "¿Cómo la Inteligencia Artificial Puede Transformar Tus Finanzas Personales en 2025?",
@@ -803,6 +1103,288 @@ export const postsEs = [
 ];
 
 export const postsEn = [
+  {
+  id: 8,
+  slug: "ai-money-automation-flows-2025",
+  title: "10 AI Money Automation Flows to Save More (2025)",
+  date: "November 10, 2025",
+  category: "Automation",
+  readMins: 10,
+  cover: "/images/posts/ai-money-automation-flows-2025/cover.jpg",
+  excerpt: "Practical automations so saving happens on autopilot.",
+  description: "AI workflows that auto-categorize, forecast, round up purchases, and prioritize goals—hands off, results on.",
+  content: `
+    <h2 id="intro">Save without thinking: Detection → Decision → Action</h2>
+    <p>Good personal finance is consistency, not heroics. AI shines at small decisions made thousands of times. Build three layers: detection (what's happening), decision (what's optimal), action (what to execute).</p>
+
+    <h2 id="flows">15 recommended flows</h2>
+    <ol>
+      <li><strong>Smart round-ups</strong> → spare change to Emergency.</li>
+      <li><strong>Anomaly alerts</strong> → +35% vs 90-day average triggers suggestions.</li>
+      <li><strong>Dynamic caps</strong> → freeze “Fun” at 80% and propose low-cost swaps.</li>
+      <li><strong>Payday split</strong> → 10% emergency, 10% goals, 5% investing, rest to fixed bills.</li>
+      <li><strong>Sleeping subs</strong> → unused 30 days → review; 7 more → cancel draft.</li>
+      <li><strong>Month-end forecast</strong> → soft cuts to land positive.</li>
+      <li><strong>1% rule</strong> → unplanned &gt;1% income → confirm.</li>
+      <li><strong>Cashback redirect</strong> → top active goal.</li>
+      <li><strong>Grocery unit-price coach</strong> → seasonal swaps.</li>
+      <li><strong>Sunday review</strong> → weekly digest + one micro-action.</li>
+      <li><strong>Freelance taxes</strong> → auto-stash per invoice.</li>
+      <li><strong>Car “wear” fund</strong> → bump contributions when transport spikes.</li>
+      <li><strong>Insurance renewal</strong> → benchmark + negotiation script.</li>
+      <li><strong>Basic antifraud</strong> → duplicates & suspicious merchants.</li>
+      <li><strong>Behavioral micro-saves</strong> → no-delivery day → +€3–5 to “Vacation”.</li>
+    </ol>
+
+    <figure>
+      <img src="/images/posts/ai-money-automation-flows-2025/automation-dashboard.jpg" alt="AI savings automations dashboard" loading="lazy" />
+      <figcaption>Automations that run your budget for you.</figcaption>
+    </figure>
+
+    <h2 id="stack">Rollout plan</h2>
+    <ol>
+      <li><strong>Layer 1:</strong> Round-ups + Sunday review.</li>
+      <li><strong>Layer 2:</strong> Forecast, Sleeping subs, Dynamic caps.</li>
+      <li><strong>Layer 3:</strong> Grocery coach, Insurance renewal, Antifraud.</li>
+    </ol>
+
+    <h2 id="metrics">Metrics</h2>
+    <ul>
+      <li><strong>Execution rate</strong>, <strong>Net monthly savings</strong>, <strong>Alert fatigue</strong>.</li>
+    </ul>
+
+    <h2 id="risks">Risks</h2>
+    <ul>
+      <li>Over-automation → keep a monthly manual review.</li>
+      <li>Excessive permissions → prefer read-only and rotate keys.</li>
+      <li>False positives → retrain categories.</li>
+    </ul>
+
+    <h2 id="wrap">Bottom line</h2>
+    <p>Start small, measure, iterate. Fewer, better automations beat dozens you’ll ignore.</p>
+  `
+},
+{
+  id: 9,
+  slug: "ai-privacy-security-bias-checklist",
+  title: "AI Finance Apps: Privacy, Security & Bias Checklist",
+  date: "November 10, 2025",
+  category: "Privacy",
+  readMins: 10,
+  cover: "/images/posts/ai-privacy-security-bias-checklist/cover.jpg",
+  excerpt: "What to verify before linking your bank to an AI app.",
+  description: "Practical checklist: minimal permissions, encryption, export/delete, explainability, bias and contingency plan.",
+  content: `
+    <h2 id="why">Why this matters</h2>
+    <p>Financial data leaks cost money, leverage, and peace of mind. Your default posture: control, reversibility, transparency.</p>
+
+    <h2 id="permissions">1) Minimal permissions</h2>
+    <ul>
+      <li>Prefer <strong>read-only</strong> access.</li>
+      <li>Isolate sources (primary bank vs card).</li>
+      <li>Rotate and revoke scopes quarterly.</li>
+    </ul>
+
+    <h2 id="encryption">2) Encryption & storage</h2>
+    <ul>
+      <li>TLS in transit + documented at-rest encryption.</li>
+      <li>Retention policy and backup deletion.</li>
+    </ul>
+
+    <h2 id="openbanking">3) Open Banking/PSD2 provider</h2>
+    <ul>
+      <li>Licenses, audits, published security contact.</li>
+      <li>Consent logs: date, scope, revocation.</li>
+    </ul>
+
+    <h2 id="rights">4) Export & delete</h2>
+    <ol>
+      <li>Monthly CSV/JSON export (encrypted, checksummed).</li>
+      <li>Deletion request with written confirmation.</li>
+      <li>Ask about models containing derived PII.</li>
+    </ol>
+
+    <h2 id="explain">5) Explainability & corrections</h2>
+    <ul>
+      <li>See <em>why</em> a label was assigned.</li>
+      <li>Edit and retrain rules with feedback loop.</li>
+    </ul>
+
+    <h2 id="bias">6) Bias & fairness</h2>
+    <ul>
+      <li>Audit categories for systemic errors.</li>
+      <li>Avoid location/store penalties without context.</li>
+    </ul>
+
+    <h2 id="plan">7) Contingency plan</h2>
+    <ul>
+      <li>Offline mirror (baseline budget).</li>
+      <li>Cyber insurance & liability limits.</li>
+    </ul>
+
+    <figure>
+      <img src="/images/posts/ai-privacy-security-bias-checklist/privacy-policy.jpg" alt="Checking an app privacy policy on a phone" loading="lazy" />
+      <figcaption>Verify policies and responsibilities before linking banks.</figcaption>
+    </figure>
+
+    <h2 id="templates">Templates</h2>
+    <pre><code>Please delete my data, backups and derived artifacts. Confirm in writing with case ID.</code></pre>
+
+    <h2 id="wrap">Bottom line</h2>
+    <p>Privacy is an operating discipline. Make it routine and your AI will only ever help you.</p>
+  `
+},
+{
+  id: 10,
+  slug: "budgeting-with-ai-irregular-income",
+  title: "Budgeting with AI When Your Income Is Irregular",
+  date: "November 10, 2025",
+  category: "Budgeting",
+  readMins: 10,
+  cover: "/images/posts/budgeting-with-ai-irregular-income/cover.jpg",
+  excerpt: "Stabilize unpredictable months using AI forecasts and adaptive rules.",
+  description: "Zero-based budgeting with variable buffer, smart envelopes and AI income forecasts for freelancers and contractors.",
+  content: `
+    <h2 id="challenge">The challenge</h2>
+    <p>Irregular income breaks fixed budgets. AI restores stability via probability, adaptive envelopes and mid-month adjustments.</p>
+
+    <h2 id="system">5-step system</h2>
+    <ol>
+      <li><strong>Base salary</strong>: 6-month moving average × 0.8.</li>
+      <li><strong>Variable buffer</strong>: P50/P90 forecast → 10–30% buffer.</li>
+      <li><strong>Zero-based envelopes</strong>: jobs for every euro (needs, taxes, debt, savings, fun).</li>
+      <li><strong>Bi-weekly rebalance</strong>: adjust to reality.</li>
+      <li><strong>Monthly post-mortem</strong>: learn, retrain, iterate.</li>
+    </ol>
+
+    <figure>
+      <img src="/images/posts/budgeting-with-ai-irregular-income/forecast-panel.jpg" alt="AI income forecast and envelope adjustments" loading="lazy" />
+      <figcaption>Forecasts (P50/P90) and real-time envelope shifts.</figcaption>
+    </figure>
+
+    <h2 id="tax">Taxes & reserves</h2>
+    <ul>
+      <li>Stash taxes per invoice, not quarterly.</li>
+      <li>High months → boost Emergency + Slow season envelopes.</li>
+      <li>Negotiate split payments on large invoices.</li>
+    </ul>
+
+    <h2 id="table">Model table (example)</h2>
+    <table>
+      <thead><tr><th>Bucket</th><th>%</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>Needs</td><td>45%</td><td>Rent, utilities, transport</td></tr>
+        <tr><td>Taxes</td><td>18%</td><td>Per-invoice separation</td></tr>
+        <tr><td>Debt</td><td>7%</td><td>High priority</td></tr>
+        <tr><td>Savings/Emergency</td><td>20%</td><td>Variable buffer</td></tr>
+        <tr><td>Fun</td><td>10%</td><td>Freezes on deviations</td></tr>
+      </tbody>
+    </table>
+
+    <h2 id="mistakes">Common mistakes</h2>
+    <ul>
+      <li>Treating a “good month” as the new normal.</li>
+      <li>Not separating taxes per invoice.</li>
+      <li>No mid-month review.</li>
+    </ul>
+
+    <h2 id="wrap">Bottom line</h2>
+    <p>Your budget shouldn’t predict the future; it should <em>absorb</em> it. AI gives you that absorption margin.</p>
+  `
+},
+{
+  id: 11,
+  slug: "use-ai-to-lower-bills",
+  title: "Use AI to Negotiate & Lower Your Bills (Utilities, Internet, Insurance)",
+  date: "November 10, 2025",
+  category: "Saving",
+  readMins: 10,
+  cover: "/images/posts/use-ai-to-lower-bills/cover.jpg",
+  excerpt: "Templates and tactics to cut recurring costs with AI help.",
+  description: "Generate counter-offers, spot clauses, and set renewal reminders to save on recurring bills.",
+  content: `
+    <h2 id="analyze">Analyze the bill</h2>
+    <p>Upload the PDF. The app parses fees, consumption, penalties, and useless add-ons. You get a <strong>savings target</strong> and <strong>arguments</strong> to negotiate.</p>
+
+    <h2 id="tactics">Negotiation tactics</h2>
+    <ol>
+      <li><strong>Benchmark</strong> three like-for-like offers → set a 12–18% target.</li>
+      <li><strong>Anchoring</strong> ask 20–25% to land at 10–15%.</li>
+      <li><strong>Silence</strong> wait for counteroffers; AI suggests replies.</li>
+      <li><strong>Renewal window</strong> contact 30/10/3 days before renewal.</li>
+    </ol>
+
+    <figure>
+      <img src="/images/posts/use-ai-to-lower-bills/bill-analysis.jpg" alt="AI bill analysis in a finance app" loading="lazy" />
+      <figcaption>Charge breakdown and quick comparisons.</figcaption>
+    </figure>
+
+    <h2 id="templates">Templates</h2>
+    <pre><code>I have equivalent offers at €X/month. If you can match or beat (−15%), I’ll renew today. Can we close now?</code></pre>
+
+    <h2 id="roi">ROI</h2>
+    <p>Save €12/month on internet → €144/year. Five renegotiated bills → €300–500/year with zero lifestyle change.</p>
+
+    <h2 id="ethics">Good practices</h2>
+    <ul>
+      <li>Avoid teaser rates with lock-ins.</li>
+      <li>Get written confirmation of new terms.</li>
+      <li>Keep the case number.</li>
+    </ul>
+
+    <h2 id="wrap">Bottom line</h2>
+    <p>Annual negotiation, AI-assisted, is the highest-ROI habit in personal finance.</p>
+  `
+},
+{
+  id: 12,
+  slug: "ai-investing-guide-limits-best-practices-2025",
+  title: "AI for Investing: Limits, Risks & Best Practices (2025)",
+  date: "November 10, 2025",
+  category: "Investing",
+  readMins: 10,
+  cover: "/images/posts/ai-investing-guide-limits-best-practices-2025/cover.jpg",
+  excerpt: "Where AI shines in investing—and where caution is vital.",
+  description: "Responsible AI use in investing: screening, rebalancing, alerts and bias handling; what to avoid and how to validate signals.",
+  content: `
+    <h2 id="useful">Where AI helps (and is measurable)</h2>
+    <ul>
+      <li><strong>Screening</strong> by TER, liquidity, tracking error, historical drawdowns.</li>
+      <li><strong>Rebalancing</strong> drift alerts (&plusmn;3–5%) and monthly orders.</li>
+      <li><strong>Tax efficiency</strong> lower-turnover instruments and windows.</li>
+      <li><strong>Regime alerts</strong> shifts in volatility/correlation and fees.</li>
+    </ul>
+
+    <h2 id="limits">Hard limits</h2>
+    <ul>
+      <li>AI does not reliably predict markets.</li>
+      <li>Overfitting wins the past, loses the future.</li>
+      <li>Biased data: long bull runs mislead models.</li>
+    </ul>
+
+    <h2 id="ops">Operating rules</h2>
+    <ol>
+      <li><strong>Written IPS</strong>: goals, asset %s, rebalance rules.</li>
+      <li><strong>Low costs</strong> and broad diversification first; “signals” second.</li>
+      <li><strong>Quarterly audit</strong>: decisions vs benchmark, with notes.</li>
+    </ol>
+
+    <figure>
+      <img src="/images/posts/ai-investing-guide-limits-best-practices-2025/ai-chart.jpg" alt="AI signals on an investment chart" loading="lazy" />
+      <figcaption>Signals help if you understand their assumptions and limits.</figcaption>
+    </figure>
+
+    <h2 id="check">Pre-trade checklist</h2>
+    <ul>
+      <li>Explainability: clear economic reason?</li>
+      <li>Risk: acceptable loss if wrong?</li>
+      <li>Turnover cost: fees and taxes.</li>
+    </ul>
+
+    <h2 id="wrap">Bottom line</h2>
+    <p>AI multiplies discipline; it is not a substitute for it. Use it to follow the plan—not to break it.</p>
+  `
+},
   {
   id: 7,
   slug: "ai-personal-finance-2025",
