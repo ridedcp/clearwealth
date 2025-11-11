@@ -3,6 +3,65 @@
 
 export const postsEs = [
   {
+  id: 14,
+  slug: "ahorrar-vs-invertir",
+  title: "Ahorrar vs invertir: qué te conviene en 2025",
+  date: "11 de noviembre de 2025",
+  category: "Finanzas personales",
+  readMins: 9,
+  cover: "/images/posts/ahorrar-vs-invertir/cover.png",
+  excerpt: "Entiende la diferencia entre ahorrar e invertir y cuándo hacer cada uno según tus objetivos.",
+  description: "Comparamos ahorrar e invertir: estabilidad frente a crecimiento, seguridad frente a rentabilidad. Aprende a equilibrar ambos según tu perfil y horizonte financiero.",
+  content: `
+    <figure>
+      <img src="/images/posts/ahorrar-vs-invertir/cover.png" alt="Comparativa entre ahorrar e invertir" loading="lazy" />
+      <figcaption>Ahorrar protege tu presente; invertir construye tu futuro.</figcaption>
+    </figure>
+
+    <h2 id="definicion">Qué significa realmente “ahorrar” y “invertir”</h2>
+    <p><strong>Ahorrar</strong> es reservar parte de tus ingresos y mantenerlos en instrumentos seguros y líquidos (cuentas, depósitos, efectivo). El objetivo principal es <em>preservar el capital</em>.</p>
+    <p><strong>Invertir</strong> implica poner ese dinero a trabajar en activos que pueden fluctuar de valor (acciones, bonos, fondos, inmuebles), con el objetivo de <em>hacer crecer el capital</em> a largo plazo.</p>
+
+    <h2 id="diferencias">Principales diferencias</h2>
+    <ul>
+      <li><strong>Riesgo</strong>: el ahorro busca estabilidad; la inversión asume volatilidad a cambio de mayor rentabilidad esperada.</li>
+      <li><strong>Horizonte temporal</strong>: ahorrar sirve para metas a corto plazo; invertir, para objetivos de más de 3–5 años.</li>
+      <li><strong>Liquidez</strong>: el ahorro se puede retirar en cualquier momento; las inversiones pueden requerir esperar o vender en momentos desfavorables.</li>
+      <li><strong>Rentabilidad</strong>: el ahorro apenas supera la inflación; invertir busca ganarle claramente al aumento de precios.</li>
+    </ul>
+
+    <figure>
+      <img src="/images/posts/ahorrar-vs-invertir/grafico-evolucion.png" alt="Evolución comparativa de ahorrar e invertir en el tiempo" loading="lazy" />
+      <figcaption>A largo plazo, el dinero invertido tiende a crecer más rápido que el dinero ahorrado sin rendimiento.</figcaption>
+    </figure>
+
+    <h2 id="cuandocadauno">Cuándo ahorrar y cuándo invertir</h2>
+    <p>El error más común es creer que son excluyentes. Ambos se complementan:</p>
+    <ul>
+      <li><strong>Ahorrar</strong>: para emergencias (3–6 meses de gastos), metas próximas (vacaciones, coche, mudanza) o fondos de reserva.</li>
+      <li><strong>Invertir</strong>: para metas a largo plazo (jubilación, vivienda, educación, independencia financiera).</li>
+    </ul>
+
+    <h2 id="errores">Errores frecuentes</h2>
+    <ol>
+      <li><strong>No tener colchón antes de invertir</strong>: si no puedes cubrir imprevistos, no inviertas aún.</li>
+      <li><strong>Buscar rentabilidad inmediata</strong>: invertir requiere tiempo y paciencia; la volatilidad es parte del proceso.</li>
+      <li><strong>No diversificar</strong>: concentrar todo en un solo activo o mercado aumenta el riesgo.</li>
+    </ol>
+
+    <h2 id="equilibrio">Cómo equilibrarlos</h2>
+    <p>Una estrategia sensata suele comenzar con un fondo de emergencia (ahorro) y, una vez cubierto, dedicar el excedente a inversión. Por ejemplo:</p>
+    <ul>
+      <li>Primeros 6 meses de gastos: cuenta remunerada o depósito seguro.</li>
+      <li>Excedente mensual: fondos indexados, ETFs o planes diversificados según tu perfil.</li>
+    </ul>
+
+    <h2 id="conclusion">Conclusión</h2>
+    <p>Ahorrar sin invertir te protege del riesgo, pero te expone a la inflación. Invertir sin ahorrar te deja vulnerable ante imprevistos. El equilibrio está en combinar ambos: primero estabilidad, luego crecimiento.</p>
+    <p>En 2025, con inflación persistente y tipos moderados, <strong>ahorrar ya no basta</strong>. Necesitas invertir para mantener tu poder adquisitivo, pero sin olvidar que la base de toda inversión sólida es un buen hábito de ahorro.</p>
+  `
+},
+  {
   id: 13,
   slug: "fondos-indexados-vs-fondos-activos",
   title: "Fondos indexados vs fondos activos: cuál te conviene en 2025",
@@ -1159,6 +1218,65 @@ export const postsEs = [
 ];
 
 export const postsEn = [
+  {
+  id: 14,
+  slug: "saving-vs-investing",
+  title: "Saving vs investing: which strategy fits you best in 2025",
+  date: "11 November 2025",
+  category: "Personal Finance",
+  readMins: 9,
+  cover: "/images/posts/ahorrar-vs-invertir/cover.png",
+  excerpt: "Understand the difference between saving and investing — and when to do each according to your goals.",
+  description: "We compare saving and investing: safety versus growth, stability versus return. Learn how to balance both depending on your goals and time horizon.",
+  content: `
+    <figure>
+      <img src="/images/posts/ahorrar-vs-invertir/cover.png" alt="Comparison between saving and investing" loading="lazy" />
+      <figcaption>Saving protects your present; investing builds your future.</figcaption>
+    </figure>
+
+    <h2 id="definition">What saving and investing really mean</h2>
+    <p><strong>Saving</strong> means setting aside part of your income in safe and liquid instruments (cash, savings accounts, deposits). Its goal is to <em>preserve capital</em>.</p>
+    <p><strong>Investing</strong> means putting money to work in assets that can fluctuate in value (stocks, bonds, funds, real estate) to <em>grow capital</em> over time.</p>
+
+    <h2 id="differences">Key differences</h2>
+    <ul>
+      <li><strong>Risk</strong>: saving focuses on stability; investing accepts volatility for higher expected returns.</li>
+      <li><strong>Time horizon</strong>: saving is for short-term goals; investing is for long-term goals (3–5 years+).</li>
+      <li><strong>Liquidity</strong>: savings are immediately available; investments may need time or favorable conditions to sell.</li>
+      <li><strong>Return</strong>: savings barely beat inflation; investing aims to grow above it.</li>
+    </ul>
+
+    <figure>
+      <img src="/images/posts/ahorrar-vs-invertir/grafico-evolucion.png" alt="Growth comparison between saving and investing" loading="lazy" />
+      <figcaption>Over time, invested money compounds faster than saved money.</figcaption>
+    </figure>
+
+    <h2 id="when">When to save and when to invest</h2>
+    <p>They are not opposites — they work together:</p>
+    <ul>
+      <li><strong>Save</strong> for emergencies (3–6 months of expenses), short-term goals (vacations, car, relocation) or safety reserves.</li>
+      <li><strong>Invest</strong> for long-term goals (retirement, home, education, financial independence).</li>
+    </ul>
+
+    <h2 id="mistakes">Common mistakes</h2>
+    <ol>
+      <li><strong>Investing without savings</strong>: if you lack an emergency fund, start there first.</li>
+      <li><strong>Expecting quick profits</strong>: investing requires time; volatility is normal.</li>
+      <li><strong>Lack of diversification</strong>: concentrating in one asset or market increases risk.</li>
+    </ol>
+
+    <h2 id="balance">How to balance both</h2>
+    <p>A sound strategy starts with savings for stability, then channels surplus into investments. Example:</p>
+    <ul>
+      <li>First 6 months of expenses: in a savings account or secure deposit.</li>
+      <li>Monthly surplus: invest in index funds, ETFs or diversified plans aligned with your profile.</li>
+    </ul>
+
+    <h2 id="conclusion">Conclusion</h2>
+    <p>Saving without investing protects you from risk but exposes you to inflation. Investing without saving leaves you vulnerable to emergencies. The balance is clear: save first, then invest.</p>
+    <p>In 2025, with moderate interest rates and inflation still present, <strong>saving alone isn’t enough</strong>. You need to invest to preserve your purchasing power — but always grounded on a strong saving habit.</p>
+  `
+},
   {
   id: 13,
   slug: "index-funds-vs-active-funds",
